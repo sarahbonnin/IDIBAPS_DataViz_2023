@@ -51,7 +51,7 @@ Attendees will gain a high-level understanding of data import, manipulation and 
 <h3>Agenda</h3>
 
 Day 1:
-* 9:30-10:00 (30’): course introduction+ check the set up.
+* 9:30-10:00 (30’): course introduction + check the set up.
 * 10:00-10:45 (45’): introduction to R and Rstudio (Posit).
 * 10:45-11:30 (45’): import data / read files.
 * 11:30-12:00 (30’): break

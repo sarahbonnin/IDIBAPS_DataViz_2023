@@ -1,0 +1,22 @@
+# Import data / read files
+
+We will learn how to read a file in R using the {readr} package (part of the {tidyverse}).
+
+First, let's copy locally a few files that we will need for this workshop.
+
+Data taken from:
+https://ajuntament.barcelona.cat/estadistica/castella/Estadistiques_per_temes/Poblacio_i_demografia/Documents_relacionats/pobest/a2023/part1/index.htm
+
+
+```{r}
+test <- readr::read_csv("stats_countries_barcelona_2013-2023.csv")
+# long format
+test_long <- tidyr::pivot_longer(test, cols=-c(Country, Continent), names_to="Year", values_to="Count")
+test_sub <- test_long %>% filter(Country %in% c("Francia", "Italia", "Alemania"))
+ggplot(test_sub, aes(x=Year, y=Count, color=Continent)) + geom_line()
+ggplot(test_sub, aes(x=Year, y=Count, fill=Country)) + geom_bar(stat="identity")
+ggplot(test_sub, aes(x=Year, y=Count, fill=Country)) + geom_bar(stat="identity", position="dodge")
+
+```
+
+
