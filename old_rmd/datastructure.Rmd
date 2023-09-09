@@ -1,0 +1,9 @@
+# Data structures
+
+The main data structures are:
+
+* Vector
+* Factor
+* Matrix
+* Data frame
+

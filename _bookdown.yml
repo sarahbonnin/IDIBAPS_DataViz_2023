@@ -1,0 +1,23 @@
+title: "Data visualization with R and ggplot2: from data to publication-quality graphics"
+author: "Sarah Bonnin"
+date: "`r Sys.Date()`"
+book_filename: "idibaps-dataviz-2023"
+language:
+  ui:
+    chapter_name: "Part"
+delete_merged_file: true
+rmd_files: ["index.Rmd", 
+          "setup.Rmd",
+           "Rintro.Rmd", 
+          "rstudio.Rmd", 
+          "pathdirectories.Rmd", 
+          "Rbasics.Rmd" 
+          ]
+output:
+  bookdown::gitbook:
+    theme: cosmo
+    highlight: tango
+output_dir: "docs"
+output_format: html
+
+

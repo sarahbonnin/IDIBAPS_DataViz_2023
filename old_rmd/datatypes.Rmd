@@ -1,0 +1,25 @@
+# Data types
+
+Each object has a data type:
+* Numeric (number - integer or double)
+* Character (text)
+* Logical (TRUE / FALSE)
+
+##Checking data types
+
+Number:
+```{r}
+a <- 10
+mode(a)
+typeof(a)
+str(a)
+```
+
+Text:
+```{r}
+b <- "word"
+mode(b)
+typeof(b)
+str(b)
+```
+

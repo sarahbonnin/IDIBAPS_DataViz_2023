@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Data visualization with R and ggplot2: from data to publication-quality graphics</title>
+  <meta name="description" content="Data visualization with R and ggplot2: from data to publication-quality graphics" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Data visualization with R and ggplot2: from data to publication-quality graphics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Data visualization with R and ggplot2: from data to publication-quality graphics" />
+  
+  
+  
+
+<meta name="author" content="Sarah Bonnin" />
+
+
+<meta name="date" content="2023-09-09" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="setup.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">IDIBAPS Data Vizualization workshop 2023</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
+<li class="chapter" data-level="2" data-path="setup.html"><a href="setup.html"><i class="fa fa-check"></i><b>2</b> Setup</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="install-r-and-rstudioposit.html"><a href="install-r-and-rstudioposit.html"><i class="fa fa-check"></i><b>2.1</b> Install R and RStudio/Posit</a></li>
+<li class="chapter" data-level="2.2" data-path="install-r-packages.html"><a href="install-r-packages.html"><i class="fa fa-check"></i><b>2.2</b> Install R packages</a></li>
+<li class="chapter" data-level="2.3" data-path="check-setup.html"><a href="check-setup.html"><i class="fa fa-check"></i><b>2.3</b> Check setup</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="what-is-r.html"><a href="what-is-r.html"><i class="fa fa-check"></i><b>3</b> What is R ?</a></li>
+<li class="chapter" data-level="4" data-path="what-is-rstudio-posit.html"><a href="what-is-rstudio-posit.html"><i class="fa fa-check"></i><b>4</b> What is RStudio (Posit)?</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="rstudio-interface.html"><a href="rstudio-interface.html"><i class="fa fa-check"></i><b>4.1</b> RStudio interface</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>5</b> Paths and directories</a></li>
+<li class="chapter" data-level="6" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>6</b> R basics</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>6.1</b> Arithmetic operators</a></li>
+<li class="chapter" data-level="6.2" data-path="simple-calculations.html"><a href="simple-calculations.html"><i class="fa fa-check"></i><b>6.2</b> Simple calculations</a></li>
+<li class="chapter" data-level="6.3" data-path="objects-in-r.html"><a href="objects-in-r.html"><i class="fa fa-check"></i><b>6.3</b> Objects in R</a></li>
+<li class="chapter" data-level="6.4" data-path="assignment-operators.html"><a href="assignment-operators.html"><i class="fa fa-check"></i><b>6.4</b> Assignment operators</a></li>
+<li class="chapter" data-level="6.5" data-path="assigning-data-to-an-object.html"><a href="assigning-data-to-an-object.html"><i class="fa fa-check"></i><b>6.5</b> Assigning data to an object</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/sarahbonnin/" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data visualization with R and ggplot2: from data to publication-quality graphics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Data visualization with R and ggplot2: from data to publication-quality graphics</h1>
+<p class="author"><em>Sarah Bonnin</em></p>
+<p class="date"><em>2023-09-09</em></p>
+</div>
+<div id="welcome" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Part1</span> Welcome<a href="index.html#welcome" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h3>
+Dates, time &amp; location
+</h3>
+<ul>
+<li>Dates:
+<ul>
+<li>First edition: September 27-28
+<ul>
+<li>Second edition: October 19-20</li>
+</ul></li>
+</ul></li>
+<li>Time:
+<ul>
+<li>9:30-13:30 <br></li>
+</ul></li>
+<li>Location:
+<ul>
+<li>IDIBAPS</li>
+</ul></li>
+</ul>
+<h3>
+Instructors
+</h3>
+<p><a href="mailto:bonninsarah@gmail.com">Sarah Bonnin</a></p>
+<h3>
+Prerequisites
+</h3>
+<p>The workshop is open to anyone with no (or little) prior programming experience.
+Attendees must however feel comfortable enough with their own computer to install programs (and debug their installation if needed) and locate folders and files.</p>
+<h3>
+Learning objectives
+</h3>
+<p>Attendees will gain a high-level understanding of data import, manipulation and graphing with R and RStudio. They will be able to produce a variety of publication-quality graphs (among others: boxplots, histograms, dot plots, heatmaps).</p>
+<h3>
+Learning outcomes
+</h3>
+<ul>
+<li>Identify and use RStudio panels (console, scripts, folders and files panels).</li>
+<li>Locate useful resources to learn more and know where to seek help.</li>
+<li>Import data from files into R.</li>
+<li>Manipulate and prepare (filter, select) data.</li>
+<li>Produce graphs:
+<ul>
+<li>Create a plot from “recipes”.</li>
+<li>Change parameters (color, font size, point shape, title, etc.).</li>
+<li>Export high-quality graphs in different formats (pdf, jpeg, png).</li>
+</ul></li>
+</ul>
+<h3>
+Agenda
+</h3>
+<p>Day 1:
+* 9:30-10:00 (30’): course introduction+ check the set up.
+* 10:00-10:45 (45’): introduction to R and Rstudio (Posit).
+* 10:45-11:30 (45’): import data / read files.
+* 11:30-12:00 (30’): break
+* 12:00-12:30 (30’): ggplot2: concept and structure.
+* 12:30-13:00 (30’:) guided boxplots, scatter plots, barplots, pie plots.
+* 13:00-13:30 (30’): exercises / changing graph parameters.</p>
+<p>Day 2:
+* 9:30-10:00 (30’): recall what was done on day 1 with a “warm up” exercise.
+* 10:00-10:45 (45’): introduction to simple data wrangling to filter and select data.
+* 10:45-11:30 (45’): exercises with filtering + graphs.
+* 11:30-12:00 (30’): break.
+* 12:00-12:30 (30’): introduction to interactive plotting with plotly.
+* 12:30-13:15 (45’): exercises combining what we learned so far.
+* 13:15-13:30 (15’): workshop wrap up.</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="setup.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["idibaps-dataviz-2023.pdf", "idibaps-dataviz-2023.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

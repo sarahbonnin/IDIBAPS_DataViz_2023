@@ -1,0 +1,18 @@
+# What is RStudio (Posit)?
+
+* Free and open source IDE (Integrated Development Environment) for R
+
+* Available for Windows, Mac OS and LINUX
+
+<img src="images/rstudio_logo.png" alt="rstudio logo" width="250"/>
+
+
+## RStudio interface
+
+* 4 panels:
+	+ top-left: scripts and files
+	+ bottom-left: R console Linux-line terminal / command-line
+	+ top-right: environment, history, connections, tutorial
+	+ bottom-right: tree of folders and files, plots/graphs window, packages, help window, viewer, presentation
+
+**Pending to add here screenshot of RStudio IDE**

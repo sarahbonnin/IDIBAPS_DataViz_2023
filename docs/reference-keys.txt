@@ -1,0 +1,15 @@
+welcome
+setup
+install-r-and-rstudioposit
+install-r-packages
+check-setup
+what-is-r
+what-is-rstudio-posit
+rstudio-interface
+paths-and-directories
+r-basics
+arithmetic-operators
+simple-calculations
+objects-in-r
+assignment-operators
+assigning-data-to-an-object
