@@ -4,7 +4,7 @@
 
 * Available for Windows, Mac OS and LINUX
 
-<img src="images/rstudio_logo.png" alt="rstudio logo" width="250"/>
+<img src="images/setup_rstudio_icon.png" alt="rstudio logo" width="300"/>
 
 
 ## RStudio interface
@@ -15,4 +15,4 @@
 	+ top-right: environment, history, connections, tutorial
 	+ bottom-right: tree of folders and files, plots/graphs window, packages, help window, viewer, presentation
 
-**Pending to add here screenshot of RStudio IDE**
+<img src="images/rstudio_interface.png" alt="rstudio interface" width="1000"/>

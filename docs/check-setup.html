@@ -23,7 +23,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2023-09-09" />
+<meta name="date" content="2023-09-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="install-r-packages.html"/>
-<link rel="next" href="what-is-r.html"/>
+<link rel="next" href="r.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -147,7 +147,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2" data-path="install-r-packages.html"><a href="install-r-packages.html"><i class="fa fa-check"></i><b>2.2</b> Install R packages</a></li>
 <li class="chapter" data-level="2.3" data-path="check-setup.html"><a href="check-setup.html"><i class="fa fa-check"></i><b>2.3</b> Check setup</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="what-is-r.html"><a href="what-is-r.html"><i class="fa fa-check"></i><b>3</b> What is R ?</a></li>
+<li class="chapter" data-level="3" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i><b>3</b> R</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="what-is-r.html"><a href="what-is-r.html"><i class="fa fa-check"></i><b>3.1</b> What is R ?</a></li>
+<li class="chapter" data-level="3.2" data-path="functions-packages.html"><a href="functions-packages.html"><i class="fa fa-check"></i><b>3.2</b> Functions &amp; packages</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="functions-packages.html"><a href="functions-packages.html#functions"><i class="fa fa-check"></i><b>3.2.1</b> Functions</a></li>
+<li class="chapter" data-level="3.2.2" data-path="functions-packages.html"><a href="functions-packages.html#packages"><i class="fa fa-check"></i><b>3.2.2</b> Packages</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="what-is-rstudio-posit.html"><a href="what-is-rstudio-posit.html"><i class="fa fa-check"></i><b>4</b> What is RStudio (Posit)?</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="rstudio-interface.html"><a href="rstudio-interface.html"><i class="fa fa-check"></i><b>4.1</b> RStudio interface</a></li>
@@ -186,7 +194,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>In order to make sure that the setup is successful, click again on tab “Packages” of the bottom-right panel, and <strong>tick packages that you just installed</strong>, like the “tidyverse package in that example:</p>
 <p><img src="images/setup_rstudio_check_packages.png" alt="rstudio check packages" width="1200"/></p>
 <p>If no error (in red) appear in the console (bottom-left panel), installation should be ok.</p>
-<p>Check by copying and pasting the following line of code in the console (bottom-left panel) and click on Enter / Return. You should be able to see the scatter plot appear on the “Plots” tab in the bottom-right panel !</p>
+<p><strong>CHECK</strong></p>
+<p>Copy-paste the following line of code in the console (bottom-left panel) and click on Enter / Return. You should be able to see the scatter plot appear on the “Plots” tab in the bottom-right panel !</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="check-setup.html#cb1-1" tabindex="-1"></a>diamonds <span class="sc">%&gt;%</span> </span>
 <span id="cb1-2"><a href="check-setup.html#cb1-2" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(carat, price, clarity) <span class="sc">%&gt;%</span>  </span>
 <span id="cb1-3"><a href="check-setup.html#cb1-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>carat, <span class="at">y=</span>price, <span class="at">col=</span>clarity)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
@@ -200,7 +209,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="install-r-packages.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="what-is-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -23,7 +23,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2023-09-09" />
+<meta name="date" content="2023-09-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -147,7 +147,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2" data-path="install-r-packages.html"><a href="install-r-packages.html"><i class="fa fa-check"></i><b>2.2</b> Install R packages</a></li>
 <li class="chapter" data-level="2.3" data-path="check-setup.html"><a href="check-setup.html"><i class="fa fa-check"></i><b>2.3</b> Check setup</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="what-is-r.html"><a href="what-is-r.html"><i class="fa fa-check"></i><b>3</b> What is R ?</a></li>
+<li class="chapter" data-level="3" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i><b>3</b> R</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="what-is-r.html"><a href="what-is-r.html"><i class="fa fa-check"></i><b>3.1</b> What is R ?</a></li>
+<li class="chapter" data-level="3.2" data-path="functions-packages.html"><a href="functions-packages.html"><i class="fa fa-check"></i><b>3.2</b> Functions &amp; packages</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="functions-packages.html"><a href="functions-packages.html#functions"><i class="fa fa-check"></i><b>3.2.1</b> Functions</a></li>
+<li class="chapter" data-level="3.2.2" data-path="functions-packages.html"><a href="functions-packages.html#packages"><i class="fa fa-check"></i><b>3.2.2</b> Packages</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="what-is-rstudio-posit.html"><a href="what-is-rstudio-posit.html"><i class="fa fa-check"></i><b>4</b> What is RStudio (Posit)?</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="rstudio-interface.html"><a href="rstudio-interface.html"><i class="fa fa-check"></i><b>4.1</b> RStudio interface</a></li>
@@ -184,7 +192,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">Data visualization with R and ggplot2: from data to publication-quality graphics</h1>
 <p class="author"><em>Sarah Bonnin</em></p>
-<p class="date"><em>2023-09-09</em></p>
+<p class="date"><em>2023-09-11</em></p>
 </div>
 <div id="welcome" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Part1</span> Welcome<a href="index.html#welcome" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -194,10 +202,8 @@ Dates, time &amp; location
 <ul>
 <li>Dates:
 <ul>
-<li>First edition: September 27-28
-<ul>
-<li>Second edition: October 19-20</li>
-</ul></li>
+<li>First edition: September 27-28</li>
+<li>Second edition: October 18-19</li>
 </ul></li>
 <li>Time:
 <ul>
@@ -209,7 +215,7 @@ Dates, time &amp; location
 </ul></li>
 </ul>
 <h3>
-Instructors
+Instructor
 </h3>
 <p><a href="mailto:bonninsarah@gmail.com">Sarah Bonnin</a></p>
 <h3>
@@ -236,25 +242,46 @@ Learning outcomes
 <li>Export high-quality graphs in different formats (pdf, jpeg, png).</li>
 </ul></li>
 </ul>
+<h4>
+What this workshop is <strong>NOT</strong>:
+</h4>
+<ul>
+<li>A programming class.</li>
+<li>A solution to all data visualization problems.</li>
+</ul>
+<h4>
+What this workshop (hopefully) is:
+</h4>
+<ul>
+<li>An introduction to data visualization.</li>
+<li>An introduction to R and to R Studio softwarea.</li>
+<li>A teaser to make you want to learn how to program in R!</li>
+</ul>
 <h3>
 Agenda
 </h3>
-<p>Day 1:
-* 9:30-10:00 (30’): course introduction+ check the set up.
-* 10:00-10:45 (45’): introduction to R and Rstudio (Posit).
-* 10:45-11:30 (45’): import data / read files.
-* 11:30-12:00 (30’): break
-* 12:00-12:30 (30’): ggplot2: concept and structure.
-* 12:30-13:00 (30’:) guided boxplots, scatter plots, barplots, pie plots.
-* 13:00-13:30 (30’): exercises / changing graph parameters.</p>
-<p>Day 2:
-* 9:30-10:00 (30’): recall what was done on day 1 with a “warm up” exercise.
-* 10:00-10:45 (45’): introduction to simple data wrangling to filter and select data.
-* 10:45-11:30 (45’): exercises with filtering + graphs.
-* 11:30-12:00 (30’): break.
-* 12:00-12:30 (30’): introduction to interactive plotting with plotly.
-* 12:30-13:15 (45’): exercises combining what we learned so far.
-* 13:15-13:30 (15’): workshop wrap up.</p>
+<p><em>Note that the agenda may be adjusted depending on the pace of the students.</em></p>
+<p>Day 1:</p>
+<ul>
+<li>9:30-10:00 (30’): course introduction + check the set up.</li>
+<li>10:00-10:45 (45’): introduction to R and Rstudio (Posit).</li>
+<li>10:45-11:30 (45’): import data / read files.</li>
+<li>11:30-12:00 (30’): break</li>
+<li>12:00-12:30 (30’): ggplot2: concept and structure.</li>
+<li>12:30-13:00 (30’:) guided boxplots, scatter plots, barplots, pie plots.</li>
+<li>13:00-13:30 (30’): exercises / changing graph parameters.</li>
+</ul>
+<p>Day 2:</p>
+<ul>
+<li>9:30-10:00 (30’): recall what was done on day 1 with a “warm up” exercise.</li>
+<li>10:00-10:45 (45’): introduction to simple data wrangling to filter and select data.</li>
+<li>10:45-11:30 (45’): exercises with filtering + graphs.</li>
+<li>11:30-12:00 (30’): break.</li>
+<li>12:00-12:30 (30’): introduction to interactive plotting with plotly.</li>
+<li>12:30-13:15 (45’): exercises combining what we learned so far.</li>
+<li>13:15-13:30 (15’): workshop wrap up.</li>
+</ul>
+<p><img src="images/R_logo.png" alt="R logo" width="150"/> <img src="images/setup_rstudio_icon.png" alt="rstudio logo" width="150"/> <img src="images/R_tidyverse_logo.png" alt="tidyverse logo" width="150"/></p>
 
 </div>
             </section>

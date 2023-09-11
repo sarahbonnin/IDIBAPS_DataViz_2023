@@ -23,7 +23,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2023-09-09" />
+<meta name="date" content="2023-09-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -147,7 +147,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2" data-path="install-r-packages.html"><a href="install-r-packages.html"><i class="fa fa-check"></i><b>2.2</b> Install R packages</a></li>
 <li class="chapter" data-level="2.3" data-path="check-setup.html"><a href="check-setup.html"><i class="fa fa-check"></i><b>2.3</b> Check setup</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="what-is-r.html"><a href="what-is-r.html"><i class="fa fa-check"></i><b>3</b> What is R ?</a></li>
+<li class="chapter" data-level="3" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i><b>3</b> R</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="what-is-r.html"><a href="what-is-r.html"><i class="fa fa-check"></i><b>3.1</b> What is R ?</a></li>
+<li class="chapter" data-level="3.2" data-path="functions-packages.html"><a href="functions-packages.html"><i class="fa fa-check"></i><b>3.2</b> Functions &amp; packages</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="functions-packages.html"><a href="functions-packages.html#functions"><i class="fa fa-check"></i><b>3.2.1</b> Functions</a></li>
+<li class="chapter" data-level="3.2.2" data-path="functions-packages.html"><a href="functions-packages.html#packages"><i class="fa fa-check"></i><b>3.2.2</b> Packages</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="what-is-rstudio-posit.html"><a href="what-is-rstudio-posit.html"><i class="fa fa-check"></i><b>4</b> What is RStudio (Posit)?</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="rstudio-interface.html"><a href="rstudio-interface.html"><i class="fa fa-check"></i><b>4.1</b> RStudio interface</a></li>
@@ -185,21 +193,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Part5</span> Paths and directories<a href="paths-and-directories.html#paths-and-directories" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ul>
 <li><p>The path of a file/directory is its <strong>location/address</strong> in the file system.</p></li>
-<li><p>Your home directory is the one that hosts your personal folder, and it should be similar to all operating system.</p></li>
+<li><p>Your home directory is the one that hosts the <strong>user (you) data</strong>: it should be similar to all operating system, for example:</p>
+<ul>
+<li><em>/users/sbonnin</em> (Linux)</li>
+<li><em>/Users/sbonnin</em> (macOS)</li>
+<li>*C:(Windows)</li>
+</ul></li>
 </ul>
-<p>Let’s go to the Files tab in the bottom-right corner: you can navigate this tree of files and directories by double clicking one folder name, to enter it, and by clicking on the double dot “..” to go one directory “up”.</p>
+<p>Go to the <strong>Files</strong> tab in the bottom-right corner: you can navigate through the <em>tree</em> of files and directories by double clicking one folder name, to enter it, and by clicking on the <strong>double dot “..”</strong> to go back.</p>
 <p>Choose the folder under which you would like to save the workshop’s work.</p>
-<p>For example, under Home -&gt; Documents. Click on “Home” and then on “Documents”:</p>
+<p>For example, you can create a new folder under <strong>Home -&gt; Documents</strong>. Click on “Home” and then on “Documents”:</p>
 <p><img src="images/path_home_documents.png" alt="rstudio logo" width="300"/></p>
-<p>Create a folder called “DataViz_2023” by clicking on the “+Folder” icon.</p>
+<p>Create a folder called <strong>“DataViz_2023”</strong> by clicking on the <strong>“+Folder”</strong> icon.</p>
 <p><img src="images/path_add_folder.png" alt="rstudio logo" width="120"/></p>
 <p>You should now see a new folder:</p>
 <p><img src="images/path_dataviz.png" alt="rstudio logo" width="600"/></p>
 <p>Double-click on the newly created “DataViz_2023” folder, still under the “Files” tab.</p>
-<p>Click on the “More file commands button”:</p>
+<p>Click on the <strong>“More file commands button”</strong>:</p>
 <p><img src="images/path_settings.png" alt="rstudio logo" width="100"/></p>
-<p>“Set As Working Directory”:</p>
+<p>Click on <strong>“Set As Working Directory”</strong>:</p>
 <p><img src="images/path_setwd.png" alt="rstudio logo" width="600"/></p>
+<p>The <a href="https://en.wikipedia.org/wiki/Working_directory">working directory</a> is where R will, by default, find files to read, and that is where it will also save files and figures, if not specified otherwise.</p>
 
 </div>
             </section>

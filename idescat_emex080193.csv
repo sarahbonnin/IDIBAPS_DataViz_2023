@@ -1,0 +1,239 @@
+﻿"El municipio en cifras"
+"080193: Barcelona (Barcelonès)"
+https://www.idescat.cat/emex/?id=080193&lang=es
+"Instituto de Estadística de Cataluña"
+
+tema,temaid,tabla,tablaid,concepto,conceptoid,tiempo,unidad,fuente,valormun,valorcom,valorcat
+Territorio,g173,"Indicadores geográficos",t176,Superficie,f271,2022,km²,,101.35,145.75,32108.00
+Territorio,g173,"Indicadores geográficos",t176,Altitud,f258,2013,m,,13,,
+Territorio,g173,"Indicadores geográficos",t176,Longitud,f328,2013,º,,2.178389,,
+Territorio,g173,"Indicadores geográficos",t176,Latitud,f329,2013,º,,41.383531,,
+Territorio,g173,"Indicadores geográficos",t176,"Coordenadas UTM x",f259,2013,m,,431300,,
+Territorio,g173,"Indicadores geográficos",t176,"Coordenadas UTM y",f260,2013,m,,4581740,,
+Población,g168,"Densidad de población",t192,Superficie,f261,2022,km²,,101.35,145.75,32108.00
+Población,g168,"Densidad de población",t192,Densidad,f262,2022,hab./km²,,16144.0,15643.5,242.7
+Población,g168,"Población. Por sexo",t195,Hombres,f318,2022,,"Idescat, a partir del Padrón continuo del INE.",778674,1093605,3833786
+Población,g168,"Población. Por sexo",t195,Mujeres,f320,2022,,"Idescat, a partir del Padrón continuo del INE.",857519,1186437,3958825
+Población,g168,"Población. Por sexo",t195,Total,f321,2022,,"Idescat, a partir del Padrón continuo del INE.",1636193,2280042,7792611
+Población,g168,"Población. Por grupos de edad",t25,"De 0 a 14 años",f167,2022,,"Idescat, a partir del Padrón continuo del INE.",193684,286169,1119768
+Población,g168,"Población. Por grupos de edad",t25,"De 15 a 64 años",f27,2022,,"Idescat, a partir del Padrón continuo del INE.",1093068,1517902,5171048
+Población,g168,"Población. Por grupos de edad",t25,"De 65 a 84 años",f28,2022,,"Idescat, a partir del Padrón continuo del INE.",279521,386548,1245368
+Población,g168,"Población. Por grupos de edad",t25,"De 85 años y más",f29,2022,,"Idescat, a partir del Padrón continuo del INE.",69920,89423,256427
+Población,g168,"Población. Por grupos de edad",t25,Total,f171,2022,,"Idescat, a partir del Padrón continuo del INE.",1636193,2280042,7792611
+Población,g168,"Población. Por grupos de edad. Hombres",t31,"De 0 a 14 años",f176,2022,,"Idescat, a partir del Padrón continuo del INE.",99669,147217,576192
+Población,g168,"Población. Por grupos de edad. Hombres",t31,"De 15 a 64 años",f33,2022,,"Idescat, a partir del Padrón continuo del INE.",539290,753373,2611918
+Población,g168,"Población. Por grupos de edad. Hombres",t31,"De 65 a 84 años",f34,2022,,"Idescat, a partir del Padrón continuo del INE.",117912,164468,560355
+Población,g168,"Población. Por grupos de edad. Hombres",t31,"De 85 años y más",f35,2022,,"Idescat, a partir del Padrón continuo del INE.",21803,28547,85321
+Población,g168,"Población. Por grupos de edad. Hombres",t31,Total,f36,2022,,"Idescat, a partir del Padrón continuo del INE.",778674,1093605,3833786
+Población,g168,"Población. Por grupos de edad. Mujeres",t37,"De 0 a 14 años",f38,2022,,"Idescat, a partir del Padrón continuo del INE.",94015,138952,543576
+Población,g168,"Población. Por grupos de edad. Mujeres",t37,"De 15 a 64 años",f39,2022,,"Idescat, a partir del Padrón continuo del INE.",553778,764529,2559130
+Población,g168,"Población. Por grupos de edad. Mujeres",t37,"De 65 a 84 años",f40,2022,,"Idescat, a partir del Padrón continuo del INE.",161609,222080,685013
+Población,g168,"Población. Por grupos de edad. Mujeres",t37,"De 85 años y más",f41,2022,,"Idescat, a partir del Padrón continuo del INE.",48117,60876,171106
+Población,g168,"Población. Por grupos de edad. Mujeres",t37,Total,f42,2022,,"Idescat, a partir del Padrón continuo del INE.",857519,1186437,3958825
+Población,g168,"Población. Por lugar de nacimiento",t68,Cataluña,f69,2022,,"Idescat, a partir del Padrón continuo del INE.",915396,1262400,4958965
+Población,g168,"Población. Por lugar de nacimiento",t68,"Resto de España",f72,2022,,"Idescat, a partir del Padrón continuo del INE.",243062,367473,1183598
+Población,g168,"Población. Por lugar de nacimiento",t68,Extranjero,f73,2022,,"Idescat, a partir del Padrón continuo del INE.",477735,650169,1650048
+Población,g168,"Población. Por lugar de nacimiento",t68,Total,f74,2022,,"Idescat, a partir del Padrón continuo del INE.",1636193,2280042,7792611
+Población,g168,"Población. Por nacionalidad",t75,Española,f183,2022,,"Idescat, a partir del Padrón continuo del INE.",1276713,1796074,6520801
+Población,g168,"Población. Por nacionalidad",t75,Extranjera,f184,2022,,"Idescat, a partir del Padrón continuo del INE.",359480,483968,1271810
+Población,g168,"Población. Por nacionalidad",t75,Total,f263,2022,,"Idescat, a partir del Padrón continuo del INE.",1636193,2280042,7792611
+Población,g168,"Población. Por nacionalidad. Hombres",t78,Española,f178,2022,,"Idescat, a partir del Padrón continuo del INE.",596557,846503,3176747
+Población,g168,"Población. Por nacionalidad. Hombres",t78,Extranjera,f77,2022,,"Idescat, a partir del Padrón continuo del INE.",182117,247102,657039
+Población,g168,"Población. Por nacionalidad. Hombres",t78,Total,f264,2022,,"Idescat, a partir del Padrón continuo del INE.",778674,1093605,3833786
+Población,g168,"Población. Por nacionalidad. Mujeres",t81,Española,f82,2022,,"Idescat, a partir del Padrón continuo del INE.",680156,949571,3344054
+Población,g168,"Población. Por nacionalidad. Mujeres",t81,Extranjera,f83,2022,,"Idescat, a partir del Padrón continuo del INE.",177363,236866,614771
+Población,g168,"Población. Por nacionalidad. Mujeres",t81,Total,f265,2022,,"Idescat, a partir del Padrón continuo del INE.",857519,1186437,3958825
+Población,g168,"Población residente en el extranjero a 1 de enero. Por sexo",t197,Hombres,f334,2023,,,82894,93641,187341
+Población,g168,"Población residente en el extranjero a 1 de enero. Por sexo",t197,Mujeres,f335,2023,,,82308,92207,180026
+Población,g168,"Población residente en el extranjero a 1 de enero. Por sexo",t197,Total,f336,2023,,,165202,185848,367367
+Población,g168,"Población ETCA (equivalente a tiempo completo anual)",t198,"Población residente",f341,2021,,"Idescat. Estimaciones de población estacional (base 2016).",1636732,2280967,
+Población,g168,"Población ETCA (equivalente a tiempo completo anual)",t198,"Población estacional ETCA",f342,2021,,"Idescat. Estimaciones de población estacional (base 2016).",23883,-14314,
+Población,g168,"Población ETCA (equivalente a tiempo completo anual)",t198,Total,f343,2021,,"Idescat. Estimaciones de población estacional (base 2016).",1660615,2266653,
+Población,g168,"Población ETCA (equivalente a tiempo completo anual)",t198,"Población ETCA / población residente",f344,2021,%,"Idescat. Estimaciones de población estacional (base 2016).",101.5,99.4,
+Población,g168,"Movilidad obligada por razón de estudios no universitarios",t211,"Alumnos residentes",f380,"Curso 2021/22",,"Idescat, a partir de les dades de la matrícula del Departament d'Educació.",204250,305190,1223420
+Población,g168,"Movilidad obligada por razón de estudios no universitarios",t211,"Alumnos residentes que estudian en el mismo municipio",f381,"Curso 2021/22",%,"Idescat, a partir de les dades de la matrícula del Departament d'Educació.",96.4,92.3,82.5
+Población,g168,"Nacimientos. Por sexo",t164,Niños,f185,"2022 (p)",,,6084,8807,29148
+Población,g168,"Nacimientos. Por sexo",t164,Niñas,f186,"2022 (p)",,,5504,7905,27168
+Población,g168,"Nacimientos. Por sexo",t164,Total,f187,"2022 (p)",,,11588,16712,56316
+Población,g168,"Defunciones. Por sexo",t165,Hombres,f181,2021,,,7868,10771,35386
+Población,g168,"Defunciones. Por sexo",t165,Mujeres,f182,2021,,,8369,11011,33956
+Población,g168,"Defunciones. Por sexo",t165,Total,f188,2021,,,16237,21782,69342
+Población,g168,Matrimonios,t166,Total,f179,2021,,,4285,5720,23601
+Población,g168,"Hogares. Por dimensión",t97,"Una persona",f98,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",198052,249997,686810
+Población,g168,"Hogares. Por dimensión",t97,"Dos personas",f99,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",230095,308382,933679
+Población,g168,"Hogares. Por dimensión",t97,"Tres personas",f100,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",127577,182573,631635
+Población,g168,"Hogares. Por dimensión",t97,"Cuatro personas y más",f101,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",128355,185630,692821
+Población,g168,"Hogares. Por dimensión",t97,Total,f107,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",684078,926583,2944944
+Población,g168,"Hogares. Por tipo de núcleo",t108,"Una persona",f109,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",198052,249997,686810
+Población,g168,"Hogares. Por tipo de núcleo",t108,"Dos personas o más sin núcleo",f110,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",37109,46421,100637
+Población,g168,"Hogares. Por tipo de núcleo",t108,"Pareja sin hijos",f111,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",166475,226802,725737
+Población,g168,"Hogares. Por tipo de núcleo",t108,"Pareja con hijos",f112,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",190647,278291,1059975
+Población,g168,"Hogares. Por tipo de núcleo",t108,"Padre o madre con hijos",f113,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",77680,104625,308995
+Población,g168,"Hogares. Por tipo de núcleo",t108,"Dos núcleos o más",f114,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",14115,20447,62789
+Población,g168,"Hogares. Por tipo de núcleo",t108,Total,f115,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",684078,926583,2944944
+Población,g168,"Migraciones internas. Saldos destinación-procedencia",t196,"Saldo con Cataluña",f322,2021,,"Idescat, a partir de la Estadística de variaciones residenciales del INE.",-15121,-18613,
+Población,g168,"Migraciones internas. Saldos destinación-procedencia",t196,"Saldo con España",f323,2021,,"Idescat, a partir de la Estadística de variaciones residenciales del INE.",-964,-1312,-3708
+Población,g168,"Migraciones internas. Saldos destinación-procedencia",t196,"Saldo migratorio interno",f324,2021,,"Idescat, a partir de la Estadística de variaciones residenciales del INE.",-16085,-19925,-3708
+Población,g168,"Migraciones externas",t208,Inmigraciones,f372,2021,,"Idescat, a partir de la Estadística de variaciones residenciales del INE.",57082,71138,149665
+Población,g168,"Migraciones externas",t208,Emigraciones,f373,2021,,"Idescat, a partir de la Estadística de variaciones residenciales del INE.",49223,55989,111331
+Población,g168,"Inmigraciones externas. Por lugar de procedencia",t194,"Resto de la UE",f314,2021,,"Idescat, a partir de la Estadística de variaciones residenciales del INE.",10261,11108,21680
+Población,g168,"Inmigraciones externas. Por lugar de procedencia",t194,"Resto del mundo",f316,2021,,"Idescat, a partir de la Estadística de variaciones residenciales del INE.",46821,60030,127985
+Población,g168,"Inmigraciones externas. Por lugar de procedencia",t194,Total,f317,2021,,"Idescat, a partir de la Estadística de variaciones residenciales del INE.",57082,71138,149665
+Población,g168,"Crecimiento de la población",t52,"Tasa bruta de natalidad",f330,"2022 (p)","tasa bruta por 1.000 habitantes",,7.13,7.37,7.18
+Población,g168,"Crecimiento de la población",t52,"Tasa bruta de mortalidad",f331,2021,"tasa bruta por 1.000 habitantes",,9.95,9.57,8.95
+Población,g168,"Crecimiento de la población",t52,"Crecimiento natural",f54,2021,"tasa bruta por 1.000 habitantes",,-2.61,-2.07,-1.51
+Población,g168,"Crecimiento de la población",t52,"Crecimiento migratorio",f55,2021,"tasa bruta por 1.000 habitantes",,-7.14,-4.60,2.53
+Población,g168,"Crecimiento de la población",t52,"Crecimiento total",f53,2021,"tasa bruta por 1.000 habitantes",,-9.70,-6.64,1.03
+Población,g168,"Crecimiento intercensal 2011-2021 de la población",t202,"Crecimiento total",f359,2021,,"Idescat, a partir del Censo de población y viviendas del INE.",16546,29400,230053
+Población,g168,"Crecimiento intercensal 2011-2021 de la población",t202,"Crecimiento total (media anual)",f360,2021,"tasa por 1.000 habitantes","Idescat, a partir del Censo de población y viviendas del INE.",1.11,1.42,3.29
+Población,g168,"Crecimiento intercensal 2011-2021 de la población",t202,"Crecimiento natural (media anual)",f361,2021,"tasa por 1.000 habitantes","Idescat, a partir del Censo de población y viviendas del INE.",-1.51,-0.75,0.32
+Población,g168,"Crecimiento intercensal 2011-2021 de la población",t202,"Crecimiento migratorio (media anual)",f362,2021,"tasa por 1.000 habitantes","Idescat, a partir del Censo de población y viviendas del INE.",2.63,2.17,2.96
+"Cultura · Lengua",g172,"Población de 2 años y más. Por conocimiento del catalán",t90,"Lo entiende",f91,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",1501262,2058268,6949344
+"Cultura · Lengua",g172,"Población de 2 años y más. Por conocimiento del catalán",t90,"Lo sabe hablar",f92,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",1137816,1487946,5345484
+"Cultura · Lengua",g172,"Población de 2 años y más. Por conocimiento del catalán",t90,"Lo sabe leer",f93,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",1246555,1653636,5750348
+"Cultura · Lengua",g172,"Población de 2 años y más. Por conocimiento del catalán",t90,"Lo sabe escribir",f94,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",835080,1092694,4069219
+"Cultura · Lengua",g172,"Población de 2 años y más. Por conocimiento del catalán",t90,"No lo entiende",f95,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",72056,129239,356728
+"Cultura · Lengua",g172,"Población de 2 años y más. Por conocimiento del catalán",t90,Total,f96,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",1573318,2187508,7306072
+"Cultura · Lengua",g172,Bibliotecas,t156,Públicas,f270,2018,,"Idescat. Estadística de bibliotecas.",41,61,459
+"Cultura · Lengua",g172,Bibliotecas,t156,Otras,f327,2018,,"Idescat. Estadística de bibliotecas.",158,166,391
+"Cultura · Lengua",g172,Bibliotecas,t156,Total,f177,2018,,"Idescat. Estadística de bibliotecas.",199,227,850
+"Cultura · Lengua",g172,"Espacios deportivos",t175,Pabellones,f293,2022,,"Idescat, a partir de los datos del Consell Català de l'Esport.",98,152,1024
+"Cultura · Lengua",g172,"Espacios deportivos",t175,"Pistas polideportivas",f294,2022,,"Idescat, a partir de los datos del Consell Català de l'Esport.",966,1385,8389
+"Cultura · Lengua",g172,"Espacios deportivos",t175,"Campos polideportivos",f295,2022,,"Idescat, a partir de los datos del Consell Català de l'Esport.",96,154,2278
+"Cultura · Lengua",g172,"Espacios deportivos",t175,"Salas deportivas",f296,2022,,"Idescat, a partir de los datos del Consell Català de l'Esport.",1673,2207,9256
+"Cultura · Lengua",g172,"Espacios deportivos",t175,"Piscinas cubiertas",f301,2022,,"Idescat, a partir de los datos del Consell Català de l'Esport.",210,256,1105
+"Cultura · Lengua",g172,"Espacios deportivos",t175,"Pistas de atletismo",f302,2022,,"Idescat, a partir de los datos del Consell Català de l'Esport.",53,74,437
+"Cultura · Lengua",g172,"Espacios deportivos",t175,"Otros espacios",f299,2022,,"Idescat, a partir de los datos del Consell Català de l'Esport.",1984,2627,29265
+"Cultura · Lengua",g172,"Espacios deportivos",t175,Total,f300,2022,,"Idescat, a partir de los datos del Consell Català de l'Esport.",5080,6855,51754
+Educación,g214,"Población de 15 años y más. Por nivel de formación alcanzado",t215,"Educación primaria o inferior",f386,2021,%,"Idescat, a partir del Censo de población y viviendas del INE.",12.7,14.8,15.0
+Educación,g214,"Población de 15 años y más. Por nivel de formación alcanzado",t215,"Primera etapa de eduacación secundaria",f387,2021,%,"Idescat, a partir del Censo de población y viviendas del INE.",18.2,21.7,27.7
+Educación,g214,"Población de 15 años y más. Por nivel de formación alcanzado",t215,"Segunda etapa de educación secundaria",f388,2021,%,"Idescat, a partir del Censo de población y viviendas del INE.",22.7,23.1,23.3
+Educación,g214,"Población de 15 años y más. Por nivel de formación alcanzado",t215,"Educación superior",f389,2021,%,"Idescat, a partir del Censo de población y viviendas del INE.",46.4,40.4,33.9
+Elecciones,g174,"Elecciones municipales",t148,Electores,f266,2019,,"Departamento de Acción Exterior y Unión Europea.",1142444,1579169,5422553
+Elecciones,g174,"Elecciones municipales",t148,Participación,f149,2019,%,"Departamento de Acción Exterior y Unión Europea.",66.2,64.3,64.8
+Elecciones,g174,"Elecciones al Parlamento de Cataluña",t189,Electores,f267,2021,,,1099283,1530604,5624067
+Elecciones,g174,"Elecciones al Parlamento de Cataluña",t189,Participación,f254,2021,%,,57.1,53.9,51.3
+Elecciones,g174,"Elecciones al Congreso de los Diputados",t190,Electores,f268,2019,,"Departamento de Acción Exterior y Unión Europea.",1122914,1558024,5615420
+Elecciones,g174,"Elecciones al Congreso de los Diputados",t190,Participación,f255,2019,%,"Departamento de Acción Exterior y Unión Europea.",73.4,72.2,69.4
+Elecciones,g174,"Elecciones al Parlamento Europeo",t191,Participación,f256,2019,%,"Departamento de Acción Exterior y Unión Europea.",65.7,63.8,60.9
+Elecciones,g174,"Elecciones al Parlamento Europeo",t191,Electores,f269,2019,,"Departamento de Acción Exterior y Unión Europea.",1138585,1574569,5645470
+Trabajo,g169,"Población. Por relación con la actividad económica",t56,"Población ocupada",f221,2021,,"Idescat, a partir del Censo de población y viviendas del INE.",680148,932538,3201006
+Trabajo,g169,"Población. Por relación con la actividad económica",t56,"Población desocupada",f222,2021,,"Idescat, a partir del Censo de población y viviendas del INE.",85908,131148,476662
+Trabajo,g169,"Población. Por relación con la actividad económica",t56,"Población activa",f223,2021,,"Idescat, a partir del Censo de población y viviendas del INE.",766056,1063686,3677668
+Trabajo,g169,"Población. Por relación con la actividad económica",t56,"Población inactiva",f60,2021,,"Idescat, a partir del Censo de población y viviendas del INE.",650178,894051,2845239
+Trabajo,g169,"Población. Por relación con la actividad económica",t56,"Población de 16 años y más",f224,2021,,"Idescat, a partir del Censo de población y viviendas del INE.",1416237,1957737,6522907
+Trabajo,g169,"Afiliados a la Seguridad Social según residencia del afiliado",t210,Hombres,f378,08/2023,,Idescat.,364855,508935,1869070
+Trabajo,g169,"Afiliados a la Seguridad Social según residencia del afiliado",t210,Mujeres,f379,08/2023,,Idescat.,353040,478925,1623205
+Trabajo,g169,"Afiliados a la Seguridad Social según residencia del afiliado",t210,Total,f377,08/2023,,Idescat.,717895,987860,3492275
+Trabajo,g169,"Afiliaciones a la Seguridad Social según residencia del afiliado",t203,Total,f363,08/2023,,Idescat.,754870,1038485,3644295
+Trabajo,g169,"Afiliaciones al régimen general de la S.S. según ubicación de la cuenta de cotización. Por sectores",t183,Agricultura,f273,"06/2023 (p)",,"Idescat, a partir dels fitxers d'afiliacions i comptes de cotització de la Tresoreria General de la Seguretat Social.",270,280,10520
+Trabajo,g169,"Afiliaciones al régimen general de la S.S. según ubicación de la cuenta de cotización. Por sectores",t183,Industria,f278,"06/2023 (p)",,"Idescat, a partir dels fitxers d'afiliacions i comptes de cotització de la Tresoreria General de la Seguretat Social.",64670,80510,462295
+Trabajo,g169,"Afiliaciones al régimen general de la S.S. según ubicación de la cuenta de cotización. Por sectores",t183,Construcción,f279,"06/2023 (p)",,"Idescat, a partir dels fitxers d'afiliacions i comptes de cotització de la Tresoreria General de la Seguretat Social.",28460,41385,157050
+Trabajo,g169,"Afiliaciones al régimen general de la S.S. según ubicación de la cuenta de cotización. Por sectores",t183,Servicios,f280,"06/2023 (p)",,"Idescat, a partir dels fitxers d'afiliacions i comptes de cotització de la Tresoreria General de la Seguretat Social.",940955,1074850,2409325
+Trabajo,g169,"Afiliaciones al régimen general de la S.S. según ubicación de la cuenta de cotización. Por sectores",t183,Total,f282,"06/2023 (p)",,"Idescat, a partir dels fitxers d'afiliacions i comptes de cotització de la Tresoreria General de la Seguretat Social.",1034355,1197020,3039190
+Trabajo,g169,"Afiliaciones al régim de autónomos de la S.S. Por sectores",t184,Agricultura,f229,"06/2023 (p)",,"Idescat, a partir dels fitxers d'afiliacions i comptes de cotització de la Tresoreria General de la Seguretat Social.",145,160,21285
+Trabajo,g169,"Afiliaciones al régim de autónomos de la S.S. Por sectores",t184,Industria,f288,"06/2023 (p)",,"Idescat, a partir dels fitxers d'afiliacions i comptes de cotització de la Tresoreria General de la Seguretat Social.",5460,7460,36910
+Trabajo,g169,"Afiliaciones al régim de autónomos de la S.S. Por sectores",t184,Construcción,f289,"06/2023 (p)",,"Idescat, a partir dels fitxers d'afiliacions i comptes de cotització de la Tresoreria General de la Seguretat Social.",9670,14900,69965
+Trabajo,g169,"Afiliaciones al régim de autónomos de la S.S. Por sectores",t184,Servicios,f290,"06/2023 (p)",,"Idescat, a partir dels fitxers d'afiliacions i comptes de cotització de la Tresoreria General de la Seguretat Social.",123355,150610,431130
+Trabajo,g169,"Afiliaciones al régim de autónomos de la S.S. Por sectores",t184,Total,f291,"06/2023 (p)",,"Idescat, a partir dels fitxers d'afiliacions i comptes de cotització de la Tresoreria General de la Seguretat Social.",138625,173130,559295
+Trabajo,g169,"Afiliaciones al régimen general de la S.S. según ubicación de la cuenta de cotización. Por tamaño de la cuenta",t185,"Hasta 9 trabajadores",f225,"06/2023 (p)",,"Idescat, a partir dels fitxers d'afiliacions i comptes de cotització de la Tresoreria General de la Seguretat Social.",153300,183150,558015
+Trabajo,g169,"Afiliaciones al régimen general de la S.S. según ubicación de la cuenta de cotización. Por tamaño de la cuenta",t185,"De 10 a 49 trabajadores",f284,"06/2023 (p)",,"Idescat, a partir dels fitxers d'afiliacions i comptes de cotització de la Tresoreria General de la Seguretat Social.",207440,242275,739405
+Trabajo,g169,"Afiliaciones al régimen general de la S.S. según ubicación de la cuenta de cotización. Por tamaño de la cuenta",t185,"De 50 a 249 trabajadores",f390,"06/2023 (p)",,"Idescat, a partir dels fitxers d'afiliacions i comptes de cotització de la Tresoreria General de la Seguretat Social.",228625,261280,738995
+Trabajo,g169,"Afiliaciones al régimen general de la S.S. según ubicación de la cuenta de cotización. Por tamaño de la cuenta",t185,"De 250 y más trabajadores",f227,"06/2023 (p)",,"Idescat, a partir dels fitxers d'afiliacions i comptes de cotització de la Tresoreria General de la Seguretat Social.",444990,510315,1002775
+Trabajo,g169,"Afiliaciones al régimen general de la S.S. según ubicación de la cuenta de cotización. Por tamaño de la cuenta",t185,Total,f286,"06/2023 (p)",,"Idescat, a partir dels fitxers d'afiliacions i comptes de cotització de la Tresoreria General de la Seguretat Social.",1034355,1197020,3039190
+Trabajo,g169,"Cuentas de cotización",t186,Total,f239,"06/2023 (p)",,"Idescat, a partir dels fitxers d'afiliacions i comptes de cotització de la Tresoreria General de la Seguretat Social.",70482,83829,247855
+Trabajo,g169,"Pensiones contributivas de la Seguridad Social. Diciembre",t209,Total,f375,2021,,"Idescat, a partir de datos del Instituto Nacional de la Seguridad Social.",391660,538887,1726137
+Trabajo,g169,"Pensiones contributivas de la Seguridad Social. Diciembre",t209,"Pensión media",f376,2021,euros,"Idescat, a partir de datos del Instituto Nacional de la Seguridad Social.",1217.4,1180.05,1090.78
+Trabajo,g169,"Pensionistas de la Seguridad Social. Por sexo. Diciembre",t212,Hombres,f382,2021,,"Idescat, a partir de datos del Instituto Nacional de la Seguridad Social.",153134,218084,735383
+Trabajo,g169,"Pensionistas de la Seguridad Social. Por sexo. Diciembre",t212,Mujeres,f383,2021,,"Idescat, a partir de datos del Instituto Nacional de la Seguridad Social.",190771,257073,783019
+Trabajo,g169,"Pensionistas de la Seguridad Social. Por sexo. Diciembre",t212,Total,f384,2021,,"Idescat, a partir de datos del Instituto Nacional de la Seguridad Social.",343905,475157,1518402
+Trabajo,g169,"Paro registrado. Por sectores",t188,Agricultura,f243,2022,"medias anuales","Departamento de Empresa y Trabajo.",261.2,408.8,7259.1
+Trabajo,g169,"Paro registrado. Por sectores",t188,Industria,f303,2022,"medias anuales","Departamento de Empresa y Trabajo.",4431.2,7671.1,39692.7
+Trabajo,g169,"Paro registrado. Por sectores",t188,Construcción,f304,2022,"medias anuales","Departamento de Empresa y Trabajo.",3633.1,6802.3,27406.5
+Trabajo,g169,"Paro registrado. Por sectores",t188,Servicios,f305,2022,"medias anuales","Departamento de Empresa y Trabajo.",50248.4,75549.7,256753.3
+Trabajo,g169,"Paro registrado. Por sectores",t188,"Sin empleo anterior",f307,2022,"medias anuales","Departamento de Empresa y Trabajo.",3576.9,6268.5,23532.1
+Trabajo,g169,"Paro registrado. Por sectores",t188,Total,f308,2022,"medias anuales","Departamento de Empresa y Trabajo.",62150.8,96700.4,354643.7
+Trabajo,g169,"Paro registrado. Por sexo",t187,Hombres,f240,2022,"medias anuales","Departamento de Empresa y Trabajo.",27822.2,42969.2,151632.6
+Trabajo,g169,"Paro registrado. Por sexo",t187,Mujeres,f241,2022,"medias anuales","Departamento de Empresa y Trabajo.",34328.6,53731.2,203011.1
+Trabajo,g169,"Paro registrado. Por sexo",t187,Total,f242,2022,"medias anuales","Departamento de Empresa y Trabajo.",62150.8,96700.4,354643.7
+"Calidad de vida",g171,"Viviendas familiares. Por tipo",t116,Principales,f250,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",684078,926583,2944944
+"Calidad de vida",g171,"Viviendas familiares. Por tipo",t116,Secundarias,f119,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",38769,42990,470081
+"Calidad de vida",g171,"Viviendas familiares. Por tipo",t116,Vacías,f120,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",88259,109679,448356
+"Calidad de vida",g171,"Viviendas familiares. Por tipo",t116,Total,f122,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",811106,1079252,3863381
+"Calidad de vida",g171,"Viviendas familiares principales. Por régimen de tenencia",t124,"De propiedad",f126,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",437631,624888,2188657
+"Calidad de vida",g171,"Viviendas familiares principales. Por régimen de tenencia",t124,"De alquiler",f128,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",205912,251347,582701
+"Calidad de vida",g171,"Viviendas familiares principales. Por régimen de tenencia",t124,"Otra forma",f130,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",40534,50348,173586
+"Calidad de vida",g171,"Viviendas familiares principales. Por régimen de tenencia",t124,Total,f131,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",684078,926583,2944944
+"Calidad de vida",g171,"Viviendas familiares principales. Por superficie útil",t177,"Hasta 60 m²",f189,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",192917,272366,538966
+"Calidad de vida",g171,"Viviendas familiares principales. Por superficie útil",t177,"De 61 a 90 m²",f190,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",348922,484479,1476187
+"Calidad de vida",g171,"Viviendas familiares principales. Por superficie útil",t177,"De 91 a 120 m²",f191,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",96794,118656,560379
+"Calidad de vida",g171,"Viviendas familiares principales. Por superficie útil",t177,"De 121 y más m²",f192,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",45445,51083,369412
+"Calidad de vida",g171,"Viviendas familiares principales. Por superficie útil",t177,Total,f193,2011,,"Idescat, a partir del Censo de población y viviendas del INE.",684078,926583,2944944
+"Calidad de vida",g171,"Índice socioeconómico territorial (IST). Índice Cataluña=100",t213,"Índice socioeconómico territorial",f385,2020,"índice Cataluña=100","Idescat. Índice socioeconómico territorial",107.1,101.7,100.0
+"Macromagnitudes · Finanzas públicas",g163,"Producto interior bruto (Revisión estadística 2019)",t1,PIB,f2,"2021 (a) (p)","millones de euros",Idescat.,75430.4,,244310.3
+"Macromagnitudes · Finanzas públicas",g163,"Producto interior bruto (Revisión estadística 2019)",t1,"PIB por habitante",f3,"2021 (a) (p)","miles de euros",Idescat.,46.0,,31.6
+"Macromagnitudes · Finanzas públicas",g163,"Producto interior bruto (Revisión estadística 2019)",t1,"PIB por habitante",f4,"2021 (a) (p)","índice Cataluña=100",Idescat.,145.9,,100.0
+"Macromagnitudes · Finanzas públicas",g163,"Valor añadido bruto (Revisión estadística 2019). Por sectores",t178,Agricultura,f194,2020,"millones de euros",Idescat.,20.9,21.2,2477.6
+"Macromagnitudes · Finanzas públicas",g163,"Valor añadido bruto (Revisión estadística 2019). Por sectores",t178,Industria,f195,2020,"millones de euros",Idescat.,5370.8,6588.0,40776.9
+"Macromagnitudes · Finanzas públicas",g163,"Valor añadido bruto (Revisión estadística 2019). Por sectores",t178,Construcción,f196,2020,"millones de euros",Idescat.,2454.8,3179.4,10855.5
+"Macromagnitudes · Finanzas públicas",g163,"Valor añadido bruto (Revisión estadística 2019). Por sectores",t178,Servicios,f197,2020,"millones de euros",Idescat.,56789.6,66701.9,153704.6
+"Macromagnitudes · Finanzas públicas",g163,"Valor añadido bruto (Revisión estadística 2019). Por sectores",t178,Total,f251,2020,"millones de euros",Idescat.,64636.2,76490.6,207814.6
+"Macromagnitudes · Finanzas públicas",g163,"Valor añadido bruto (Revisión estadística 2019). Industria. Por ramas",t180,"Industrias extractivas, energía, agua y residuos",f364,2020,"millones de euros",Idescat.,2407.5,2695.1,6320.9
+"Macromagnitudes · Finanzas públicas",g163,"Valor añadido bruto (Revisión estadística 2019). Industria. Por ramas",t180,"Alimentación, textil, madera, artes gráfiques, química y caucho",f365,2020,"millones de euros",Idescat.,1686.9,2186.4,20440.4
+"Macromagnitudes · Finanzas públicas",g163,"Valor añadido bruto (Revisión estadística 2019). Industria. Por ramas",t180,"Metalurgia, maquinaria, material eléctrico y de transporte",f207,2020,"millones de euros",Idescat.,1276.4,1706.5,14015.6
+"Macromagnitudes · Finanzas públicas",g163,"Valor añadido bruto (Revisión estadística 2019). Industria. Por ramas",t180,Total,f208,2020,"millones de euros",Idescat.,5370.8,6588.0,40776.9
+"Macromagnitudes · Finanzas públicas",g163,"Valor añadido bruto (Revisión estadística 2019). Servicios. Por ramas",t181,Comercio,f209,2020,"millones de euros",Idescat.,7333.5,9532.6,27117.3
+"Macromagnitudes · Finanzas públicas",g163,"Valor añadido bruto (Revisión estadística 2019). Servicios. Por ramas",t181,"Transporte, información y comunicaciones",f211,2020,"millones de euros",Idescat.,8557.5,9319.7,17458.9
+"Macromagnitudes · Finanzas públicas",g163,"Valor añadido bruto (Revisión estadística 2019). Servicios. Por ramas",t181,Hostelería,f210,2020,"millones de euros",Idescat.,2445.7,2772.9,7477.6
+"Macromagnitudes · Finanzas públicas",g163,"Valor añadido bruto (Revisión estadística 2019). Servicios. Por ramas",t181,"Act. financieras y seguros",f212,2020,"millones de euros",Idescat.,2810.4,3226.0,7407.9
+"Macromagnitudes · Finanzas públicas",g163,"Valor añadido bruto (Revisión estadística 2019). Servicios. Por ramas",t181,"Act. inmobiliarias, técnicas y administrativas",f213,2020,"millones de euros",Idescat.,18919.2,22020.6,48726.0
+"Macromagnitudes · Finanzas públicas",g163,"Valor añadido bruto (Revisión estadística 2019). Servicios. Por ramas",t181,"Administración pública y otros servicios",f214,2020,"millones de euros",Idescat.,16723.3,19830.1,45516.8
+"Macromagnitudes · Finanzas públicas",g163,"Valor añadido bruto (Revisión estadística 2019). Servicios. Por ramas",t181,Total,f253,2020,"millones de euros",Idescat.,56789.6,66701.9,153704.6
+"Macromagnitudes · Finanzas públicas",g163,"Renta familiar disponible bruta. Revisión estadística 2019",t5,RFDB,f6,"2020 (p)","miles de euros",Idescat.,34394085,44350125,135705727
+"Macromagnitudes · Finanzas públicas",g163,"Renta familiar disponible bruta. Revisión estadística 2019",t5,"RFDB por habitante",f7,"2020 (p)","miles de euros",Idescat.,20.9,19.4,17.6
+"Macromagnitudes · Finanzas públicas",g163,"Renta familiar disponible bruta. Revisión estadística 2019",t5,"RFDB por habitante",f8,"2020 (p)","índice Cataluña=100",Idescat.,119.2,110.4,100.0
+"Macromagnitudes · Finanzas públicas",g163,"Impuesto de bienes inmuebles urbanos (IBI)",t179,"Número de recibos",f198,2022,,"Idescat, a partir de los datos de la Dirección General de Catastro.",1160255,1564746,5932460
+"Macromagnitudes · Finanzas públicas",g163,"Impuesto de bienes inmuebles urbanos (IBI)",t179,"Base imponible por recibo",f199,2022,euros,"Idescat, a partir de los datos de la Dirección General de Catastro.",103918,91144,70362
+"Macromagnitudes · Finanzas públicas",g163,"Impuesto de bienes inmuebles urbanos (IBI)",t179,"Cuota íntegra por recibo",f200,2022,euros,"Idescat, a partir de los datos de la Dirección General de Catastro.",680,609,497
+"Macromagnitudes · Finanzas públicas",g163,"Impuesto sobre la renta de las personas físicas (IRPF)",t9,"Base imponible general por declarante",f10,2020,euros,"Idescat, a partir de los datos de la Agencia Estatal de Administración Tributaria.",29043,26925,24568
+"Macromagnitudes · Finanzas públicas",g163,"Impuesto sobre la renta de las personas físicas (IRPF)",t9,"Cuota resultante de la autoliquidación por declarante",f11,2020,euros,"Idescat, a partir de los datos de la Agencia Estatal de Administración Tributaria.",9275,8315,7029
+"Sectores económicos",g170,"Superficie agrícola utilizada (SAU)",t132,"Tierras labradas",f133,2020,hectáreas,,53,88,800833
+"Sectores económicos",g170,"Superficie agrícola utilizada (SAU)",t132,"Pastos permanentes",f134,2020,hectáreas,,27,53,291383
+"Sectores económicos",g170,"Superficie agrícola utilizada (SAU)",t132,Total,f345,2020,hectáreas,,80,141,1092215
+"Sectores económicos",g170,"Tierras labradas. Por tipo de cultivo",t199,"Cereales para grano",f391,2020,hectáreas,,0,12,360408
+"Sectores económicos",g170,"Tierras labradas. Por tipo de cultivo",t199,"Cultivos cosechados en verde",f392,2020,hectáreas,,0,0,79907
+"Sectores económicos",g170,"Tierras labradas. Por tipo de cultivo",t199,"Otros cultivos herbáceos",f393,2020,hectáreas,,13,18,48347
+"Sectores económicos",g170,"Tierras labradas. Por tipo de cultivo",t199,Barbechos,f346,2020,hectáreas,,0,8,38416
+"Sectores económicos",g170,"Tierras labradas. Por tipo de cultivo",t199,"Frutales al aire libre",f347,2020,hectáreas,,11,13,106030
+"Sectores económicos",g170,"Tierras labradas. Por tipo de cultivo",t199,Olivar,f348,2020,hectáreas,,27,27,100123
+"Sectores económicos",g170,"Tierras labradas. Por tipo de cultivo",t199,Viñedo,f349,2020,hectáreas,,1,6,59533
+"Sectores económicos",g170,"Tierras labradas. Por tipo de cultivo",t199,"Otros cultivos leñosos",f350,2020,hectáreas,,0,0,7111
+"Sectores económicos",g170,"Tierras labradas. Por tipo de cultivo",t199,"Cultivos en invernadero",f394,2020,hectáreas,,2,3,752
+"Sectores económicos",g170,"Tierras labradas. Por tipo de cultivo",t199,"Huertos para consumo propio",f395,2020,hectáreas,,0,0,206
+"Sectores económicos",g170,"Tierras labradas. Por tipo de cultivo",t199,Total,f351,2020,hectáreas,,53,88,800833
+"Sectores económicos",g170,"Explotaciones agrarias",t216,"Explotaciones con SAU",f396,2020,,,27,41,53903
+"Sectores económicos",g170,"Explotaciones agrarias",t216,"Explotaciones con ganadería",f397,2020,,,0,0,10890
+"Sectores económicos",g170,"Cabezas de ganado. Por especies",t140,Bovinas,f141,2020,,,0,0,676097
+"Sectores económicos",g170,"Cabezas de ganado. Por especies",t140,Ovinas,f142,2020,,,0,0,488771
+"Sectores económicos",g170,"Cabezas de ganado. Por especies",t140,Cabrías,f252,2020,,,0,0,69820
+"Sectores económicos",g170,"Cabezas de ganado. Por especies",t140,Porcinas,f144,2020,,,0,0,8192796
+"Sectores económicos",g170,"Cabezas de ganado. Por especies",t140,Aves,f145,2020,,,0,0,42544012
+"Sectores económicos",g170,"Cabezas de ganado. Por especies",t140,"Conejas madres",f146,2020,,,0,0,138400
+"Sectores económicos",g170,"Cabezas de ganado. Por especies",t140,Equinas,f147,2020,,,0,0,13380
+"Sectores económicos",g170,"Construcción de viviendas",t12,"Viviendas iniciadas de protección oficial",f13,2022,,"Departament de Drets Socials",514,621,1530
+"Sectores económicos",g170,"Construcción de viviendas",t12,"Viviendas iniciadas",f14,2022,,"Departament de Drets Socials",2518,3961,16311
+"Sectores económicos",g170,"Alojamientos turísticos",t182,Hoteles,f215,2022,,"Idescat, a partir de los datos del Departamento de Empresa y Trabajo.",745,787,3120
+"Sectores económicos",g170,"Alojamientos turísticos",t182,"Plazas de hoteles",f216,2022,,"Idescat, a partir de los datos del Departamento de Empresa y Trabajo.",82038,88174,323064
+"Sectores económicos",g170,"Alojamientos turísticos",t182,Campings,f217,2022,,"Idescat, a partir de los datos del Departamento de Empresa y Trabajo.",0,0,353
+"Sectores económicos",g170,"Alojamientos turísticos",t182,"Plazas de campings",f218,2022,,"Idescat, a partir de los datos del Departamento de Empresa y Trabajo.",0,0,270342
+"Sectores económicos",g170,"Alojamientos turísticos",t182,"Turismo rural",f219,2022,,"Idescat, a partir de los datos del Departamento de Empresa y Trabajo.",0,0,2588
+"Sectores económicos",g170,"Alojamientos turísticos",t182,"Plazas de turismo rural",f220,2022,,"Idescat, a partir de los datos del Departamento de Empresa y Trabajo.",0,0,20963
+"Sectores económicos",g170,"Parque de vehículos",t18,Turismos,f19,2021,,"Idescat, a partir de datos de la DGT.",537077,745789,3524212
+"Sectores económicos",g170,"Parque de vehículos",t18,Motocicletas,f325,2021,,"Idescat, a partir de datos de la DGT.",253690,312065,901489
+"Sectores económicos",g170,"Parque de vehículos",t18,"Vehículos industriales",f272,2021,,"Idescat, a partir de datos de la DGT.",94294,130706,764171
+"Sectores económicos",g170,"Parque de vehículos",t18,Otros,f326,2021,,"Idescat, a partir de datos de la DGT.",18512,25001,176896
+"Sectores económicos",g170,"Parque de vehículos",t18,Total,f163,2021,,"Idescat, a partir de datos de la DGT.",903573,1213561,5366768
+"Medio ambiente",g205,"Residuos municipales",t204,"Generación per cápita",f366,2021,kg/hab./día,"Agència de Residus de Catalunya.",1.22,1.20,1.42
+"Medio ambiente",g205,"Residuos municipales",t204,"Recogida selectiva",f368,2021,%,"Agència de Residus de Catalunya.",40.6,37.0,46.7
+"Medio ambiente",g205,"Residuos industriales",t207,"Establecimientos con declaración anual de residuos",f371,2021,,"Agència de Residus de Catalunya.",791,1421,15622
+"Medio ambiente",g205,"Residuos industriales",t207,"Generación de residuos",f369,2021,toneladas,"Agència de Residus de Catalunya.",159883.13,213094.85,3823878.74

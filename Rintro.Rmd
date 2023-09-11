@@ -1,4 +1,9 @@
-# What is R ?
+# R
+
+<img src="images/R_logo.png" alt="rstudio check packages" width="300"/>
+
+
+## What is R ?
 
 * Programming language and environment for **data manipulation**, **statistical computing**, and **graphical display**.
 
@@ -15,7 +20,41 @@
 * Very active community of developers and users!
 	+ Many resources and forums available
 
-* Access through a command-line interpreter:
-![](images/rterminal.png "R command line")
+## Functions & packages
 
+### Functions
 
+A function in R is a piece of code that takes an input and/or some parameters, processes some calculation, and gives the user some output.
+
+For example: the **mean()** function would take a vector / series of numbers as an input, calculate and output their average.
+
+### Packages
+
+A package in R stores, in standardized format, a set of functions, data and documentation.
+
+They are developed and shared by the community, and vary in size and complexity.
+
+Packages are stored in a **library**.
+
+<img src="images/R_packages_logos.png" alt="rstudio logo" width="500"/>
+
+[source](https://www.mitchelloharawild.com/blog/2018-07-10-hexwall_files/figure-html/final-1.png)
+
+#### The "tidyverse"
+
+*The [tidyverse](https://www.tidyverse.org/) is an opinionated collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures.*
+
+<img src="images/R_packages_tidyverse.png" alt="rstudio logo" width="700"/>
+
+[source](hhttps://ajsmit.github.io/Intro_R_Official/tidy.html)
+
+**Why do we use the tidyverse packages in this course?**
+
+* Easier to understand / more intuitive vocabulary.
+* Uniform across data manipulation and visualization.
+
+In this course, we will use in particular, and in that order:
+
+* [{readr}](https://readr.tidyverse.org/) for importing / exporting files.
+* [{ggplot2}](https://ggplot2.tidyverse.org/) for data visualization.
+* [{tidyr}](https://tidyr.tidyverse.org/) and [{dplyr}](https://dplyr.tidyverse.org/) for (simple) data manipulation and selection.

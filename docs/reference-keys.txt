@@ -3,7 +3,12 @@ setup
 install-r-and-rstudioposit
 install-r-packages
 check-setup
+r
 what-is-r
+functions-packages
+functions
+packages
+the-tidyverse
 what-is-rstudio-posit
 rstudio-interface
 paths-and-directories
