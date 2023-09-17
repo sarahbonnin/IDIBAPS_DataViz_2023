@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>6.3 Objects in R | Data visualization with R and ggplot2: from data to publication-quality graphics</title>
-  <meta name="description" content="6.3 Objects in R | Data visualization with R and ggplot2: from data to publication-quality graphics" />
+  <title>6.2 Objects in R | Data visualization with R and ggplot2: from data to publication-quality graphics</title>
+  <meta name="description" content="6.2 Objects in R | Data visualization with R and ggplot2: from data to publication-quality graphics" />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="6.3 Objects in R | Data visualization with R and ggplot2: from data to publication-quality graphics" />
+  <meta property="og:title" content="6.2 Objects in R | Data visualization with R and ggplot2: from data to publication-quality graphics" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="6.3 Objects in R | Data visualization with R and ggplot2: from data to publication-quality graphics" />
+  <meta name="twitter:title" content="6.2 Objects in R | Data visualization with R and ggplot2: from data to publication-quality graphics" />
   
   
   
@@ -23,14 +23,14 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2023-09-11" />
+<meta name="date" content="2023-09-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="simple-calculations.html"/>
+<link rel="prev" href="arithmetic-operators.html"/>
 <link rel="next" href="assignment-operators.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -159,16 +159,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4" data-path="what-is-rstudio-posit.html"><a href="what-is-rstudio-posit.html"><i class="fa fa-check"></i><b>4</b> What is RStudio (Posit)?</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="rstudio-interface.html"><a href="rstudio-interface.html"><i class="fa fa-check"></i><b>4.1</b> RStudio interface</a></li>
+<li class="chapter" data-level="4.2" data-path="the-r-console.html"><a href="the-r-console.html"><i class="fa fa-check"></i><b>4.2</b> The R console</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>5</b> Paths and directories</a></li>
+<li class="chapter" data-level="5" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>5</b> Paths and directories</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="path-and-home-directory.html"><a href="path-and-home-directory.html"><i class="fa fa-check"></i><b>5.1</b> Path and home directory</a></li>
+<li class="chapter" data-level="5.2" data-path="create-course-directory.html"><a href="create-course-directory.html"><i class="fa fa-check"></i><b>5.2</b> Create course directory</a></li>
+</ul></li>
 <li class="chapter" data-level="6" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>6</b> R basics</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>6.1</b> Arithmetic operators</a></li>
-<li class="chapter" data-level="6.2" data-path="simple-calculations.html"><a href="simple-calculations.html"><i class="fa fa-check"></i><b>6.2</b> Simple calculations</a></li>
-<li class="chapter" data-level="6.3" data-path="objects-in-r.html"><a href="objects-in-r.html"><i class="fa fa-check"></i><b>6.3</b> Objects in R</a></li>
-<li class="chapter" data-level="6.4" data-path="assignment-operators.html"><a href="assignment-operators.html"><i class="fa fa-check"></i><b>6.4</b> Assignment operators</a></li>
-<li class="chapter" data-level="6.5" data-path="assigning-data-to-an-object.html"><a href="assigning-data-to-an-object.html"><i class="fa fa-check"></i><b>6.5</b> Assigning data to an object</a></li>
+<li class="chapter" data-level="6.2" data-path="objects-in-r.html"><a href="objects-in-r.html"><i class="fa fa-check"></i><b>6.2</b> Objects in R</a></li>
+<li class="chapter" data-level="6.3" data-path="assignment-operators.html"><a href="assignment-operators.html"><i class="fa fa-check"></i><b>6.3</b> Assignment operators</a></li>
+<li class="chapter" data-level="6.4" data-path="assigning-data-to-an-object.html"><a href="assigning-data-to-an-object.html"><i class="fa fa-check"></i><b>6.4</b> Assigning data to an object</a></li>
 </ul></li>
+<li class="chapter" data-level="7" data-path="import-data-read-files.html"><a href="import-data-read-files.html"><i class="fa fa-check"></i><b>7</b> Import data / read files</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/sarahbonnin/" target="blank">Published with bookdown</a></li>
 
@@ -189,19 +194,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="objects-in-r" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> Objects in R<a href="objects-in-r.html#objects-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Everything that stores any kind of data in R is an <strong>object</strong>:
-<img src="images/objects_box.png" alt="rstudio logo" width="300"/></p>
-<p>#R syntax
-<img src="images/rsyntax1.png" alt="rstudio logo" width="350"/></p>
+<div id="objects-in-r" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Objects in R<a href="objects-in-r.html#objects-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Everything that stores any kind of data in R is an <strong>object</strong>:</p>
+<p><img src="images/R_basics_objects.png" alt="rstudio logo" width="350"/></p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="simple-calculations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="arithmetic-operators.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="assignment-operators.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

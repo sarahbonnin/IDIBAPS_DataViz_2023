@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Part6 R basics | Data visualization with R and ggplot2: from data to publication-quality graphics</title>
-  <meta name="description" content="Part6 R basics | Data visualization with R and ggplot2: from data to publication-quality graphics" />
+  <title>Part7 Import data / read files | Data visualization with R and ggplot2: from data to publication-quality graphics</title>
+  <meta name="description" content="Part7 Import data / read files | Data visualization with R and ggplot2: from data to publication-quality graphics" />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Part6 R basics | Data visualization with R and ggplot2: from data to publication-quality graphics" />
+  <meta property="og:title" content="Part7 Import data / read files | Data visualization with R and ggplot2: from data to publication-quality graphics" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Part6 R basics | Data visualization with R and ggplot2: from data to publication-quality graphics" />
+  <meta name="twitter:title" content="Part7 Import data / read files | Data visualization with R and ggplot2: from data to publication-quality graphics" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="create-course-directory.html"/>
-<link rel="next" href="arithmetic-operators.html"/>
+<link rel="prev" href="assigning-data-to-an-object.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -194,16 +194,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="r-basics" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">Part6</span> R basics<a href="r-basics.html#r-basics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="import-data-read-files" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Part7</span> Import data / read files<a href="import-data-read-files.html#import-data-read-files" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>We will learn how to read a file in R using the {readr} package (part of the {tidyverse}, that was previously installed).</p>
+<p>First, let’s copy locally a few files that we will need for this workshop.</p>
+<p>Please go to:</p>
+<p>“”</p>
+<p>And copy this archive in the course directory</p>
+<p>Data taken from:
+<a href="https://ajuntament.barcelona.cat/estadistica/castella/Estadistiques_per_temes/Poblacio_i_demografia/Documents_relacionats/pobest/a2023/part1/index.htm" class="uri">https://ajuntament.barcelona.cat/estadistica/castella/Estadistiques_per_temes/Poblacio_i_demografia/Documents_relacionats/pobest/a2023/part1/index.htm</a></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="import-data-read-files.html#cb11-1" tabindex="-1"></a>test <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">&quot;stats_countries_barcelona_2013-2023.csv&quot;</span>)</span></code></pre></div>
+<pre><code>## Rows: 185 Columns: 13
+## ── Column specification ─────────────────────────────────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot;
+## chr  (2): Country, Continent
+## dbl (11): 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="import-data-read-files.html#cb13-1" tabindex="-1"></a><span class="co"># long format</span></span>
+<span id="cb13-2"><a href="import-data-read-files.html#cb13-2" tabindex="-1"></a>test_long <span class="ot">&lt;-</span> tidyr<span class="sc">::</span><span class="fu">pivot_longer</span>(test, <span class="at">cols=</span><span class="sc">-</span><span class="fu">c</span>(Country, Continent), <span class="at">names_to=</span><span class="st">&quot;Year&quot;</span>, <span class="at">values_to=</span><span class="st">&quot;Count&quot;</span>)</span>
+<span id="cb13-3"><a href="import-data-read-files.html#cb13-3" tabindex="-1"></a>test_sub <span class="ot">&lt;-</span> test_long <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Francia&quot;</span>, <span class="st">&quot;Italia&quot;</span>, <span class="st">&quot;Alemania&quot;</span>))</span>
+<span id="cb13-4"><a href="import-data-read-files.html#cb13-4" tabindex="-1"></a><span class="fu">ggplot</span>(test_sub, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>Count, <span class="at">color=</span>Continent)) <span class="sc">+</span> <span class="fu">geom_line</span>()</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="import-data-read-files.html#cb14-1" tabindex="-1"></a><span class="fu">ggplot</span>(test_sub, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>Count, <span class="at">fill=</span>Country)) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>)</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-8-2.png" width="672" /></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="import-data-read-files.html#cb15-1" tabindex="-1"></a><span class="fu">ggplot</span>(test_sub, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>Count, <span class="at">fill=</span>Country)) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">position=</span><span class="st">&quot;dodge&quot;</span>)</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-8-3.png" width="672" /></p>
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="create-course-directory.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="arithmetic-operators.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="assigning-data-to-an-object.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

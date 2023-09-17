@@ -11,7 +11,8 @@ rmd_files: ["index.Rmd",
            "Rintro.Rmd", 
           "rstudio.Rmd", 
           "pathdirectories.Rmd", 
-          "Rbasics.Rmd" 
+          "Rbasics.Rmd",
+          "dataimport.Rmd"
           ]
 output:
   bookdown::gitbook:

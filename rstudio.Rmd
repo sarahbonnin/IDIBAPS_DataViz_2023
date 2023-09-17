@@ -16,3 +16,32 @@
 	+ bottom-right: tree of folders and files, plots/graphs window, packages, help window, viewer, presentation
 
 <img src="images/rstudio_interface.png" alt="rstudio interface" width="1000"/>
+
+## The R console
+
+The R console (bottom-left panel) is where the magic happens.
+
+It is where the user/programmer/you will interact with R.
+
+Let's give it a try. Type (or copy-paste) the following in the console, and hit Enter/Return:
+
+```{r}
+getwd()
+```
+
+getwd() is a function. Note: you can detect functions because they use parenthesis/round brackets.
+
+Upon clicking Enter/Return, you are sending this function to the R kernel.
+
+What R returns is the response, after computing the function.
+
+The getwd() function provides your current working directory.
+
+Let's try to interact a bit more with the console: copy-paste the following, and hit Enter:
+
+```{r}
+7*3
+```
+
+R gives you the results of this simple multiplication.
+

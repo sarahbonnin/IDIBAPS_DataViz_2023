@@ -11,10 +11,13 @@ packages
 the-tidyverse
 what-is-rstudio-posit
 rstudio-interface
+the-r-console
 paths-and-directories
+path-and-home-directory
+create-course-directory
 r-basics
 arithmetic-operators
-simple-calculations
 objects-in-r
 assignment-operators
 assigning-data-to-an-object
+import-data-read-files

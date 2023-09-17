@@ -10,40 +10,19 @@
 |     *     | multiplication|
 |  ^ or **  | exponential   |
 
-In the R terminal:
+In the R terminal, as you have seen before, you can type the following:
+
 ```{r}
 10 - 2
 ```
-Type **Enter** for R to interpret the command.
 
-## Simple calculations
-
-Given the following table:
-
-| type of RNA | Total   |
-| :---------: |:-------:|
-| mRNA        | 329     |
-| miRNA       | 45      |
-| snoRNA      | 12      |
-| lncRNA      | 28      |
-
-
-Calculate the total number of RNAs reported in the table:
-```{r}
-329 + 45 + 12 + 28
-```
-What is the percentage of miRNA?
-```{r}
-( 45 / 414 ) * 100
-```
+And hit **Enter** for R to interpret the command, and give you the output.
 
 ## Objects in R
 
 Everything that stores any kind of data in R is an **object**:
-<img src="images/objects_box.png" alt="rstudio logo" width="300"/>
 
-#R syntax
-<img src="images/rsyntax1.png" alt="rstudio logo" width="350"/>
+<img src="images/R_basics_objects.png" alt="rstudio logo" width="350"/>
 
 ## Assignment operators
 
@@ -54,8 +33,13 @@ Everything that stores any kind of data in R is an **object**:
 
 ## Assigning data to an object
 
-* Assigning a value to the object **B**:
+* Assigning a value to the object named **B**:
+
+Copy-paste the following in the console, and hit Enter.
+
+```{r}
 B <- 10
+```
 
 * Reassigning: modifying the content of an object:
 ```{r, eval=FALSE}
@@ -69,6 +53,8 @@ B <- B + 10
 
 <span style="color:red">**B changed !!**</span><br>
 
-* You can see the objects you created in the upper right panel in RStudio: the environment.
+* You can see the objects you created in the upper right panel in RStudio that is, the environment.
+
+
 
 
