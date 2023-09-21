@@ -8,6 +8,7 @@ what-is-r
 functions-packages
 functions
 packages
+what-are-packages
 the-tidyverse
 what-is-rstudio-posit
 rstudio-interface

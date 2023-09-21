@@ -76,6 +76,10 @@ If no error (in red) appear in the console (bottom-left panel), installation sho
 
 Copy-paste the following line of code in the console (bottom-left panel) and click on Enter / Return. You should be able to see the scatter plot appear on the "Plots" tab in the bottom-right panel !
 
+```{r, eval=T, echo=F, include=F}
+library(tidyverse)
+```
+
 ```{r, eval=T, echo=T, cache=TRUE}
 diamonds %>% 
   dplyr::select(carat, price, clarity) %>%  

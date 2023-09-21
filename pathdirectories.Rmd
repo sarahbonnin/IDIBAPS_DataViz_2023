@@ -5,9 +5,19 @@
 * The path of a file/directory is its **location/address** in the file system.
 
 * Your home directory is the one that hosts the **user (you) data**: it should be similar to all operating system, for example:
-  * */users/sbonnin* (Linux)
-  * */Users/sbonnin* (macOS)
-  * *C:\Users\sbonnin* (Windows)
+  - */users/sbonnin* (Linux)
+  - */Users/sbonnin* (macOS)
+  - *C:\\Users\\sbonnin* (Windows)
+  
+Starting "/" or "\\" is called the **root** directory. Directories branch downwards from the root directory, and can contain both files and subdirectories.
+
+In the examples above, sbonnin is a subdirectory of users (or Users).
+
+Example of a *tree* / organization of directories:
+
+<img src="images/path_tree.png" alt="rstudio logo" width="600"/>
+
+
 
 ## Create course directory
 .
