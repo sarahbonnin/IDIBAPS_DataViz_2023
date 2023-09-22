@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="fetch-workshop-files.html"/>
-
+<link rel="next" href="ggplot2.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -178,6 +178,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="fetch-workshop-files.html"><a href="fetch-workshop-files.html"><i class="fa fa-check"></i><b>7.1</b> Fetch workshop files</a></li>
 <li class="chapter" data-level="7.2" data-path="import-read-in-data.html"><a href="import-read-in-data.html"><i class="fa fa-check"></i><b>7.2</b> Import / read in data</a></li>
 </ul></li>
+<li class="chapter" data-level="8" data-path="ggplot2.html"><a href="ggplot2.html"><i class="fa fa-check"></i><b>8</b> ggplot2</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>8.1</b> Getting started</a></li>
+<li class="chapter" data-level="8.2" data-path="first-example-a-scatter-plot.html"><a href="first-example-a-scatter-plot.html"><i class="fa fa-check"></i><b>8.2</b> First example: a scatter plot</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="first-example-a-scatter-plot.html"><a href="first-example-a-scatter-plot.html#base-plot"><i class="fa fa-check"></i><b>8.2.1</b> Base plot</a></li>
+<li class="chapter" data-level="8.2.2" data-path="first-example-a-scatter-plot.html"><a href="first-example-a-scatter-plot.html#customize-the-points"><i class="fa fa-check"></i><b>8.2.2</b> Customize the points</a></li>
+<li class="chapter" data-level="8.2.3" data-path="first-example-a-scatter-plot.html"><a href="first-example-a-scatter-plot.html#add-more-layers"><i class="fa fa-check"></i><b>8.2.3</b> Add more layers</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="save-your-plot.html"><a href="save-your-plot.html"><i class="fa fa-check"></i><b>8.3</b> Save your plot</a></li>
+<li class="chapter" data-level="8.4" data-path="exercise.html"><a href="exercise.html"><i class="fa fa-check"></i><b>8.4</b> Exercise</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/sarahbonnin/" target="blank">Published with bookdown</a></li>
 
@@ -201,25 +213,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="import-read-in-data" class="section level2 hasAnchor" number="7.2">
 <h2><span class="header-section-number">7.2</span> Import / read in data<a href="import-read-in-data.html#import-read-in-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Let’s now import the content of a first file in our environment:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="import-read-in-data.html#cb12-1" tabindex="-1"></a>test <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/population_age_group_per_sex_long_format.csv&quot;</span>)</span></code></pre></div>
-<p>The content of file “population_age_group_per_sex_long_format.csv” is now stored in object “test”.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="import-read-in-data.html#cb12-1" tabindex="-1"></a>geneexp <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/expression_20genes.csv&quot;</span>)</span></code></pre></div>
+<p>The content of file “expression_20genes.csv” is now stored in the object named <strong>geneexp</strong>.</p>
 <p>The function also outputs some information about the data you are importing:</p>
-<p><img src="images/import_readr_console.png" alt="import zip" width="800"/></p>
+<p><img src="images/import_readr_console2.png" alt="import zip" width="700"/></p>
+<p>Such as that:</p>
 <ul>
-<li>The data contains 182880 rows (observations), and 5 columns (variables).</li>
+<li>The data contains 20 rows (observations), and 3 columns (variables).</li>
 <li>Out of these 5 columns:
 <ul>
-<li>3 contain characters (<span style="color: red;">chr</span>)</li>
+<li>1 contain characters (<span style="color: red;">chr</span>)</li>
 <li>2 contain numbers (<span style="color: green;">dbl</span> for “double”)</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="import-read-in-data.html#cb13-1" tabindex="-1"></a>test <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">&quot;files/stats_countries_barcelona_2013-2023.csv&quot;</span>)</span>
-<span id="cb13-2"><a href="import-read-in-data.html#cb13-2" tabindex="-1"></a><span class="co"># long format</span></span>
-<span id="cb13-3"><a href="import-read-in-data.html#cb13-3" tabindex="-1"></a>test_long <span class="ot">&lt;-</span> tidyr<span class="sc">::</span><span class="fu">pivot_longer</span>(test, <span class="at">cols=</span><span class="sc">-</span><span class="fu">c</span>(Country, Continent), <span class="at">names_to=</span><span class="st">&quot;Year&quot;</span>, <span class="at">values_to=</span><span class="st">&quot;Count&quot;</span>)</span>
-<span id="cb13-4"><a href="import-read-in-data.html#cb13-4" tabindex="-1"></a>test_sub <span class="ot">&lt;-</span> test_long <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Francia&quot;</span>, <span class="st">&quot;Italia&quot;</span>, <span class="st">&quot;Alemania&quot;</span>))</span>
-<span id="cb13-5"><a href="import-read-in-data.html#cb13-5" tabindex="-1"></a><span class="fu">ggplot</span>(test_sub, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>Count, <span class="at">color=</span>Continent)) <span class="sc">+</span> <span class="fu">geom_line</span>()</span>
-<span id="cb13-6"><a href="import-read-in-data.html#cb13-6" tabindex="-1"></a><span class="fu">ggplot</span>(test_sub, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>Count, <span class="at">fill=</span>Country)) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>)</span>
-<span id="cb13-7"><a href="import-read-in-data.html#cb13-7" tabindex="-1"></a><span class="fu">ggplot</span>(test_sub, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>Count, <span class="at">fill=</span>Country)) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">position=</span><span class="st">&quot;dodge&quot;</span>)</span></code></pre></div>
 
 </div>
 <!-- </div> -->
@@ -228,8 +234,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="fetch-workshop-files.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="fetch-workshop-files.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ggplot2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

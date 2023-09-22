@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2.3 Check setup | Data visualization with R and ggplot2: from data to publication-quality graphics</title>
-  <meta name="description" content="2.3 Check setup | Data visualization with R and ggplot2: from data to publication-quality graphics" />
+  <title>8.1 Getting started | Data visualization with R and ggplot2: from data to publication-quality graphics</title>
+  <meta name="description" content="8.1 Getting started | Data visualization with R and ggplot2: from data to publication-quality graphics" />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.3 Check setup | Data visualization with R and ggplot2: from data to publication-quality graphics" />
+  <meta property="og:title" content="8.1 Getting started | Data visualization with R and ggplot2: from data to publication-quality graphics" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.3 Check setup | Data visualization with R and ggplot2: from data to publication-quality graphics" />
+  <meta name="twitter:title" content="8.1 Getting started | Data visualization with R and ggplot2: from data to publication-quality graphics" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="install-r-packages.html"/>
-<link rel="next" href="r.html"/>
+<link rel="prev" href="ggplot2.html"/>
+<link rel="next" href="first-example-a-scatter-plot.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -210,27 +210,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="check-setup" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> Check setup<a href="check-setup.html#check-setup" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In order to make sure that the setup is successful, click again on tab “Packages” of the bottom-right panel, and <strong>tick packages that you just installed</strong>, like the “tidyverse package in that example:</p>
-<p><img src="images/setup_rstudio_check_packages.png" alt="rstudio check packages" width="1200"/></p>
-<p>If no error (in red) appear in the console (bottom-left panel), installation should be ok.</p>
-<p><strong>CHECK</strong></p>
-<p>Copy-paste the following line of code in the console (bottom-left panel) and click on Enter / Return. You should be able to see the scatter plot appear on the “Plots” tab in the bottom-right panel !</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="check-setup.html#cb1-1" tabindex="-1"></a>diamonds <span class="sc">%&gt;%</span> </span>
-<span id="cb1-2"><a href="check-setup.html#cb1-2" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(carat, price, clarity) <span class="sc">%&gt;%</span>  </span>
-<span id="cb1-3"><a href="check-setup.html#cb1-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>carat, <span class="at">y=</span>price, <span class="at">col=</span>clarity)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-
+<div id="getting-started" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Getting started<a href="getting-started.html#getting-started" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>All ggplots start with a <strong>base layer</strong> created with the <strong>ggplot()</strong> function. This is the base of what we will see during the course.</li>
+</ul>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="getting-started.html#cb13-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>dataframe, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>column1, <span class="at">y=</span>column2))</span></code></pre></div>
+<p><em>data</em> is the object that contains the data that we want to graph.</p>
+<p><em>column1</em> and <em>column2</em> are the names of columns that we want to represent on the graph. In this example, column1 will be plotted on the x-axis and column2 on the y-axis.</p>
+<p><em>The base layer is setting the grounds but NOT producing any plot yet</em>.</p>
+<ul>
+<li>Add a layer (with the <strong>+</strong> sign) that tells R what kind of plot you want to produce out of the data.</li>
+</ul>
 </div>
-<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="install-r-packages.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="ggplot2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="first-example-a-scatter-plot.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

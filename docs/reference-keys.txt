@@ -24,3 +24,13 @@ data-types
 import-data-read-files
 fetch-workshop-files
 import-read-in-data
+ggplot2
+getting-started
+first-example-a-scatter-plot
+base-plot
+customize-the-points
+add-more-layers
+ggtitle
+background
+save-your-plot
+exercise

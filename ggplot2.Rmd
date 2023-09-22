@@ -1,0 +1,158 @@
+# ggplot2
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(fig.width=5, fig.height=4,
+                      echo=TRUE, warning=FALSE, message=FALSE)
+```
+
+* Graphing package inspired by the **G**rammar of **G**raphics work of Leland Wilkinson.
+
+* Allows to compose graphs by combining independent **components / blocks / layers**.
+
+* Flexible, highly customizable.
+
+* Well documented.
+
+<img src="images/ggplot_plots_cscherer.png" alt="import zip" width="700"/>
+
+*image from https://www.cedricscherer.com/img/ggplot-tutorial/overview.png*
+
+
+## Getting started
+
+* All ggplots start with a **base layer** created with the **ggplot()** function. This is the base of what we will see during the course.
+
+```{r, eval=F, echo=TRUE}
+ggplot(data=dataframe, mapping=aes(x=column1, y=column2))
+```
+
+*data* is the object that contains the data that we want to graph.
+
+*column1* and *column2* are the names of columns that we want to represent on the graph. In this example, column1 will be plotted on the x-axis and column2 on the y-axis.
+
+*The base layer is setting the grounds but NOT producing any plot yet*.
+
+* Add a layer (with the **+** sign) that tells R what kind of plot you want to produce out of the data.
+
+## First example: a scatter plot
+
+### Base plot
+
+We can start from our **geneexp** object: we want to plot **sample1** on the x axis and **sample2** on the y axis.
+
+The base layer will be the following:
+
+```{r, eval=F}
+ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2))
+```
+
+Adding to this the layer / block called **geom_point** that will **tell ggplot to produce a scatter/point plot**:
+
+```{r, eval=T}
+# This line is a comment: a comment is not interpreted by R.
+# Example of a scatter plot: add the geom_point() layer
+ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) + 
+  geom_point()
+
+# Note that the new line is not necessary here
+```
+
+Your plot should appear in the "Plots" tab in the bottom-right panel.
+
+### Customize the points
+
+**geom_point()** also takes some parameters, including the color of the point, and their size:
+
+Color all points in red:
+
+```{r}
+ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) + 
+  geom_point(color="red")
+```
+
+Make points larger (size default is 1.5):
+
+```{r}
+ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) + 
+  geom_point(color="red", size=2.5)
+```
+
+You can also have different shapes for the points!
+
+This is done by setting the **shape** parameter in **geom_point()**.
+
+For example, triangles:
+
+```{r}
+ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) + 
+  geom_point(color="red", size=2.5, shape="triangle")
+```
+
+<img src="images/ggplot2_shape.png" alt="import zip" width="700"/>
+
+*Image from ggplot2 documentation*
+
+### Add more layers
+
+We can add more layers to the plot, using the same structure!
+
+#### ggtitle()
+
+For example, let's add a title using the **ggtitle()** layer:
+
+```{r}
+ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) + 
+  geom_point(color="red", size=2.5, shape="diamond") +
+  ggtitle(label="my first ggplot")
+
+```
+
+**label** is a parameter of **ggtitle()** function.
+
+#### Background
+
+Not a big fan of the grey background?
+This is the default "theme", but there are [more options](https://ggplot2.tidyverse.org/reference/ggtheme.html).
+
+For example:
+
+```{r}
+ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) + 
+  geom_point(color="red", size=2.5, shape="diamond") +
+  ggtitle(label="my first ggplot") +
+  theme_linedraw()
+```
+
+## Save your plot
+
+Before we dive into more graph types, let's save the current plot.
+
+In the "Plots" tab, click on "Export" and "Save as image":
+
+<img src="images/ggplot_save_image.png" alt="import zip" width="700"/>
+
+From that windows, you can:
+
+* Pick an image format between: PNG, JPEG, TIFF, BMP, SVG, EPS.
+* Choose where you want to **save the output file**
+* Choose the **file name**.
+* Set the dimensions, by either:
+  * Setting the Width and Height of the figure (in Pixels)
+  * Moving the graph manually (bottom-right corner of the plot) until you obtain the size and proportions that you want.
+
+## Exercise
+
+Time for our first exercise! 
+
+Staring from the same object genexp:
+
+* Create a scatter plot that shows sample2 on the x-axis and sample1 on the y-axis.
+* Change the point color to blue, and the point size to 2.
+* Change the point shape to "square cross"
+* Add the title of your choice.
+* Add a subtitle (wait, that's new!! Google "ggtitle subtitle" and see if you can find out!)
+* Save your plot as a JPEG file, in the course folder, with dimensions 600X600.
+
+
+
+

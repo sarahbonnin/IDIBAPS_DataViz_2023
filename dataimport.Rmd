@@ -31,20 +31,20 @@ The **path** to fetch the files is the following (remember that the first piece 
 Let's now import the content of a first file in our environment:
 
 ```{r, echo=T, eval=T, message=F, warning=F}
-datapopulation <- read_csv("DataViz_source_files-main/files/population_age_group_per_sex_long_format.csv")
+geneexp <- read_csv("DataViz_source_files-main/files/expression_20genes.csv")
 ```
 
-The content of file "population_age_group_per_sex_long_format.csv" is now stored in the object named **datapopulation**.
+The content of file "expression_20genes.csv" is now stored in the object named **geneexp**.
 
 The function also outputs some information about the data you are importing:
 
-<img src="images/import_readr_console.png" alt="import zip" width="800"/>
+<img src="images/import_readr_console2.png" alt="import zip" width="700"/>
 
 Such as that:
 
-* The data contains 182880 rows (observations), and 5 columns (variables).
+* The data contains 20 rows (observations), and 3 columns (variables).
 * Out of these 5 columns:
-  * 3 contain characters (<span style="color: red;">chr</span>)
+  * 1 contain characters (<span style="color: red;">chr</span>)
   * 2 contain numbers (<span style="color: green;">dbl</span> for "double")
 
 

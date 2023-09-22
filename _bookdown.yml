@@ -12,7 +12,8 @@ rmd_files: ["index.Rmd",
           "rstudio.Rmd", 
           "pathdirectories.Rmd", 
           "Rbasics.Rmd",
-          "dataimport.Rmd"
+          "dataimport.Rmd",
+          "ggplot2.Rmd"
           ]
 output:
   bookdown::gitbook:
