@@ -31,13 +31,13 @@ Let's give it a try. Type (or copy-paste) the following in the console, and hit 
 getwd()
 ```
 
-getwd() is a function. Reminder: you can detect functions because they use parenthesis/round brackets.
+getwd() is a function. Remember that functions are followed by **parenthesis/round brackets**.
 
 Upon clicking **Enter/Return**, you are asking the R kernel to **execute the function**.
 
 What R returns is the response/result, after computing the content of the code.
 
-The getwd() function provides your current working directory.
+The getwd() function outputs your current working directory.
 
 Let's try to interact a bit more with the console: copy-paste the following, and hit Enter/Return:
 

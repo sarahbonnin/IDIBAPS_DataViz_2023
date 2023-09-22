@@ -1,29 +1,50 @@
 # Import data / read files
 
-We will learn how to read a file in R using the {readr} package (part of the {tidyverse}, that was previously installed).
+We will learn how to **import the content of a file** in R using the {readr} package (part of the {tidyverse}, that was previously installed).
+
+## Fetch workshop files
 
 First, let's copy locally a few files that we will need for this workshop.
 
 Please go to:
-
-""
-
-And copy this archive in the course directory
+https://github.com/sarahbonnin/DataViz_source_files
 
 
-Data taken from:
-https://ajuntament.barcelona.cat/estadistica/castella/Estadistiques_per_temes/Poblacio_i_demografia/Documents_relacionats/pobest/a2023/part1/index.htm
+And download the ZIP archive, as follows:
+
+Click on <img src="images/import_github_code_button.png" alt="import zip" width="90"/> -> Download ZIP:
 
 
-```{r}
-test <- readr::read_csv("stats_countries_barcelona_2013-2023.csv")
-# long format
-test_long <- tidyr::pivot_longer(test, cols=-c(Country, Continent), names_to="Year", values_to="Count")
-test_sub <- test_long %>% filter(Country %in% c("Francia", "Italia", "Alemania"))
-ggplot(test_sub, aes(x=Year, y=Count, color=Continent)) + geom_line()
-ggplot(test_sub, aes(x=Year, y=Count, fill=Country)) + geom_bar(stat="identity")
-ggplot(test_sub, aes(x=Year, y=Count, fill=Country)) + geom_bar(stat="identity", position="dodge")
+<img src="images/import_github_zip.png" alt="import zip" width="600"/>
 
+
+Save the archive in the course folder previously created (**DataViz_2023**) and extract it (click right on the archive and you should see some extraction options).
+
+What is extracted from the archive is the "DataViz_source_files-main" folder, which in turns contains a "files" folder: this contains the files we need for the course.
+
+The **path** to fetch the files is the following (remember that the first piece is OS/user dependent):
+
+/users/sbonnin/**DataViz_source_files-main/files**
+
+## Import / read in data
+
+Let's now import the content of a first file in our environment:
+
+```{r, echo=T, eval=T, message=F, warning=F}
+datapopulation <- read_csv("DataViz_source_files-main/files/population_age_group_per_sex_long_format.csv")
 ```
+
+The content of file "population_age_group_per_sex_long_format.csv" is now stored in the object named **datapopulation**.
+
+The function also outputs some information about the data you are importing:
+
+<img src="images/import_readr_console.png" alt="import zip" width="800"/>
+
+Such as that:
+
+* The data contains 182880 rows (observations), and 5 columns (variables).
+* Out of these 5 columns:
+  * 3 contain characters (<span style="color: red;">chr</span>)
+  * 2 contain numbers (<span style="color: green;">dbl</span> for "double")
 
 

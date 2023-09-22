@@ -19,6 +19,8 @@ create-course-directory
 r-basics
 arithmetic-operators
 objects-in-r
-assignment-operators
 assigning-data-to-an-object
+data-types
 import-data-read-files
+fetch-workshop-files
+import-read-in-data

@@ -23,15 +23,15 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2023-09-21" />
+<meta name="date" content="2023-09-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="assigning-data-to-an-object.html"/>
-
+<link rel="prev" href="data-types.html"/>
+<link rel="next" href="fetch-workshop-files.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -170,10 +170,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="6.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>6.1</b> Arithmetic operators</a></li>
 <li class="chapter" data-level="6.2" data-path="objects-in-r.html"><a href="objects-in-r.html"><i class="fa fa-check"></i><b>6.2</b> Objects in R</a></li>
-<li class="chapter" data-level="6.3" data-path="assignment-operators.html"><a href="assignment-operators.html"><i class="fa fa-check"></i><b>6.3</b> Assignment operators</a></li>
-<li class="chapter" data-level="6.4" data-path="assigning-data-to-an-object.html"><a href="assigning-data-to-an-object.html"><i class="fa fa-check"></i><b>6.4</b> Assigning data to an object</a></li>
+<li class="chapter" data-level="6.3" data-path="assigning-data-to-an-object.html"><a href="assigning-data-to-an-object.html"><i class="fa fa-check"></i><b>6.3</b> Assigning data to an object</a></li>
+<li class="chapter" data-level="6.4" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>6.4</b> Data types</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="import-data-read-files.html"><a href="import-data-read-files.html"><i class="fa fa-check"></i><b>7</b> Import data / read files</a></li>
+<li class="chapter" data-level="7" data-path="import-data-read-files.html"><a href="import-data-read-files.html"><i class="fa fa-check"></i><b>7</b> Import data / read files</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="fetch-workshop-files.html"><a href="fetch-workshop-files.html"><i class="fa fa-check"></i><b>7.1</b> Fetch workshop files</a></li>
+<li class="chapter" data-level="7.2" data-path="import-read-in-data.html"><a href="import-read-in-data.html"><i class="fa fa-check"></i><b>7.2</b> Import / read in data</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/sarahbonnin/" target="blank">Published with bookdown</a></li>
 
@@ -196,40 +200,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="import-data-read-files" class="section level1 hasAnchor" number="7">
 <h1><span class="header-section-number">Part7</span> Import data / read files<a href="import-data-read-files.html#import-data-read-files" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>We will learn how to read a file in R using the {readr} package (part of the {tidyverse}, that was previously installed).</p>
-<p>First, let’s copy locally a few files that we will need for this workshop.</p>
-<p>Please go to:</p>
-<p>“”</p>
-<p>And copy this archive in the course directory</p>
-<p>Data taken from:
-<a href="https://ajuntament.barcelona.cat/estadistica/castella/Estadistiques_per_temes/Poblacio_i_demografia/Documents_relacionats/pobest/a2023/part1/index.htm" class="uri">https://ajuntament.barcelona.cat/estadistica/castella/Estadistiques_per_temes/Poblacio_i_demografia/Documents_relacionats/pobest/a2023/part1/index.htm</a></p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="import-data-read-files.html#cb9-1" tabindex="-1"></a>test <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">&quot;stats_countries_barcelona_2013-2023.csv&quot;</span>)</span></code></pre></div>
-<pre><code>## Rows: 185 Columns: 13
-## ── Column specification ────────────────────────────────────────────────────────────────────────────────────
-## Delimiter: &quot;,&quot;
-## chr  (2): Country, Continent
-## dbl (11): 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023
-## 
-## ℹ Use `spec()` to retrieve the full column specification for this data.
-## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="import-data-read-files.html#cb11-1" tabindex="-1"></a><span class="co"># long format</span></span>
-<span id="cb11-2"><a href="import-data-read-files.html#cb11-2" tabindex="-1"></a>test_long <span class="ot">&lt;-</span> tidyr<span class="sc">::</span><span class="fu">pivot_longer</span>(test, <span class="at">cols=</span><span class="sc">-</span><span class="fu">c</span>(Country, Continent), <span class="at">names_to=</span><span class="st">&quot;Year&quot;</span>, <span class="at">values_to=</span><span class="st">&quot;Count&quot;</span>)</span>
-<span id="cb11-3"><a href="import-data-read-files.html#cb11-3" tabindex="-1"></a>test_sub <span class="ot">&lt;-</span> test_long <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Francia&quot;</span>, <span class="st">&quot;Italia&quot;</span>, <span class="st">&quot;Alemania&quot;</span>))</span>
-<span id="cb11-4"><a href="import-data-read-files.html#cb11-4" tabindex="-1"></a><span class="fu">ggplot</span>(test_sub, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>Count, <span class="at">color=</span>Continent)) <span class="sc">+</span> <span class="fu">geom_line</span>()</span></code></pre></div>
-<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="import-data-read-files.html#cb12-1" tabindex="-1"></a><span class="fu">ggplot</span>(test_sub, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>Count, <span class="at">fill=</span>Country)) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>)</span></code></pre></div>
-<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-9-2.png" width="672" /></p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="import-data-read-files.html#cb13-1" tabindex="-1"></a><span class="fu">ggplot</span>(test_sub, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>Count, <span class="at">fill=</span>Country)) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">position=</span><span class="st">&quot;dodge&quot;</span>)</span></code></pre></div>
-<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-9-3.png" width="672" /></p>
-
+<p>We will learn how to <strong>import the content of a file</strong> in R using the {readr} package (part of the {tidyverse}, that was previously installed).</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="assigning-data-to-an-object.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="data-types.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="fetch-workshop-files.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

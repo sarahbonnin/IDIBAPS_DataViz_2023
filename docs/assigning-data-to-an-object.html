@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>6.4 Assigning data to an object | Data visualization with R and ggplot2: from data to publication-quality graphics</title>
-  <meta name="description" content="6.4 Assigning data to an object | Data visualization with R and ggplot2: from data to publication-quality graphics" />
+  <title>6.3 Assigning data to an object | Data visualization with R and ggplot2: from data to publication-quality graphics</title>
+  <meta name="description" content="6.3 Assigning data to an object | Data visualization with R and ggplot2: from data to publication-quality graphics" />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="6.4 Assigning data to an object | Data visualization with R and ggplot2: from data to publication-quality graphics" />
+  <meta property="og:title" content="6.3 Assigning data to an object | Data visualization with R and ggplot2: from data to publication-quality graphics" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="6.4 Assigning data to an object | Data visualization with R and ggplot2: from data to publication-quality graphics" />
+  <meta name="twitter:title" content="6.3 Assigning data to an object | Data visualization with R and ggplot2: from data to publication-quality graphics" />
   
   
   
@@ -23,15 +23,15 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2023-09-21" />
+<meta name="date" content="2023-09-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="assignment-operators.html"/>
-<link rel="next" href="import-data-read-files.html"/>
+<link rel="prev" href="objects-in-r.html"/>
+<link rel="next" href="data-types.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -170,10 +170,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="6.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>6.1</b> Arithmetic operators</a></li>
 <li class="chapter" data-level="6.2" data-path="objects-in-r.html"><a href="objects-in-r.html"><i class="fa fa-check"></i><b>6.2</b> Objects in R</a></li>
-<li class="chapter" data-level="6.3" data-path="assignment-operators.html"><a href="assignment-operators.html"><i class="fa fa-check"></i><b>6.3</b> Assignment operators</a></li>
-<li class="chapter" data-level="6.4" data-path="assigning-data-to-an-object.html"><a href="assigning-data-to-an-object.html"><i class="fa fa-check"></i><b>6.4</b> Assigning data to an object</a></li>
+<li class="chapter" data-level="6.3" data-path="assigning-data-to-an-object.html"><a href="assigning-data-to-an-object.html"><i class="fa fa-check"></i><b>6.3</b> Assigning data to an object</a></li>
+<li class="chapter" data-level="6.4" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>6.4</b> Data types</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="import-data-read-files.html"><a href="import-data-read-files.html"><i class="fa fa-check"></i><b>7</b> Import data / read files</a></li>
+<li class="chapter" data-level="7" data-path="import-data-read-files.html"><a href="import-data-read-files.html"><i class="fa fa-check"></i><b>7</b> Import data / read files</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="fetch-workshop-files.html"><a href="fetch-workshop-files.html"><i class="fa fa-check"></i><b>7.1</b> Fetch workshop files</a></li>
+<li class="chapter" data-level="7.2" data-path="import-read-in-data.html"><a href="import-read-in-data.html"><i class="fa fa-check"></i><b>7.2</b> Import / read in data</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/sarahbonnin/" target="blank">Published with bookdown</a></li>
 
@@ -194,33 +198,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="assigning-data-to-an-object" class="section level2 hasAnchor" number="6.4">
-<h2><span class="header-section-number">6.4</span> Assigning data to an object<a href="assigning-data-to-an-object.html#assigning-data-to-an-object" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="assigning-data-to-an-object" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Assigning data to an object<a href="assigning-data-to-an-object.html#assigning-data-to-an-object" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We will use an assignment operator to <strong>assign data to an object:</strong></p>
+<p>You can use either <strong>&lt;-</strong> or <strong>=</strong> (essentially the same).</p>
+<p>Examples:</p>
 <ul>
-<li>Assigning a value to the object named <strong>B</strong>:</li>
+<li>Assigning/storing <strong>10</strong> to the object named <strong>B</strong>:</li>
 </ul>
 <p>Copy-paste the following in the console, and hit Enter.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="assigning-data-to-an-object.html#cb6-1" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="dv">10</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="assigning-data-to-an-object.html#cb8-1" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="dv">10</span></span></code></pre></div>
+<p>This time, there is no output. If you now click <strong>B</strong> in the R console, and hit Enter, what happens?</p>
 <ul>
 <li>Reassigning: modifying the content of an object:</li>
 </ul>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="assigning-data-to-an-object.html#cb7-1" tabindex="-1"></a>B <span class="sc">+</span> <span class="dv">10</span></span></code></pre></div>
-<p><span style="color:red"><strong>B unchanged !!</strong></span><br></p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="assigning-data-to-an-object.html#cb8-1" tabindex="-1"></a>B <span class="ot">&lt;-</span> B <span class="sc">+</span> <span class="dv">10</span></span></code></pre></div>
-<p><span style="color:red"><strong>B changed !!</strong></span><br></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="assigning-data-to-an-object.html#cb9-1" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="dv">12</span></span></code></pre></div>
 <ul>
-<li>You can see the objects you created in the upper right panel in RStudio that is, the environment.</li>
+<li>You can see the objects you created in the upper right panel in RStudio that is, the environment:</li>
 </ul>
-
+<p><img src="images/R_basics_object_env.png" alt="R object env" width="500"/></p>
+<p><strong>How to name an object?</strong></p>
+<p>Naming an object in R is quite flexible.</p>
+<p>You can use:</p>
+<ul>
+<li>letters (note that object names case sensitive: <strong>A</strong> and <strong>a</strong> are NOT the same)</li>
+<li>numbers (although the object name <strong>cannot start with a number</strong>)</li>
+<li>underscores **_**</li>
+</ul>
+<p>What you CANNOT use:</p>
+<ul>
+<li>Spaces</li>
+<li>Most special characters</li>
+</ul>
 </div>
-<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="assignment-operators.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="import-data-read-files.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="objects-in-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-types.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

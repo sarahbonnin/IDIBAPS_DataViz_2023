@@ -57,23 +57,23 @@ Attendees will:
 <h4>What this workshop is **NOT**:</h4>
 
 * A programming class.
-* A solution to all data visualization problems.
+* A data visualization class.
 
 <h4>What this workshop (hopefully) is:</h4>
 
 * An introduction to data visualization.
-* An introduction to R and to R Studio softwarea.
-* A teaser to make you want to learn how to program in R!
+* An introduction to R and to RStudio softwares.
+* A teaser to - hopefully - make you want to learn how to program in R!
 
 <h3>Agenda</h3>
 
-*Note that the agenda may be adjusted depending on the pace of the students.*
+*Note that the agenda may be adjusted depending on the pace of the group*
 
 Day 1:
 
 * 9:30-10:00 (30’): course introduction + check the set up.
-* 10:00-10:45 (45’): introduction to R and Rstudio (Posit).
-* 10:45-11:30 (45’): import data / read files.
+* 10:00-10:45 (30’): introduction to R and Rstudio (Posit).
+* 10:45-11:30 (60’): paths and directories, R basics, import data / read files.
 * 11:30-12:00 (30’): break
 * 12:00-12:30 (30’): ggplot2: concept and structure.
 * 12:30-13:00 (30’:) guided boxplots, scatter plots, barplots, pie plots.

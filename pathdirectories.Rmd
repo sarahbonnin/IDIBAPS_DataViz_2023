@@ -20,7 +20,7 @@ Example of a *tree* / organization of directories:
 
 
 ## Create course directory
-.
+
 Go to the **Files** tab in the bottom-right corner: you can navigate through the *tree* of files and directories by double clicking one folder name, to enter it, and by clicking on the **double dot ".."** to go back.
 
 Choose the folder under which you would like to save the workshop's work.
@@ -31,7 +31,7 @@ For example, you can create a new folder under **Home -> Documents**. Click on "
 
 Create a folder called **"DataViz_2023"** by clicking on the **"+Folder"** icon.
 
-<img src="images/path_add_folder.png" alt="rstudio logo" width="120"/>
+<img src="images/path_add_folder_popup.png" alt="add folder pop up" width="500"/>
 
 You should now see a new folder:
 
