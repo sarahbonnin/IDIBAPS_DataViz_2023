@@ -39,3 +39,4 @@ bar-plots
 exercise-2
 bars-positions
 statsidentity-parameter
+exercise

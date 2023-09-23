@@ -437,11 +437,11 @@ ggplot(data=gtf, mapping=aes(x=chr, fill=gene_type)) +
 ```
 
 
-*More advanced (as reference, or if someone asks): how to reorder x-axis labels:*
+
 
 <details>
 <summary>
-correction
+*More advanced (as reference, or if someone asks): how to reorder x-axis labels:*
 </summary>
 
 ```{r}
@@ -505,11 +505,11 @@ ggplot(statsbcn, aes(x=Year, y=Population, fill=Continent)) +
   geom_bar(stat="identity", position="dodge")
 ```
 
-*More advanced (as reference, or if someone asks): display all labels:*
+
 
 <details>
 <summary>
-correction
+*More advanced (as reference, or if someone asks): display all labels:*
 </summary>
 
 Convert "Year" column as character, instead of numbers:
@@ -520,6 +520,146 @@ ggplot(statsbcn, aes(x=as.character(Year), y=Population, fill=Continent)) +
 ```
 
 </details>
+
+
+
+## Exercise
+
+1. Import **population_age_group_per_sex_long_format.csv** into an object called **pop_age**.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+pop_age <- read_csv("DataViz_source_files-main/files/population_age_group_per_sex_long_format.csv")
+```
+
+</details>
+
+
+2. Create a barplot that shows the number of people per **Year**:
+
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+ggplot(data=pop_age, mapping=aes(x=Year, y=Population)) + 
+  geom_bar(stat="identity")
+```
+
+</details>
+
+
+3. Split the view by Sex:
+
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+ggplot(data=pop_age, mapping=aes(x=Year, y=Population, fill=Sex)) + 
+  geom_bar(stat="identity")
+```
+
+</details>
+
+
+4. Select only "Spain" in "Country":
+
+  
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+ggplot(data=pop_age %>% filter(Country=="Spain"), mapping=aes(x=Year, y=Population, fill=Sex)) + 
+  geom_bar(stat="identity")
+```
+
+</details>
+
+
+5. Show the bars next to each other.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+
+ggplot(data=pop_age %>% filter(Country=="Spain"), mapping=aes(x=Year, y=Population, fill=Sex)) + 
+  geom_bar(stat="identity", position="dodge")
+```
+
+</details>
+
+
+
+6. Change default colors using **scale_fill_manual()** layer.
+
+The structure is not easy to remember: take a peek at the answer!
+
+  
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+ggplot(data=pop_age %>% filter(Country=="Spain"), mapping=aes(x=Year, y=Population, fill=Sex)) + 
+  geom_bar(stat="identity", position="dodge") + 
+  scale_fill_manual(values=c("darkgreen", "red"))
+```
+
+</details>
+
+
+7. Add a title, change the theme / background:
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+ggplot(data=pop_age %>% filter(Country=="Spain"), mapping=aes(x=Year, y=Population, fill=Sex)) +
+  geom_bar(stat="identity", position="dodge") + 
+  scale_fill_manual(values=c("darkgreen", "red")) + 
+  ggtitle("Spanish population from 1950 to 2021 per sex") + 
+  theme_minimal()
+```
+
+</details>
+
+8. Save to a PDF file: Export -> Save as PDF. Note: when saving to PDF format, you cannot manualy drag the plot to get the size and proportion you want, but you can **Preview** before saving it.
+
+9. Only if you have time!
+
+* Select data from **Italy** and for the year **2000**. 
+* Create a barplot that shows **Sex** in **y**, Population in **y** and that is split by the **Age_group**.
+* Show the proportions (remember: position="fill")
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+ggplot(data=pop_age %>% filter(Country=="Spain" & Year==2000), mapping=aes(x=Sex, y=Population, fill=Age_group)) + 
+  geom_bar(stat="identity", position="dodge")
+```
+
+</details>
+
 
 
 
