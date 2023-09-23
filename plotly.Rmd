@@ -1,0 +1,32 @@
+# Bonus: interactive plots
+
+**{plotly}** is a package that makes interactive graphs.
+
+There are many applications to plotly, but a simple one is to convert a plot created by ggplot into an interactive version.
+
+First we can install **plotly** (bottom-right panel -> Packages -> Install).
+
+And then we load the package: **tick** the package in the list.
+
+<br>
+
+Let's read again one of our first data file:
+
+```{r, echo=T, eval=F}
+geneexp <- read_csv("DataViz_source_files-main/files/expression_20genes.csv")
+```
+
+We can first save the "ggplot" as an object **myplot**:
+
+```{r}
+myplot <- ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=genes)) + 
+  geom_point()
+```
+
+And then input that object into the **ggplotly()** function:
+
+```{r, echo=T, eval=F}
+ggplotly(p=myplot)
+```
+
+The interactive plot should appear in the **Viewer** tab (bottom-right panel).
