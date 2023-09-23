@@ -23,7 +23,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2023-09-22" />
+<meta name="date" content="2023-09-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="getting-started.html"/>
-
+<link rel="next" href="save-your-plot.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -181,7 +181,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8" data-path="ggplot2.html"><a href="ggplot2.html"><i class="fa fa-check"></i><b>8</b> ggplot2</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>8.1</b> Getting started</a></li>
-<li class="chapter" data-level="8.2" data-path="scatter-plot.html"><a href="scatter-plot.html"><i class="fa fa-check"></i><b>8.2</b> Scatter plot</a></li>
+<li class="chapter" data-level="8.2" data-path="scatter-plot.html"><a href="scatter-plot.html"><i class="fa fa-check"></i><b>8.2</b> Scatter plot</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="scatter-plot.html"><a href="scatter-plot.html#base-plot"><i class="fa fa-check"></i><b>8.2.1</b> Base plot</a></li>
+<li class="chapter" data-level="8.2.2" data-path="scatter-plot.html"><a href="scatter-plot.html#customize-the-points"><i class="fa fa-check"></i><b>8.2.2</b> Customize the points</a></li>
+<li class="chapter" data-level="8.2.3" data-path="scatter-plot.html"><a href="scatter-plot.html#add-more-layers"><i class="fa fa-check"></i><b>8.2.3</b> Add more layers</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="save-your-plot.html"><a href="save-your-plot.html"><i class="fa fa-check"></i><b>8.3</b> Save your plot</a></li>
+<li class="chapter" data-level="8.4" data-path="exercise-1.html"><a href="exercise-1.html"><i class="fa fa-check"></i><b>8.4</b> Exercise 1</a></li>
+<li class="chapter" data-level="8.5" data-path="scatter-plots-more-features.html"><a href="scatter-plots-more-features.html"><i class="fa fa-check"></i><b>8.5</b> Scatter plots: more features</a></li>
+<li class="chapter" data-level="8.6" data-path="bar-plots.html"><a href="bar-plots.html"><i class="fa fa-check"></i><b>8.6</b> Bar plots</a>
+<ul>
+<li class="chapter" data-level="8.6.1" data-path="bar-plots.html"><a href="bar-plots.html#exercise-2"><i class="fa fa-check"></i><b>8.6.1</b> Exercise 2</a></li>
+<li class="chapter" data-level="8.6.2" data-path="bar-plots.html"><a href="bar-plots.html#bars-positions"><i class="fa fa-check"></i><b>8.6.2</b> Bars positions</a></li>
+<li class="chapter" data-level="8.6.3" data-path="bar-plots.html"><a href="bar-plots.html#statsidentity-parameter"><i class="fa fa-check"></i><b>8.6.3</b> stats=“identity” parameter</a></li>
+</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/sarahbonnin/" target="blank">Published with bookdown</a></li>
@@ -205,7 +219,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="scatter-plot" class="section level2 hasAnchor" number="8.2">
 <h2><span class="header-section-number">8.2</span> Scatter plot<a href="scatter-plot.html#scatter-plot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We can start from our <strong>geneexp</strong> object: we want to plot <strong>sample1</strong> on the x axis and <strong>sample2</strong> on the y axis.</p>
+<div id="base-plot" class="section level3 hasAnchor" number="8.2.1">
+<h3><span class="header-section-number">8.2.1</span> Base plot<a href="scatter-plot.html#base-plot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can start from the <strong>geneexp</strong> object, that contains the content of file <em>expression_20genes.csv</em>: we want to plot <strong>sample1</strong> on the x axis and <strong>sample2</strong> on the y axis.</p>
 <p>The base layer will be the following:</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="scatter-plot.html#cb14-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>geneexp, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2))</span></code></pre></div>
 <p>Adding to this the layer / block called <strong>geom_point</strong> that will <strong>tell ggplot to produce a scatter/point plot</strong>:</p>
@@ -215,34 +231,60 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb15-4"><a href="scatter-plot.html#cb15-4" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
 <p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-15-1.png" width="480" /></p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="scatter-plot.html#cb16-1" tabindex="-1"></a><span class="co"># Note that the new line is not necessary here</span></span></code></pre></div>
-<p>We can add more layers to the plot, using the same structure!</p>
-<p>For example, let’s add a title using the <strong>ggtitle()</strong> layer:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="scatter-plot.html#cb17-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>geneexp, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2)) <span class="sc">+</span> </span>
-<span id="cb17-2"><a href="scatter-plot.html#cb17-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb17-3"><a href="scatter-plot.html#cb17-3" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="at">label=</span><span class="st">&quot;my first ggplot&quot;</span>)</span></code></pre></div>
-<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-16-1.png" width="480" /></p>
-<p><strong>label</strong> is a parameter of <strong>ggtitle()</strong> function.</p>
+<p>Your plot should appear in the “Plots” tab in the bottom-right panel.</p>
+</div>
+<div id="customize-the-points" class="section level3 hasAnchor" number="8.2.2">
+<h3><span class="header-section-number">8.2.2</span> Customize the points<a href="scatter-plot.html#customize-the-points" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>geom_point()</strong> also takes some parameters, including the color of the point, and their size:</p>
 <p>Color all points in red:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="scatter-plot.html#cb17-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>geneexp, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2)) <span class="sc">+</span> </span>
+<span id="cb17-2"><a href="scatter-plot.html#cb17-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color=</span><span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-16-1.png" width="480" /></p>
+<p>Make points larger (size default is 1.5):</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="scatter-plot.html#cb18-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>geneexp, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2)) <span class="sc">+</span> </span>
-<span id="cb18-2"><a href="scatter-plot.html#cb18-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color=</span><span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
-<span id="cb18-3"><a href="scatter-plot.html#cb18-3" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="at">label=</span><span class="st">&quot;my first ggplot&quot;</span>)</span></code></pre></div>
+<span id="cb18-2"><a href="scatter-plot.html#cb18-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color=</span><span class="st">&quot;red&quot;</span>, <span class="at">size=</span><span class="fl">2.5</span>)</span></code></pre></div>
 <p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-17-1.png" width="480" /></p>
-<p>Make points smaller (size default is 1.5):</p>
+<p>You can also have different shapes for the points!</p>
+<p>This is done by setting the <strong>shape</strong> parameter in <strong>geom_point()</strong>.</p>
+<p>For example, triangles:</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="scatter-plot.html#cb19-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>geneexp, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2)) <span class="sc">+</span> </span>
-<span id="cb19-2"><a href="scatter-plot.html#cb19-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color=</span><span class="st">&quot;red&quot;</span>, <span class="at">size=</span><span class="fl">0.7</span>) <span class="sc">+</span></span>
-<span id="cb19-3"><a href="scatter-plot.html#cb19-3" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="at">label=</span><span class="st">&quot;my first ggplot&quot;</span>)</span></code></pre></div>
+<span id="cb19-2"><a href="scatter-plot.html#cb19-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color=</span><span class="st">&quot;red&quot;</span>, <span class="at">size=</span><span class="fl">2.5</span>, <span class="at">shape=</span><span class="st">&quot;triangle&quot;</span>)</span></code></pre></div>
 <p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-18-1.png" width="480" /></p>
-
+<p><img src="images/ggplot2_shape.png" alt="import zip" width="700"/></p>
+<p><em>Image from ggplot2 documentation</em></p>
 </div>
-<!-- </div> -->
+<div id="add-more-layers" class="section level3 hasAnchor" number="8.2.3">
+<h3><span class="header-section-number">8.2.3</span> Add more layers<a href="scatter-plot.html#add-more-layers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can add more layers to the plot, using the same structure!</p>
+<div id="ggtitle" class="section level4 hasAnchor" number="8.2.3.1">
+<h4><span class="header-section-number">8.2.3.1</span> ggtitle()<a href="scatter-plot.html#ggtitle" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>For example, let’s add a title using the <strong>ggtitle()</strong> layer:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="scatter-plot.html#cb20-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>geneexp, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2)) <span class="sc">+</span> </span>
+<span id="cb20-2"><a href="scatter-plot.html#cb20-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color=</span><span class="st">&quot;red&quot;</span>, <span class="at">size=</span><span class="fl">2.5</span>, <span class="at">shape=</span><span class="st">&quot;diamond&quot;</span>) <span class="sc">+</span></span>
+<span id="cb20-3"><a href="scatter-plot.html#cb20-3" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="at">label=</span><span class="st">&quot;my first ggplot&quot;</span>)</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-19-1.png" width="480" /></p>
+<p><strong>label</strong> is a parameter of <strong>ggtitle()</strong> function.</p>
+</div>
+<div id="background" class="section level4 hasAnchor" number="8.2.3.2">
+<h4><span class="header-section-number">8.2.3.2</span> Background<a href="scatter-plot.html#background" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Not a big fan of the grey background?
+This is the default “theme”, but there are <a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">more options</a>.</p>
+<p>For example:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="scatter-plot.html#cb21-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>geneexp, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2)) <span class="sc">+</span> </span>
+<span id="cb21-2"><a href="scatter-plot.html#cb21-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color=</span><span class="st">&quot;red&quot;</span>, <span class="at">size=</span><span class="fl">2.5</span>, <span class="at">shape=</span><span class="st">&quot;diamond&quot;</span>) <span class="sc">+</span></span>
+<span id="cb21-3"><a href="scatter-plot.html#cb21-3" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="at">label=</span><span class="st">&quot;my first ggplot&quot;</span>) <span class="sc">+</span></span>
+<span id="cb21-4"><a href="scatter-plot.html#cb21-4" tabindex="-1"></a>  <span class="fu">theme_linedraw</span>()</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-20-1.png" width="480" /></p>
+</div>
+</div>
+</div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="getting-started.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="getting-started.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="save-your-plot.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

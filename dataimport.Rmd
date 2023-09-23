@@ -42,9 +42,8 @@ The function also outputs some information about the data you are importing:
 
 Such as that:
 
-* The data contains 20 rows (observations), and 3 columns (variables).
-* Out of these 5 columns:
-  * 1 contain characters (<span style="color: red;">chr</span>)
-  * 2 contain numbers (<span style="color: green;">dbl</span> for "double")
-
+* The data contains 20 rows (observations), and 4 columns (variables).
+* Out of these 4 columns:
+  * 2 contain characters (<span style="color: red;">chr</span>): **Gene** and **DE**.
+  * 2 contain numbers (<span style="color: green;">dbl</span> for "double"): **sample1** and **sample2**
 

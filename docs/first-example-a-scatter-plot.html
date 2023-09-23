@@ -23,7 +23,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2023-09-22" />
+<meta name="date" content="2023-09-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -188,7 +188,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.2.3" data-path="first-example-a-scatter-plot.html"><a href="first-example-a-scatter-plot.html#add-more-layers"><i class="fa fa-check"></i><b>8.2.3</b> Add more layers</a></li>
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="save-your-plot.html"><a href="save-your-plot.html"><i class="fa fa-check"></i><b>8.3</b> Save your plot</a></li>
-<li class="chapter" data-level="8.4" data-path="exercise.html"><a href="exercise.html"><i class="fa fa-check"></i><b>8.4</b> Exercise</a></li>
+<li class="chapter" data-level="8.4" data-path="exercise-1.html"><a href="exercise-1.html"><i class="fa fa-check"></i><b>8.4</b> Exercise 1</a></li>
+<li class="chapter" data-level="8.5" data-path="scatter-plots-more-features.html"><a href="scatter-plots-more-features.html"><i class="fa fa-check"></i><b>8.5</b> Scatter plots: more features</a></li>
+<li class="chapter" data-level="8.6" data-path="exercise-2.html"><a href="exercise-2.html"><i class="fa fa-check"></i><b>8.6</b> Exercise 2</a></li>
+<li class="chapter" data-level="8.7" data-path="bar-plots.html"><a href="bar-plots.html"><i class="fa fa-check"></i><b>8.7</b> Bar plots</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/sarahbonnin/" target="blank">Published with bookdown</a></li>
@@ -214,7 +217,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">8.2</span> First example: a scatter plot<a href="first-example-a-scatter-plot.html#first-example-a-scatter-plot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="base-plot" class="section level3 hasAnchor" number="8.2.1">
 <h3><span class="header-section-number">8.2.1</span> Base plot<a href="first-example-a-scatter-plot.html#base-plot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>We can start from our <strong>geneexp</strong> object: we want to plot <strong>sample1</strong> on the x axis and <strong>sample2</strong> on the y axis.</p>
+<p>We can start from the <strong>geneexp</strong> object, that contains the content of file <em>expression_20genes.csv</em>: we want to plot <strong>sample1</strong> on the x axis and <strong>sample2</strong> on the y axis.</p>
 <p>The base layer will be the following:</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="first-example-a-scatter-plot.html#cb14-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>geneexp, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2))</span></code></pre></div>
 <p>Adding to this the layer / block called <strong>geom_point</strong> that will <strong>tell ggplot to produce a scatter/point plot</strong>:</p>

@@ -83,7 +83,7 @@ You can use:
 
 * letters (note that object names case sensitive: **A** and **a** are NOT the same)
 * numbers (although the object name **cannot start with a number**)
-* underscores **_**
+* underscores **\_**
 
 What you CANNOT use:
 
@@ -96,7 +96,7 @@ There are several data types in R: numbers, characters, booleans, factors, etc.
 
 For this introduction, we will mainly see and use numbers and characters.
 
-A character must be assigned with **quotes ("")**, for example:
+A character or string of characters must be assigned with **quotes ("")**, for example:
 
 ```{r}
 myobject <- "training"

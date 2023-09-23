@@ -47,3 +47,9 @@ Let's try to interact a bit more with the console: copy-paste the following, and
 
 R gives you the results of this simple multiplication.
 
+**USEFUL TIP**
+
+In the console, press the **up arrow** key <img src="images/rstudio_up_arrow.png" alt="rstudio interface" width="50"/>: this goes **back to the previous commands** you wrote in the console.
+
+
+
