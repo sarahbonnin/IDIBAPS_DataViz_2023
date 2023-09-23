@@ -38,7 +38,7 @@ The content of file "expression_20genes.csv" is now stored in the object named *
 
 The function also outputs some information about the data you are importing:
 
-<img src="images/import_readr_console2.png" alt="import zip" width="700"/>
+<img src="images/import_readr_console2.png" alt="import zip" width="600"/>
 
 Such as that:
 
@@ -46,4 +46,11 @@ Such as that:
 * Out of these 4 columns:
   * 2 contain characters (<span style="color: red;">chr</span>): **Gene** and **DE**.
   * 2 contain numbers (<span style="color: green;">dbl</span> for "double"): **sample1** and **sample2**
+
+You can find the objects that you create in the "Environment" tab in the upper-right panel.
+
+Note that if you click on an object name in the "Environment" tab, it will open on the upper-left panel:
+
+<img src="images/import_click_env.png" alt="import env" width="800"/>
+
 

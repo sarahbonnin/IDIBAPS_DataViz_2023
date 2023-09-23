@@ -1,0 +1,68 @@
+# Data filtering
+
+We will now see a couple of basic functions to filter and select a data object.
+
+## filter()
+
+**filter()** will filter **rows**.
+
+If we take the **geneexp** objet as an example, we can filter only down-regulated genes using the **filter()** function of **{dplyr}**.
+
+In case you need to import the data again:
+
+```{r, eval=FALSE}
+geneexp <- read_csv("DataViz_source_files-main/files/expression_20genes.csv")
+```
+
+```{r}
+filter(geneexp, DE=="Down")
+```
+
+**==** is a **logical operator** that represens equality. It means that filter will return **rows in geneexp that are exactly equal to "Down"**.
+
+Logical operators:
+
+| Operator  | Description   |
+|:--------: |:-------------:|
+|     <     | less than    |
+|     <=    | less than or equal to   |
+|     >     | greater than  |
+|     >=    | greater than or equal to|
+|     ==    | exactly equal to   |
+|     !=    | not equal to |
+|    !x     | not x |
+|    x | y  | x OR y |
+|    x & y  | x AND y |
+
+We can have several conditions.
+
+For example, we may want to extract only **Up** or **Down** rows from geneexp column **DE**:
+
+```{r}
+filter(geneexp, DE=="Down" | DE=="Up")
+```
+
+Here, we introduce another operator, **|**, which mean **OR**, so rows will be kept if there is either **Down** or **Up** in **DE** column.
+
+A good practice is to assign the filtered output to a new object, for example:
+
+```{r}
+geneexp_filt <- filter(geneexp, DE=="Down" | DE=="Up")
+```
+
+## select()
+
+**select()** will select **columns**.
+
+Select only columns **Gene** and **DE**:
+
+```{r}
+select(geneexp, Gene, DE)
+```
+
+
+## Exercise
+
+
+
+

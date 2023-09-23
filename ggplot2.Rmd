@@ -20,7 +20,7 @@ knitr::opts_chunk$set(fig.width=5, fig.height=4,
 
 ## Getting started
 
-* All ggplots start with a **base layer** created with the **ggplot()** function. This is the base of what we will see during the course.
+* All ggplots start with a **base layer** created with the **ggplot()** function. This is the base of what we will see during the course:
 
 ```{r, eval=F, echo=TRUE}
 ggplot(data=dataframe, mapping=aes(x=column1, y=column2))
@@ -125,6 +125,18 @@ ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) +
   geom_point(color="red", size=2.5, shape="diamond") +
   ggtitle(label="my first ggplot") +
   theme_linedraw()
+```
+
+#### Regression line
+
+Add a regression line with **geom_smooth()**. A smoothed line can help highlight the dominant pattern/trend.
+
+```{r}
+ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) + 
+  geom_point(color="red", size=2.5, shape="diamond") +
+  ggtitle(label="my first ggplot") +
+  theme_linedraw() +
+  geom_smooth()
 ```
 
 ## Save your plot
@@ -248,7 +260,7 @@ We may want to show the gene names that correspond to those points.
 This is done by setting the "label" parameter, in the ggplot **aes()** function, and by adding the **geom_text()** layer:
 
 ```{r}
-ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=genes)) + 
+ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=Gene)) + 
   geom_point() +
   geom_text()
 ```
@@ -258,7 +270,7 @@ Not bad, but let's adjust the location of the labels, so they do not overlap wit
 We can set the **nudge_x** parameter, to move the labels horizontally (on the **x** axis).
 
 ```{r}
-ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=genes)) + 
+ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=Gene)) + 
   geom_point() +
   geom_text(nudge_x=1.5)
 ```
@@ -266,7 +278,7 @@ ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=genes)) +
 We can also decrease or increase the label size:
 
 ```{r}
-ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=genes)) + 
+ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=Gene)) + 
   geom_point() +
   geom_text(nudge_x=1.5, size=3)
 ```
@@ -276,7 +288,7 @@ Last but not least: point color can be **dependent on another column / variable 
 The column we want to use to color the points should be specified inside the **aes()** function:
 
 ```{r, fig.width=7}
-ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=genes, color=DE)) + 
+ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=Gene, color=DE)) + 
   geom_point() +
   geom_text(nudge_x=1.2, size=3)
 ```
@@ -286,15 +298,15 @@ Colors can be set manually using (yet another) layer: **scale_color_manual()**.
 This is becoming more complex in terms of code structure:
 
 ```{r, fig.width=7}
-ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=genes, color=DE)) + 
+ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=Gene, color=DE)) + 
   geom_point() +
   geom_text(nudge_x=1.2, size=3) +
   scale_color_manual(values=c("blue", "black", "red"))
 ```
 
-## Bar plots
+## Barplots
 
-A bar plot (or bar chart) is a graph that represents categorical data with rectangular bars, which heights are proportional to the values they represent.
+A barplot (or barchart) is a graph that represents categorical data with rectangular bars, which heights are proportional to the values they represent.
 
 The first layer of the **ggplot()** function will be similar. However, note that we start with only the **x=** parameter set in **aes()** function (this is the basic way to plot a barplot):
 
@@ -521,8 +533,47 @@ ggplot(statsbcn, aes(x=as.character(Year), y=Population, fill=Continent)) +
 
 </details>
 
+## Boxplots
 
+A boxplot is used to visualize the distribution of data.
 
+<img src="images/ggplot_boxplot_definition.jpg" alt="import zip" width="460"/>
+
+*[Source](https://i.ytimg.com/vi/BE8CVGJuftI/maxresdefault.jpg)*
+
+We can import data from a file that contains the same information as **geneexp** but in a slightly different format:
+
+```{r, echo=T, eval=T, message=F, warning=F}
+geneexp2 <- read_csv("DataViz_source_files-main/files/expression_20genes_long.csv")
+```
+
+In our first boxplot, one box corresponds to one sample:
+
+```{r}
+ggplot(geneexp2, aes(x=sample, y=expression)) + 
+  geom_boxplot()
+```
+
+Split boxes by **DE**:
+
+```{r}
+ggplot(geneexp2, aes(x=sample, y=expression, fill=DE)) + 
+  geom_boxplot()
+```
+
+Set **notch=TRUE** in geom_boxplot():
+
+```{r}
+ggplot(geneexp2, aes(x=sample, y=expression, fill=DE)) + 
+  geom_boxplot(notch=TRUE)
+```
+
+If you prefer a violin plot, it is easy:
+
+```{r}
+ggplot(geneexp2, aes(x=sample, y=expression, fill=DE)) + 
+  geom_violin()
+```
 
 
 

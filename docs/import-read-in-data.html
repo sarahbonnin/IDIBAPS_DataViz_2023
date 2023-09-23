@@ -23,7 +23,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2023-09-23" />
+<meta name="date" content="2023-09-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -190,15 +190,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.3" data-path="save-your-plot.html"><a href="save-your-plot.html"><i class="fa fa-check"></i><b>8.3</b> Save your plot</a></li>
 <li class="chapter" data-level="8.4" data-path="exercise-1.html"><a href="exercise-1.html"><i class="fa fa-check"></i><b>8.4</b> Exercise 1</a></li>
 <li class="chapter" data-level="8.5" data-path="scatter-plots-more-features.html"><a href="scatter-plots-more-features.html"><i class="fa fa-check"></i><b>8.5</b> Scatter plots: more features</a></li>
-<li class="chapter" data-level="8.6" data-path="bar-plots.html"><a href="bar-plots.html"><i class="fa fa-check"></i><b>8.6</b> Bar plots</a>
+<li class="chapter" data-level="8.6" data-path="barplots.html"><a href="barplots.html"><i class="fa fa-check"></i><b>8.6</b> Barplots</a>
 <ul>
-<li class="chapter" data-level="8.6.1" data-path="bar-plots.html"><a href="bar-plots.html#exercise-2"><i class="fa fa-check"></i><b>8.6.1</b> Exercise 2</a></li>
-<li class="chapter" data-level="8.6.2" data-path="bar-plots.html"><a href="bar-plots.html#bars-positions"><i class="fa fa-check"></i><b>8.6.2</b> Bars positions</a></li>
-<li class="chapter" data-level="8.6.3" data-path="bar-plots.html"><a href="bar-plots.html#statsidentity-parameter"><i class="fa fa-check"></i><b>8.6.3</b> stats=“identity” parameter</a></li>
+<li class="chapter" data-level="8.6.1" data-path="barplots.html"><a href="barplots.html#exercise-2"><i class="fa fa-check"></i><b>8.6.1</b> Exercise 2</a></li>
+<li class="chapter" data-level="8.6.2" data-path="barplots.html"><a href="barplots.html#bars-positions"><i class="fa fa-check"></i><b>8.6.2</b> Bars positions</a></li>
+<li class="chapter" data-level="8.6.3" data-path="barplots.html"><a href="barplots.html#statsidentity-parameter"><i class="fa fa-check"></i><b>8.6.3</b> stats=“identity” parameter</a></li>
 </ul></li>
+<li class="chapter" data-level="8.7" data-path="boxplots.html"><a href="boxplots.html"><i class="fa fa-check"></i><b>8.7</b> Boxplots</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="final-exercises.html"><a href="final-exercises.html"><i class="fa fa-check"></i><b>9</b> Final exercises</a></li>
-<li class="chapter" data-level="10" data-path="bonus-interactive-plots.html"><a href="bonus-interactive-plots.html"><i class="fa fa-check"></i><b>10</b> Bonus: interactive plots</a></li>
+<li class="chapter" data-level="9" data-path="data-filtering.html"><a href="data-filtering.html"><i class="fa fa-check"></i><b>9</b> Data filtering</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="filter.html"><a href="filter.html"><i class="fa fa-check"></i><b>9.1</b> filter()</a></li>
+<li class="chapter" data-level="9.2" data-path="select.html"><a href="select.html"><i class="fa fa-check"></i><b>9.2</b> select()</a></li>
+<li class="chapter" data-level="9.3" data-path="exercise.html"><a href="exercise.html"><i class="fa fa-check"></i><b>9.3</b> Exercise</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="final-exercises.html"><a href="final-exercises.html"><i class="fa fa-check"></i><b>10</b> Final exercises</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="exercise-a-barplots.html"><a href="exercise-a-barplots.html"><i class="fa fa-check"></i><b>10.1</b> Exercise A: barplots</a></li>
+<li class="chapter" data-level="10.2" data-path="exercise-b-scatter-plot.html"><a href="exercise-b-scatter-plot.html"><i class="fa fa-check"></i><b>10.2</b> Exercise B: scatter plot</a></li>
+<li class="chapter" data-level="10.3" data-path="exercise-c-boxplot.html"><a href="exercise-c-boxplot.html"><i class="fa fa-check"></i><b>10.3</b> Exercise C: boxplot</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="bonus-interactive-plots.html"><a href="bonus-interactive-plots.html"><i class="fa fa-check"></i><b>11</b> Bonus: interactive plots</a></li>
+<li class="chapter" data-level="12" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>12</b> Resources</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/sarahbonnin/" target="blank">Published with bookdown</a></li>
 
@@ -225,7 +238,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="import-read-in-data.html#cb12-1" tabindex="-1"></a>geneexp <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/expression_20genes.csv&quot;</span>)</span></code></pre></div>
 <p>The content of file “expression_20genes.csv” is now stored in the object named <strong>geneexp</strong>.</p>
 <p>The function also outputs some information about the data you are importing:</p>
-<p><img src="images/import_readr_console2.png" alt="import zip" width="700"/></p>
+<p><img src="images/import_readr_console2.png" alt="import zip" width="600"/></p>
 <p>Such as that:</p>
 <ul>
 <li>The data contains 20 rows (observations), and 4 columns (variables).</li>
@@ -235,6 +248,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>2 contain numbers (<span style="color: green;">dbl</span> for “double”): <strong>sample1</strong> and <strong>sample2</strong></li>
 </ul></li>
 </ul>
+<p>You can find the objects that you create in the “Environment” tab in the upper-right panel.</p>
+<p>Note that if you click on an object name in the “Environment” tab, it will open on the upper-left panel:</p>
+<p><img src="images/import_click_env.png" alt="import env" width="800"/></p>
 
 </div>
 <!-- </div> -->
