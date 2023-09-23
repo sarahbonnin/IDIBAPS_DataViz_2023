@@ -13,7 +13,9 @@ rmd_files: ["index.Rmd",
           "pathdirectories.Rmd", 
           "Rbasics.Rmd",
           "dataimport.Rmd",
-          "ggplot2.Rmd"
+          "ggplot2.Rmd",
+          "final_exercises.Rmd",
+          "plotly.Rmd"
           ]
 output:
   bookdown::gitbook:

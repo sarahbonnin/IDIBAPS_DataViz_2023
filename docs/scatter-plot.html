@@ -196,8 +196,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.6.2" data-path="bar-plots.html"><a href="bar-plots.html#bars-positions"><i class="fa fa-check"></i><b>8.6.2</b> Bars positions</a></li>
 <li class="chapter" data-level="8.6.3" data-path="bar-plots.html"><a href="bar-plots.html#statsidentity-parameter"><i class="fa fa-check"></i><b>8.6.3</b> stats=“identity” parameter</a></li>
 </ul></li>
-<li class="chapter" data-level="8.7" data-path="exercise.html"><a href="exercise.html"><i class="fa fa-check"></i><b>8.7</b> Exercise</a></li>
 </ul></li>
+<li class="chapter" data-level="9" data-path="final-exercises.html"><a href="final-exercises.html"><i class="fa fa-check"></i><b>9</b> Final exercises</a></li>
+<li class="chapter" data-level="10" data-path="bonus-interactive-plots.html"><a href="bonus-interactive-plots.html"><i class="fa fa-check"></i><b>10</b> Bonus: interactive plots</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/sarahbonnin/" target="blank">Published with bookdown</a></li>
 
@@ -222,7 +223,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">8.2</span> Scatter plot<a href="scatter-plot.html#scatter-plot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="base-plot" class="section level3 hasAnchor" number="8.2.1">
 <h3><span class="header-section-number">8.2.1</span> Base plot<a href="scatter-plot.html#base-plot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>We can start from the <strong>geneexp</strong> object, that contains the content of file <em>expression_20genes.csv</em>: we want to plot <strong>sample1</strong> on the x axis and <strong>sample2</strong> on the y axis.</p>
+<p>We can start from the <strong>geneexp</strong> object, that holds the content of file <em>expression_20genes.csv</em>: we want to plot <strong>sample1</strong> on the x axis and <strong>sample2</strong> on the y axis.</p>
 <p>The base layer will be the following:</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="scatter-plot.html#cb14-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>geneexp, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2))</span></code></pre></div>
 <p>Adding to this the layer / block called <strong>geom_point</strong> that will <strong>tell ggplot to produce a scatter/point plot</strong>:</p>

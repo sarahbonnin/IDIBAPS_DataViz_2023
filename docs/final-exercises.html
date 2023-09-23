@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>6.4 Data types | Data visualization with R and ggplot2: from data to publication-quality graphics</title>
-  <meta name="description" content="6.4 Data types | Data visualization with R and ggplot2: from data to publication-quality graphics" />
+  <title>Part9 Final exercises | Data visualization with R and ggplot2: from data to publication-quality graphics</title>
+  <meta name="description" content="Part9 Final exercises | Data visualization with R and ggplot2: from data to publication-quality graphics" />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="6.4 Data types | Data visualization with R and ggplot2: from data to publication-quality graphics" />
+  <meta property="og:title" content="Part9 Final exercises | Data visualization with R and ggplot2: from data to publication-quality graphics" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="6.4 Data types | Data visualization with R and ggplot2: from data to publication-quality graphics" />
+  <meta name="twitter:title" content="Part9 Final exercises | Data visualization with R and ggplot2: from data to publication-quality graphics" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="assigning-data-to-an-object.html"/>
-<link rel="next" href="import-data-read-files.html"/>
+<link rel="prev" href="bar-plots.html"/>
+<link rel="next" href="bonus-interactive-plots.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -219,26 +219,123 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data-types" class="section level2 hasAnchor" number="6.4">
-<h2><span class="header-section-number">6.4</span> Data types<a href="data-types.html#data-types" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>There are several data types in R: numbers, characters, booleans, factors, etc.</p>
-<p>For this introduction, we will mainly see and use numbers and characters.</p>
-<p>A character or string of characters must be assigned with <strong>quotes (““)</strong>, for example:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="data-types.html#cb10-1" tabindex="-1"></a>myobject <span class="ot">&lt;-</span> <span class="st">&quot;training&quot;</span></span></code></pre></div>
-<p>You should now see in the environment (upper-right corner) the new object called <strong>training</strong>.</p>
-<p>Now try to assign the same object <strong>without the quotes</strong>:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="data-types.html#cb11-1" tabindex="-1"></a>myobject <span class="ot">&lt;-</span> training</span></code></pre></div>
-<p>What happens?</p>
+<div id="final-exercises" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Part9</span> Final exercises<a href="final-exercises.html#final-exercises" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The following sets of exercises aim to help you practice what was learned during this workshop.
+<br></p>
+<p>Exercise A: barplots
+<br>
+Exercise B: boxplots
+<br>
+Exercise C: scatter plots
+<br></p>
+<p><strong>Exercise A</strong></p>
+<ol style="list-style-type: decimal">
+<li>Import <strong>DataViz_source_files-main/files/population_age_group_per_sex_long_format.csv</strong> into an object called <strong>pop_age</strong>.</li>
+</ol>
+<details>
+<summary>
+correction
+</summary>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="final-exercises.html#cb50-1" tabindex="-1"></a>pop_age <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/population_age_group_per_sex_long_format.csv&quot;</span>)</span></code></pre></div>
+</details>
+<ol start="2" style="list-style-type: decimal">
+<li>Create a barplot that shows the number of people per <strong>Year</strong>:</li>
+</ol>
+<details>
+<summary>
+correction
+</summary>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="final-exercises.html#cb51-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>pop_age, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>Population)) <span class="sc">+</span> </span>
+<span id="cb51-2"><a href="final-exercises.html#cb51-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>)</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-50-1.png" width="480" /></p>
+</details>
+<ol start="3" style="list-style-type: decimal">
+<li>Split the view by Sex:</li>
+</ol>
+<details>
+<summary>
+correction
+</summary>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="final-exercises.html#cb52-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>pop_age, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>Population, <span class="at">fill=</span>Sex)) <span class="sc">+</span> </span>
+<span id="cb52-2"><a href="final-exercises.html#cb52-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>)</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-51-1.png" width="480" /></p>
+</details>
+<ol start="4" style="list-style-type: decimal">
+<li>Select only “Spain” in “Country”:</li>
+</ol>
+<details>
+<summary>
+correction
+</summary>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="final-exercises.html#cb53-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>pop_age <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Country<span class="sc">==</span><span class="st">&quot;Spain&quot;</span>), <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>Population, <span class="at">fill=</span>Sex)) <span class="sc">+</span> </span>
+<span id="cb53-2"><a href="final-exercises.html#cb53-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>)</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-52-1.png" width="480" /></p>
+</details>
+<ol start="5" style="list-style-type: decimal">
+<li>Show the bars next to each other.</li>
+</ol>
+<details>
+<summary>
+correction
+</summary>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="final-exercises.html#cb54-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>pop_age <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Country<span class="sc">==</span><span class="st">&quot;Spain&quot;</span>), <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>Population, <span class="at">fill=</span>Sex)) <span class="sc">+</span> </span>
+<span id="cb54-2"><a href="final-exercises.html#cb54-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">position=</span><span class="st">&quot;dodge&quot;</span>)</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-53-1.png" width="480" /></p>
+</details>
+<ol start="6" style="list-style-type: decimal">
+<li>Change default colors using <strong>scale_fill_manual()</strong> layer.</li>
+</ol>
+<p>The structure is not easy to remember: take a peek at the answer!</p>
+<details>
+<summary>
+correction
+</summary>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="final-exercises.html#cb55-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>pop_age <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Country<span class="sc">==</span><span class="st">&quot;Spain&quot;</span>), <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>Population, <span class="at">fill=</span>Sex)) <span class="sc">+</span> </span>
+<span id="cb55-2"><a href="final-exercises.html#cb55-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">position=</span><span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb55-3"><a href="final-exercises.html#cb55-3" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;darkgreen&quot;</span>, <span class="st">&quot;red&quot;</span>))</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-54-1.png" width="480" /></p>
+</details>
+<ol start="7" style="list-style-type: decimal">
+<li>Add a title, change the theme / background:</li>
+</ol>
+<details>
+<summary>
+correction
+</summary>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="final-exercises.html#cb56-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>pop_age <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Country<span class="sc">==</span><span class="st">&quot;Spain&quot;</span>), <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>Population, <span class="at">fill=</span>Sex)) <span class="sc">+</span></span>
+<span id="cb56-2"><a href="final-exercises.html#cb56-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">position=</span><span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb56-3"><a href="final-exercises.html#cb56-3" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;darkgreen&quot;</span>, <span class="st">&quot;red&quot;</span>)) <span class="sc">+</span> </span>
+<span id="cb56-4"><a href="final-exercises.html#cb56-4" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Spanish population from 1950 to 2021 per sex&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb56-5"><a href="final-exercises.html#cb56-5" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-55-1.png" width="480" /></p>
+</details>
+<ol start="8" style="list-style-type: decimal">
+<li><p>Save to a PDF file: Export -&gt; Save as PDF. Note: when saving to PDF format, you cannot manualy drag the plot to get the size and proportion you want, but you can <strong>Preview</strong> before saving it.</p></li>
+<li><p>Only if you have time!</p></li>
+</ol>
+<ul>
+<li>Select data from <strong>Italy</strong> and for the year <strong>2000</strong>.</li>
+<li>Create a barplot that shows <strong>Sex</strong> in <strong>y</strong>, Population in <strong>y</strong> and that is split by the <strong>Age_group</strong>.</li>
+<li>Show the proportions (remember: position=“fill”)</li>
+</ul>
+<details>
+<summary>
+correction
+</summary>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="final-exercises.html#cb57-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>pop_age <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Country<span class="sc">==</span><span class="st">&quot;Spain&quot;</span> <span class="sc">&amp;</span> Year<span class="sc">==</span><span class="dv">2000</span>), <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>Sex, <span class="at">y=</span>Population, <span class="at">fill=</span>Age_group)) <span class="sc">+</span> </span>
+<span id="cb57-2"><a href="final-exercises.html#cb57-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">position=</span><span class="st">&quot;dodge&quot;</span>)</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-56-1.png" width="480" /></p>
+</details>
 
 </div>
-<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="assigning-data-to-an-object.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="import-data-read-files.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="bar-plots.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="bonus-interactive-plots.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
