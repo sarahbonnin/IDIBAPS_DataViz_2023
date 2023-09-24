@@ -45,7 +45,6 @@ boxplots
 fine-tuning-text
 colors
 faceting
-faceting-1
 data-filtering
 filter
 select
