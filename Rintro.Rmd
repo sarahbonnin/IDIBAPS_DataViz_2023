@@ -52,7 +52,7 @@ Packages are usually found in public **repositories** such as:
 - CRAN (general repository for any type of data analysis).
 - Bioconductor (initially specialized in high throughput data analysis / bioinformatics)
 
-Packages can also be created and stored locally by the programmer.
+Anyone can create a package and stored it locally; creating packages is a great way to share code.
 
 #### The "tidyverse"
 
@@ -71,4 +71,4 @@ In this course, we will use in particular, and in that order:
 
 * [{readr}](https://readr.tidyverse.org/) for importing / exporting files.
 * [{ggplot2}](https://ggplot2.tidyverse.org/) for data visualization.
-* [{tidyr}](https://tidyr.tidyverse.org/) and [{dplyr}](https://dplyr.tidyverse.org/) for (simple) data manipulation and selection.
+* [{dplyr}](https://dplyr.tidyverse.org/) for (simple) data manipulation and selection.

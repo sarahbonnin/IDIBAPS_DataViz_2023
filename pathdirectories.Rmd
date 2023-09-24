@@ -4,14 +4,14 @@
 
 * The path of a file/directory is its **location/address** in the file system.
 
-* Your home directory is the one that hosts the **user (you) data**: it should be similar to all operating system, for example:
+* Your home directory is the one that hosts the **user (your) data**: it is similar, although not identical, in all operating systems, for example:
   - */users/sbonnin* (Linux)
   - */Users/sbonnin* (macOS)
   - *C:\\Users\\sbonnin* (Windows)
   
-Starting "/" or "\\" is called the **root** directory. Directories branch downwards from the root directory, and can contain both files and subdirectories.
+The starting "/" or "\\" is called the **root** directory. Directories branch downwards from the root directory, and can contain both files and subdirectories.
 
-In the examples above, sbonnin is a subdirectory of users (or Users).
+In the examples above, **sbonnin** is a subdirectory of **users** (or Users), and users starts at the root.
 
 Example of a *tree* / organization of directories:
 
@@ -47,5 +47,5 @@ Click on **"Set As Working Directory"**:
 
 <img src="images/path_setwd.png" alt="rstudio logo" width="600"/>
 
-The [working directory](https://en.wikipedia.org/wiki/Working_directory) is where R will, by default, find files to read, and that is where it will also save files and figures, if not specified otherwise.
+The [working directory](https://en.wikipedia.org/wiki/Working_directory) is where R will, by default, find files to read, and that is where it will also save files and figures, if another location/path is not specified.
 

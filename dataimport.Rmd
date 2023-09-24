@@ -1,10 +1,10 @@
-# Import data / read files
+# Import data / read files / scripts
 
 We will learn how to **import the content of a file** in R using the {readr} package (part of the {tidyverse}, that was previously installed).
 
 ## Fetch workshop files
 
-First, let's copy locally a few files that we will need for this workshop.
+First, let's copy locally a few files that were prepared for this workshop.
 
 Please go to:
 https://github.com/sarahbonnin/DataViz_source_files
@@ -17,14 +17,17 @@ Click on <img src="images/import_github_code_button.png" alt="import zip" width=
 
 <img src="images/import_github_zip.png" alt="import zip" width="600"/>
 
-
 Save the archive in the course folder previously created (**DataViz_2023**) and extract it (click right on the archive and you should see some extraction options).
 
-What is extracted from the archive is the "DataViz_source_files-main" folder, which in turns contains a "files" folder: this contains the files we need for the course.
+What is extracted from the archive is the **DataViz_source_files-main** folder, which in turns contains a **files** folder: this contains the files we need for the course.
 
 The **path** to fetch the files is the following (remember that the first piece is OS/user dependent):
 
-/users/sbonnin/**DataViz_source_files-main/files**
+*/your_home_directory/*DataViz_2023/**DataViz_source_files-main/files**
+
+e.g.
+
+/users/sbonnin/DataViz_2023/**DataViz_source_files-main/files**
 
 ## Import / read in data
 
@@ -34,7 +37,9 @@ Let's now import the content of a first file in our environment:
 geneexp <- read_csv("DataViz_source_files-main/files/expression_20genes.csv")
 ```
 
-The content of file "expression_20genes.csv" is now stored in the object named **geneexp**.
+Because your **working directory** is */your_home_directory/*DataViz_2023/, R can find the **DataViz_source_files-main** without the need to know the whole path: this is a **relative path** as opposed to na **absolute path**.
+
+The content of file **expression_20genes.csv** is now stored in the object named **geneexp**.
 
 The function also outputs some information about the data you are importing:
 
@@ -47,10 +52,27 @@ Such as that:
   * 2 contain characters (<span style="color: red;">chr</span>): **Gene** and **DE**.
   * 2 contain numbers (<span style="color: green;">dbl</span> for "double"): **sample1** and **sample2**
 
-You can find the objects that you create in the "Environment" tab in the upper-right panel.
+Remember that you can find the objects that you create in the **Environment** tab in the upper-right panel.
 
-Note that if you click on an object name in the "Environment" tab, it will open on the upper-left panel:
+Note that if you click on an object name in the **Environment** tab, it will open on the upper-left panel. Let's try with **geneexp**:
 
 <img src="images/import_click_env.png" alt="import env" width="800"/>
+
+## Scripts
+
+A script is a text file containing a set of commands and comments.
+
+It can be saved and re-used later or be refered to.
+
+It is good practice to create a script and save all commands: let's create a script for this course.
+
+Go to File -> New File -> R script
+
+<img src="images/import_create_script.png" alt="import env" width="800"/>
+
+A new window will open in the upper-left panel. Now save the file in the course folder.
+
+**Save all commands you will use during the course, and save changes regularly!**
+
 
 

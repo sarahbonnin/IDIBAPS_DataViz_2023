@@ -1,12 +1,12 @@
 # R basics
 
-In this section, we will cover very basic notions to understand a bit how R works.
+In this section, we will cover very basic notions of R programming.
 
 ## Arithmetic operators
 
-R is a programming language with a statistics focus. While it can be used for very complex tasks, it can also be used as a simple calculator, as shown previously.
+R is a programming language with a statistics focus. While it can be used for very complex tasks, it can also be used as a simple **calculator**, as shown previously.
 
-The following arithmetic operators can be used:
+The following arithmetic operators can be used for these tasks:
 
 | Operator  | Function      |
 |:--------: |:-------------:|
@@ -47,9 +47,11 @@ Everything that stores any kind of data in R is an **object**:
 
 <img src="images/R_basics_objects.png" alt="rstudio logo" width="350"/>
 
+When data is stored in objects, it can easily be **reused.**
+
 ## Assigning data to an object
 
-We will use an assignment operator to **assign data to an object:**
+We will use an assignment operator to **assign (i.e. store) data to an object:**
 
 You can use either **<-** or **=** (essentially the same).
 
@@ -63,13 +65,24 @@ Copy-paste the following in the console, and hit Enter.
 B <- 10
 ```
 
-This time, there is no output. If you now click **B** in the R console, and hit Enter, what happens?
+This time, there is no output. If you now type **B** in the R console, and hit Enter, what happens?
 
 * Reassigning: modifying the content of an object:
 
 ```{r, eval=FALSE}
 B <- 12
 ```
+
+* You can also use an object to assign data to a new (or to the same) object: try the following in the console:
+
+```{r, eval=FALSE}
+B <- 12
+A <- 5
+A <- A + B
+```
+
+What values do A and B store?
+
 
 * You can see the objects you created in the upper right panel in RStudio that is, the environment:
 

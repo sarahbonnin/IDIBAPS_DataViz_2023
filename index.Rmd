@@ -75,8 +75,7 @@ Day 1:
 * 10:00-10:45 (30’): introduction to R and Rstudio (Posit).
 * 10:45-11:30 (60’): paths and directories, R basics, import data / read files.
 * 11:30-12:00 (30’): break
-* 12:00-12:30 (30’): ggplot2: concept and structure.
-* 12:30-13:00 (30’:) guided boxplots, scatter plots, barplots, pie plots.
+* 12:00-13:00 (60’): ggplot2: concept, structure, scatter plots, boxplots, barplots.
 * 13:00-13:30 (30’): exercises / changing graph parameters.
 
 Day 2:

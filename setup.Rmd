@@ -29,8 +29,9 @@ libcurl4-openssl-dev libssl-dev libxml2-dev libfontconfig1-dev libharfbuzz-dev l
 libxml2-devel libcurl-devel fontconfig-devel openssl-devel  libjpeg-devel  libtiff-devel  libpng-devel
 
 Guides for Linux package installation (you may need to contact your IT department for permissions):
-    • Install a DEB package
-    • Install an RPM package
+
+* [Install a DEB package](https://help.ubuntu.com/kubuntu/desktopguide/C/manual-install.html)
+* [Install an RPM package](https://access.redhat.com/solutions/1189)
 
 ## Install R packages
 
@@ -66,7 +67,7 @@ If installation of the first package (tidyverse) repeatedly fails, try and insta
 
 ## Check setup
 
-In order to make sure that the setup is successful, click again on tab "Packages" of the bottom-right panel, and **tick packages that you just installed**, like the "tidyverse package in that example:
+In order to make sure that the setup is successful, click again on tab "Packages" of the bottom-right panel, and **tick packages that you just installed**, like the "tidyverse" package in that example:
 
  <img src="images/setup_rstudio_check_packages.png" alt="rstudio check packages" width="1200"/>
 
