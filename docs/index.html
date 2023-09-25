@@ -23,7 +23,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2023-09-24" />
+<meta name="date" content="2023-09-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -215,8 +215,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.2" data-path="exercise-b-scatter-plot.html"><a href="exercise-b-scatter-plot.html"><i class="fa fa-check"></i><b>10.2</b> Exercise B: scatter plot</a></li>
 <li class="chapter" data-level="10.3" data-path="exercise-c-boxplot.html"><a href="exercise-c-boxplot.html"><i class="fa fa-check"></i><b>10.3</b> Exercise C: boxplot</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="bonus-interactive-plots.html"><a href="bonus-interactive-plots.html"><i class="fa fa-check"></i><b>11</b> Bonus: interactive plots</a></li>
-<li class="chapter" data-level="12" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>12</b> Resources</a></li>
+<li class="chapter" data-level="11" data-path="bonus-interactive-plots-with-plotly.html"><a href="bonus-interactive-plots-with-plotly.html"><i class="fa fa-check"></i><b>11</b> Bonus: interactive plots with {plotly}</a></li>
+<li class="chapter" data-level="12" data-path="bonus-heatmaps-with-pheatmap.html"><a href="bonus-heatmaps-with-pheatmap.html"><i class="fa fa-check"></i><b>12</b> Bonus: heatmaps with {pheatmap}</a></li>
+<li class="chapter" data-level="13" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>13</b> Resources</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/sarahbonnin/" target="blank">Published with bookdown</a></li>
 
@@ -240,7 +241,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">Data visualization with R and ggplot2: from data to publication-quality graphics</h1>
 <p class="author"><em>Sarah Bonnin</em></p>
-<p class="date"><em>2023-09-24</em></p>
+<p class="date"><em>2023-09-25</em></p>
 </div>
 <div id="welcome" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Part1</span> Welcome<a href="index.html#welcome" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -278,7 +279,7 @@ Learning objectives
 <p>Attendees will:</p>
 <ul>
 <li>Gain a high-level understanding of data import, manipulation and graphing with R and RStudio.</li>
-<li>Be able to produce and save a variety of publication-quality graphs (among others: boxplots, histograms, dot plots, heatmaps).</li>
+<li>Be able to produce and save a variety of publication-quality graphs (among others: boxplots, scatter plots, barplots).</li>
 </ul>
 <h3>
 Learning outcomes
@@ -300,38 +301,40 @@ What this workshop is <strong>NOT</strong>:
 </h4>
 <ul>
 <li>A programming class.</li>
-<li>A data visualization class.</li>
+<li>A design class.</li>
 </ul>
 <h4>
-What this workshop (hopefully) is:
+What this workshop is:
 </h4>
 <ul>
+<li>An introduction to R and to RStudio software.</li>
 <li>An introduction to data visualization.</li>
-<li>An introduction to R and to RStudio softwares.</li>
 <li>A teaser to - hopefully - make you want to learn how to program in R!</li>
 </ul>
 <h3>
-Agenda
+Approximate agenda
 </h3>
-<p><em>Note that the agenda may be adjusted depending on the pace of the group</em></p>
-<p>Day 1:</p>
+<p>Day 1 &amp; 2: 9:30-13:30
+30’ break around 11:30.</p>
 <ul>
-<li>9:30-10:00 (30’): course introduction + check the set up.</li>
-<li>10:00-10:45 (30’): introduction to R and Rstudio (Posit).</li>
-<li>10:45-11:30 (60’): paths and directories, R basics, import data / read files.</li>
-<li>11:30-12:00 (30’): break</li>
-<li>12:00-13:00 (60’): ggplot2: concept, structure, scatter plots, boxplots, barplots.</li>
-<li>13:00-13:30 (30’): exercises / changing graph parameters.</li>
-</ul>
-<p>Day 2:</p>
+<li>Welcome and set up</li>
+<li>Introduction to R and RStudio (Posit)</li>
+<li>Paths and directories</li>
+<li>R basics</li>
+<li>Data import</li>
+<li>ggplot2:
 <ul>
-<li>9:30-10:00 (30’): recall what was done on day 1 with a “warm up” exercise.</li>
-<li>10:00-10:45 (45’): introduction to simple data wrangling to filter and select data.</li>
-<li>10:45-11:30 (45’): exercises with filtering + graphs.</li>
-<li>11:30-12:00 (30’): break.</li>
-<li>12:00-12:30 (30’): introduction to interactive plotting with plotly.</li>
-<li>12:30-13:15 (45’): exercises combining what we learned so far.</li>
-<li>13:15-13:30 (15’): workshop wrap up.</li>
+<li>Introduction, concept</li>
+<li>Scatter plots</li>
+<li>Barplots</li>
+<li>Boxplots</li>
+<li>Font fine-tuning</li>
+<li>Colors</li>
+<li>Faceting</li>
+</ul></li>
+<li>Data filtering</li>
+<li>Final exercises</li>
+<li>Bonus: interactive plots</li>
 </ul>
 <p><img src="images/R_logo.png" alt="R logo" width="150"/> <img src="images/setup_rstudio_icon.png" alt="rstudio logo" width="150"/> <img src="images/R_tidyverse_logo.png" alt="tidyverse logo" width="150"/></p>
 

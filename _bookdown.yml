@@ -17,6 +17,7 @@ rmd_files: ["index.Rmd",
           "data_wrangling.Rmd",
           "final_exercises.Rmd",
           "plotly.Rmd",
+          "pheatmap.Rmd",
           "resources.Rmd"
           ]
 output:

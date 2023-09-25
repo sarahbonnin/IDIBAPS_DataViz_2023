@@ -41,7 +41,7 @@ Attendees must however **feel comfortable enough with their own computer to inst
 Attendees will:
 
 * Gain a high-level understanding of data import, manipulation and graphing with R and RStudio. 
-* Be able to produce and save a variety of publication-quality graphs (among others: boxplots, histograms, dot plots, heatmaps).
+* Be able to produce and save a variety of publication-quality graphs (among others: boxplots, scatter plots, barplots).
 
 <h3>Learning outcomes</h3>
 
@@ -57,36 +57,35 @@ Attendees will:
 <h4>What this workshop is **NOT**:</h4>
 
 * A programming class.
-* A data visualization class.
+* A design class.
 
-<h4>What this workshop (hopefully) is:</h4>
+<h4>What this workshop is:</h4>
 
+* An introduction to R and to RStudio software.
 * An introduction to data visualization.
-* An introduction to R and to RStudio softwares.
 * A teaser to - hopefully - make you want to learn how to program in R!
 
-<h3>Agenda</h3>
+<h3>Approximate agenda</h3>
 
-*Note that the agenda may be adjusted depending on the pace of the group*
+Day 1 & 2: 9:30-13:30
+30' break around 11:30.
 
-Day 1:
-
-* 9:30-10:00 (30’): course introduction + check the set up.
-* 10:00-10:45 (30’): introduction to R and Rstudio (Posit).
-* 10:45-11:30 (60’): paths and directories, R basics, import data / read files.
-* 11:30-12:00 (30’): break
-* 12:00-13:00 (60’): ggplot2: concept, structure, scatter plots, boxplots, barplots.
-* 13:00-13:30 (30’): exercises / changing graph parameters.
-
-Day 2:
-
-* 9:30-10:00 (30’): recall what was done on day 1 with a “warm up” exercise.
-* 10:00-10:45 (45’): introduction to simple data wrangling to filter and select data.
-* 10:45-11:30 (45’): exercises with filtering + graphs.
-* 11:30-12:00 (30’): break.
-* 12:00-12:30 (30’): introduction to interactive plotting with plotly.
-* 12:30-13:15 (45’): exercises combining what we learned so far.
-* 13:15-13:30 (15’): workshop wrap up.
+* Welcome and set up
+* Introduction to R and RStudio (Posit)
+* Paths and directories
+* R basics
+* Data import
+* ggplot2:
+  * Introduction, concept
+  * Scatter plots
+  * Barplots
+  * Boxplots
+  * Font fine-tuning
+  * Colors
+  * Faceting
+* Data filtering
+* Final exercises
+* Bonus: interactive plots
 
 
 <img src="images/R_logo.png" alt="R logo" width="150"/> <img src="images/setup_rstudio_icon.png" alt="rstudio logo" width="150"/> <img src="images/R_tidyverse_logo.png" alt="tidyverse logo" width="150"/>

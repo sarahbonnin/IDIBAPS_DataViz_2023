@@ -1,0 +1,7 @@
+# Bonus: more plots with {ggplot2}
+
+## Histograms and density plots
+
+## Dot plots
+
+## 

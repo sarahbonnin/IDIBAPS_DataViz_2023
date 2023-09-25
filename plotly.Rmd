@@ -1,4 +1,4 @@
-# Bonus: interactive plots
+# Bonus: interactive plots with {plotly}
 
 **{plotly}** is a package that makes interactive graphs.
 

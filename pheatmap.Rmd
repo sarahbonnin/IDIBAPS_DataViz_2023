@@ -1,0 +1,27 @@
+# Bonus: heatmaps with {pheatmap}
+
+We will introduce package **{pheatmap}** to produce heatmaps.
+
+First we can install **pheatmap** (bottom-right panel -> Packages -> Install).
+
+And then we load the package: **tick** the package in the list.
+
+**pheatmap** is not from the tidyverse package, and does not follow the same structure. It does not work with layers, but with multiple parameters inside a same function.
+
+<br>
+```{r, echo=F, fig.height=15, fig.width=10}
+library(pheatmap)
+```
+
+
+Let's read again one of our first data file:
+
+```{r, echo=T, eval=F}
+expr_heatmap <- read_csv("DataViz_source_files-main/files/GSE150029_rnaseq_for_heatmap.csv") %>%
+  column_to_rownames(var = "gene_name") %>%
+  as.matrix()
+```
+
+```{r}
+pheatmap(expr_heatmap)
+```
