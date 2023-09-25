@@ -2,6 +2,50 @@
 
 ## Histograms and density plots
 
+### Histogram
+
+```{r}
+ggplot(geneexp2, aes(x=expression, color=sample)) + 
+  geom_histogram(aes(y=after_stat(density)), fill="white") +
+  theme_classic()
+```
+
+### Density plot
+
+```{r}
+ggplot(geneexp2, aes(x=expression, color=sample)) + 
+  theme_classic() +
+  geom_density(alpha=.2, fill="#FF6666") 
+```
+
+### Histogram + density
+
+```{r}
+ggplot(geneexp2, aes(x=expression, color=sample)) + 
+  geom_histogram(aes(y=after_stat(density)), fill="white") +
+  theme_classic() +
+  geom_density(alpha=.2, fill="#FF6666") 
+```
+
+
+## Pie chart
+
+We will plot a pie chart representing the number of genes from **gtf** found in each chromosome.
+
+Prepare data so as to obtain counts:
+
+```{r}
+gtf_count_chr <- gtf %>%
+  group_by(chr) %>%
+  summarise(counts=n())
+```
+
+```{r}
+ggplot(data=gtf_count_chr, mapping=aes(x="", y=counts, fill=chr)) + 
+  geom_bar(stat="identity", width=1) +
+  coord_polar("y", start=0) +
+  theme_void()
+```
+
 ## Dot plots
 
-## 
