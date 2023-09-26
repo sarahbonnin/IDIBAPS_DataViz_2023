@@ -1,12 +1,12 @@
 # Import data / read files / scripts
 
-We will learn how to **import the content of a file** in R using the {readr} package (part of the {tidyverse}, that was previously installed).
+We will learn how to **import the content of a file** in R using the **{readr}** package (part of the **{tidyverse}** we previously installed).
 
 ## Fetch workshop files
 
 First, let's copy locally a few files that were prepared for this workshop.
 
-Please go to:
+Go to:
 https://github.com/sarahbonnin/DataViz_source_files
 
 
@@ -37,7 +37,7 @@ Let's now import the content of a first file in our environment:
 geneexp <- read_csv("DataViz_source_files-main/files/expression_20genes.csv")
 ```
 
-Because your **working directory** is */your_home_directory/*DataViz_2023/, R can find the **DataViz_source_files-main** without the need to know the whole path: this is a **relative path** as opposed to na **absolute path**.
+Because your **working directory** is */your_home_directory/*DataViz_2023/, R can find the **DataViz_source_files-main** without requiring the whole path: this is a **relative path** as opposed to an **absolute path** .
 
 The content of file **expression_20genes.csv** is now stored in the object named **geneexp**.
 
@@ -60,17 +60,17 @@ Note that if you click on an object name in the **Environment** tab, it will ope
 
 ## Scripts
 
-A script is a text file containing a set of commands and comments.
+A **script** is a text file containing a set of **commands** and **comments**.
 
-It can be saved and re-used later or be refered to.
+It can be saved and re-used later or be shared.
 
 It is good practice to create a script and save all commands: let's create a script for this course.
 
 Go to File -> New File -> R script
 
-<img src="images/import_create_script.png" alt="import env" width="800"/>
+<img src="images/import_create_script.png" alt="import env" width="700"/>
 
-A new window will open in the upper-left panel. Now save the file in the course folder.
+A new window will open in the upper-left panel. Now save the file in the course folder (you can name it workshop.R)
 
 **Save all commands you will use during the course, and save changes regularly!**
 

@@ -15,13 +15,13 @@
 	+ **top-right**: environment, history, connections, tutorial
 	+ **bottom-right**: tree of folders and files, plots/graphs window, packages, help window, viewer, presentation
 
-<img src="images/rstudio_interface.png" alt="rstudio interface" width="1000"/>
+<img src="images/rstudio_interface.png" alt="rstudio interface" width="1200"/>
 
 ## The R console
 
-The R console (bottom-left panel) is where the magic happens!
+The R **console** (bottom-left panel) is where the magic happens!
 
-It is where the user/programmer/you will interact with R.
+It is where the user/programmer/you will **interact** with R.
 
 Let's give it a try. Type (or copy-paste) the following in the console (bottom-left panel), and hit the **Enter/Return** key:
 <img src="images/rstudio_return_key.png" alt="return key 1" width="60"/>
@@ -31,7 +31,7 @@ Let's give it a try. Type (or copy-paste) the following in the console (bottom-l
 getwd()
 ```
 
-getwd() is a function. Remember that functions are followed by **parenthesis/round brackets**.
+**getwd()** is a function. Remember that functions are followed by **parenthesis/round brackets**.
 
 Upon clicking **Enter/Return**, you are asking the R kernel to **execute the function**.
 

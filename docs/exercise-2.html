@@ -23,7 +23,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2023-09-25" />
+<meta name="date" content="2023-09-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -164,7 +164,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>5</b> Paths and directories</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="path-and-home-directory.html"><a href="path-and-home-directory.html"><i class="fa fa-check"></i><b>5.1</b> Path and home directory</a></li>
-<li class="chapter" data-level="5.2" data-path="create-course-directory.html"><a href="create-course-directory.html"><i class="fa fa-check"></i><b>5.2</b> Create course directory</a></li>
+<li class="chapter" data-level="5.2" data-path="create-the-workshop-directory.html"><a href="create-the-workshop-directory.html"><i class="fa fa-check"></i><b>5.2</b> Create the workshop directory</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>6</b> R basics</a>
 <ul>
@@ -209,15 +209,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.3" data-path="rename.html"><a href="rename.html"><i class="fa fa-check"></i><b>9.3</b> rename()</a></li>
 <li class="chapter" data-level="9.4" data-path="exercise-3.html"><a href="exercise-3.html"><i class="fa fa-check"></i><b>9.4</b> Exercise 3</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="final-exercises.html"><a href="final-exercises.html"><i class="fa fa-check"></i><b>10</b> Final exercises</a>
-<ul>
-<li class="chapter" data-level="10.1" data-path="exercise-a-barplots.html"><a href="exercise-a-barplots.html"><i class="fa fa-check"></i><b>10.1</b> Exercise A: barplots</a></li>
-<li class="chapter" data-level="10.2" data-path="exercise-b-scatter-plot.html"><a href="exercise-b-scatter-plot.html"><i class="fa fa-check"></i><b>10.2</b> Exercise B: scatter plot</a></li>
-<li class="chapter" data-level="10.3" data-path="exercise-c-boxplot.html"><a href="exercise-c-boxplot.html"><i class="fa fa-check"></i><b>10.3</b> Exercise C: boxplot</a></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="bonus-interactive-plots-with-plotly.html"><a href="bonus-interactive-plots-with-plotly.html"><i class="fa fa-check"></i><b>11</b> Bonus: interactive plots with {plotly}</a></li>
-<li class="chapter" data-level="12" data-path="bonus-heatmaps-with-pheatmap.html"><a href="bonus-heatmaps-with-pheatmap.html"><i class="fa fa-check"></i><b>12</b> Bonus: heatmaps with {pheatmap}</a></li>
-<li class="chapter" data-level="13" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>13</b> Resources</a></li>
+<li class="chapter" data-level="10" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>10</b> Resources</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/sarahbonnin/" target="blank">Published with bookdown</a></li>
 
@@ -247,7 +239,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="exercise-2.html#cb37-1" tabindex="-1"></a>gtf <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/gencode.v44.annotation.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="exercise-2.html#cb38-1" tabindex="-1"></a>gtf <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/gencode.v44.annotation.csv&quot;</span>)</span></code></pre></div>
 <p>This is a small subset of the gencode v44 human gene annotation:</p>
 <ul>
 <li>Only protein coding, long non-coding, miRNAs, snRNAs and snoRNAs</li>
@@ -262,9 +254,9 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="exercise-2.html#cb38-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr)) <span class="sc">+</span> </span>
-<span id="cb38-2"><a href="exercise-2.html#cb38-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
-<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-37-1.png" width="480" /></p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="exercise-2.html#cb39-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr)) <span class="sc">+</span> </span>
+<span id="cb39-2"><a href="exercise-2.html#cb39-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-39-1.png" width="480" /></p>
 </details>
 <p><br>
 3. Keeping the chromosome on the x axis, split the barplot <strong>per gene type</strong>.</p>
@@ -273,19 +265,19 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="exercise-2.html#cb39-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">color=</span>gene_type)) <span class="sc">+</span> </span>
-<span id="cb39-2"><a href="exercise-2.html#cb39-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
-<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-38-1.png" width="480" /></p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="exercise-2.html#cb40-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">color=</span>gene_type)) <span class="sc">+</span> </span>
+<span id="cb40-2"><a href="exercise-2.html#cb40-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-40-1.png" width="480" /></p>
 </details>
 <p><br>
-4. Now try with <strong>fill</strong> instead of <strong>color</strong>:</p>
+4. Now try with <strong>fill</strong> instead of <strong>color</strong> in <strong>aes()</strong>:</p>
 <details>
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="exercise-2.html#cb40-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">fill=</span>gene_type)) <span class="sc">+</span> </span>
-<span id="cb40-2"><a href="exercise-2.html#cb40-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
-<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-39-1.png" width="480" /></p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="exercise-2.html#cb41-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">fill=</span>gene_type)) <span class="sc">+</span> </span>
+<span id="cb41-2"><a href="exercise-2.html#cb41-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-41-1.png" width="480" /></p>
 </details>
 <p><br>
 5. Add a title to the graph:</p>
@@ -293,22 +285,22 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="exercise-2.html#cb41-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">fill=</span>gene_type)) <span class="sc">+</span> </span>
-<span id="cb41-2"><a href="exercise-2.html#cb41-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position=</span><span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span></span>
-<span id="cb41-3"><a href="exercise-2.html#cb41-3" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="at">label =</span> <span class="st">&quot;Number of genes per chromosome, split by gene type&quot;</span>)</span></code></pre></div>
-<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-40-1.png" width="480" /></p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="exercise-2.html#cb42-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">fill=</span>gene_type)) <span class="sc">+</span> </span>
+<span id="cb42-2"><a href="exercise-2.html#cb42-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position=</span><span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span></span>
+<span id="cb42-3"><a href="exercise-2.html#cb42-3" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="at">label =</span> <span class="st">&quot;Number of genes per chromosome, split by gene type&quot;</span>)</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-42-1.png" width="480" /></p>
 </details>
 <p><br>
-6. Change the <a href="https://ggplot2-book.org/themes"><strong>theme</strong></a>:</p>
+6. Change the default <a href="https://ggplot2-book.org/themes"><strong>theme</strong></a>:</p>
 <details>
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="exercise-2.html#cb42-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">fill=</span>gene_type)) <span class="sc">+</span> </span>
-<span id="cb42-2"><a href="exercise-2.html#cb42-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position=</span><span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span></span>
-<span id="cb42-3"><a href="exercise-2.html#cb42-3" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="at">label =</span> <span class="st">&quot;Number of genes per chromosome, split by gene type&quot;</span>) <span class="sc">+</span></span>
-<span id="cb42-4"><a href="exercise-2.html#cb42-4" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div>
-<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-41-1.png" width="480" /></p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="exercise-2.html#cb43-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">fill=</span>gene_type)) <span class="sc">+</span> </span>
+<span id="cb43-2"><a href="exercise-2.html#cb43-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position=</span><span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span></span>
+<span id="cb43-3"><a href="exercise-2.html#cb43-3" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="at">label =</span> <span class="st">&quot;Number of genes per chromosome, split by gene type&quot;</span>) <span class="sc">+</span></span>
+<span id="cb43-4"><a href="exercise-2.html#cb43-4" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-43-1.png" width="480" /></p>
 </details>
 <p><br>
 7. Save the graph in PNG format in the course’s directory.</p>

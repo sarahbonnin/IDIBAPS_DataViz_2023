@@ -23,7 +23,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2023-09-25" />
+<meta name="date" content="2023-09-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -164,7 +164,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>5</b> Paths and directories</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="path-and-home-directory.html"><a href="path-and-home-directory.html"><i class="fa fa-check"></i><b>5.1</b> Path and home directory</a></li>
-<li class="chapter" data-level="5.2" data-path="create-course-directory.html"><a href="create-course-directory.html"><i class="fa fa-check"></i><b>5.2</b> Create course directory</a></li>
+<li class="chapter" data-level="5.2" data-path="create-the-workshop-directory.html"><a href="create-the-workshop-directory.html"><i class="fa fa-check"></i><b>5.2</b> Create the workshop directory</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>6</b> R basics</a>
 <ul>
@@ -209,15 +209,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.3" data-path="rename.html"><a href="rename.html"><i class="fa fa-check"></i><b>9.3</b> rename()</a></li>
 <li class="chapter" data-level="9.4" data-path="exercise-3.html"><a href="exercise-3.html"><i class="fa fa-check"></i><b>9.4</b> Exercise 3</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="final-exercises.html"><a href="final-exercises.html"><i class="fa fa-check"></i><b>10</b> Final exercises</a>
-<ul>
-<li class="chapter" data-level="10.1" data-path="exercise-a-barplots.html"><a href="exercise-a-barplots.html"><i class="fa fa-check"></i><b>10.1</b> Exercise A: barplots</a></li>
-<li class="chapter" data-level="10.2" data-path="exercise-b-scatter-plot.html"><a href="exercise-b-scatter-plot.html"><i class="fa fa-check"></i><b>10.2</b> Exercise B: scatter plot</a></li>
-<li class="chapter" data-level="10.3" data-path="exercise-c-boxplot.html"><a href="exercise-c-boxplot.html"><i class="fa fa-check"></i><b>10.3</b> Exercise C: boxplot</a></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="bonus-interactive-plots-with-plotly.html"><a href="bonus-interactive-plots-with-plotly.html"><i class="fa fa-check"></i><b>11</b> Bonus: interactive plots with {plotly}</a></li>
-<li class="chapter" data-level="12" data-path="bonus-heatmaps-with-pheatmap.html"><a href="bonus-heatmaps-with-pheatmap.html"><i class="fa fa-check"></i><b>12</b> Bonus: heatmaps with {pheatmap}</a></li>
-<li class="chapter" data-level="13" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>13</b> Resources</a></li>
+<li class="chapter" data-level="10" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>10</b> Resources</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/sarahbonnin/" target="blank">Published with bookdown</a></li>
 
@@ -247,21 +239,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Assigning/storing <strong>10</strong> to the object named <strong>B</strong>:</li>
 </ul>
 <p>Copy-paste the following in the console, and hit Enter.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="assigning-data-to-an-object.html#cb8-1" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="dv">10</span></span></code></pre></div>
-<p>This time, there is no output. If you now type <strong>B</strong> in the R console, and hit Enter, what happens?</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="assigning-data-to-an-object.html#cb7-1" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="dv">10</span></span></code></pre></div>
+<p>This time, not there is <strong>no output</strong>. If you now type <strong>B</strong> in the R console, and hit Enter, what happens?</p>
 <ul>
 <li>Reassigning: modifying the content of an object:</li>
 </ul>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="assigning-data-to-an-object.html#cb9-1" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="dv">12</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="assigning-data-to-an-object.html#cb8-1" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="dv">12</span></span></code></pre></div>
 <ul>
 <li>You can also use an object to assign data to a new (or to the same) object: try the following in the console:</li>
 </ul>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="assigning-data-to-an-object.html#cb10-1" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="dv">12</span></span>
-<span id="cb10-2"><a href="assigning-data-to-an-object.html#cb10-2" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="dv">5</span></span>
-<span id="cb10-3"><a href="assigning-data-to-an-object.html#cb10-3" tabindex="-1"></a>A <span class="ot">&lt;-</span> A <span class="sc">+</span> B</span></code></pre></div>
-<p>What values do A and B store?</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="assigning-data-to-an-object.html#cb9-1" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="dv">12</span></span>
+<span id="cb9-2"><a href="assigning-data-to-an-object.html#cb9-2" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb9-3"><a href="assigning-data-to-an-object.html#cb9-3" tabindex="-1"></a>A <span class="ot">&lt;-</span> A <span class="sc">+</span> B</span></code></pre></div>
+<p>What values do A and B store now?</p>
 <ul>
-<li>You can see the objects you created in the upper right panel in RStudio that is, the environment:</li>
+<li>You can see the objects you created in the upper-right panel in RStudio that is, the <strong>environment</strong>:</li>
 </ul>
 <p><img src="images/R_basics_object_env.png" alt="R object env" width="500"/></p>
 <p><strong>How to name an object?</strong></p>

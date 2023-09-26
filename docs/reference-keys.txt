@@ -15,7 +15,7 @@ rstudio-interface
 the-r-console
 paths-and-directories
 path-and-home-directory
-create-course-directory
+create-the-workshop-directory
 r-basics
 arithmetic-operators
 objects-in-r
@@ -50,10 +50,4 @@ filter
 select
 rename
 exercise-3
-final-exercises
-exercise-a-barplots
-exercise-b-scatter-plot
-exercise-c-boxplot
-bonus-interactive-plots-with-plotly
-bonus-heatmaps-with-pheatmap
 resources

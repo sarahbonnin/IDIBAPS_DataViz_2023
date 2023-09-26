@@ -18,7 +18,7 @@ The following arithmetic operators can be used for these tasks:
 
 In the R terminal, as you have seen before, you can type the following:
 
-```{r, eval=TRUE}
+```{r, eval=FALSE}
 10-2
 ```
 
@@ -41,7 +41,7 @@ or:
 
 So far, we  used the R console interactively, and received the answers from R **in the console.**
 
-Data/output of commands can also be stored in **object**.
+Data/output of commands can also be stored in **objects**.
 
 Everything that stores any kind of data in R is an **object**:
 
@@ -65,7 +65,7 @@ Copy-paste the following in the console, and hit Enter.
 B <- 10
 ```
 
-This time, there is no output. If you now type **B** in the R console, and hit Enter, what happens?
+This time, not there is **no output**. If you now type **B** in the R console, and hit Enter, what happens?
 
 * Reassigning: modifying the content of an object:
 
@@ -81,10 +81,10 @@ A <- 5
 A <- A + B
 ```
 
-What values do A and B store?
+What values do A and B store now?
 
 
-* You can see the objects you created in the upper right panel in RStudio that is, the environment:
+* You can see the objects you created in the upper-right panel in RStudio that is, the **environment**:
 
 <img src="images/R_basics_object_env.png" alt="R object env" width="500"/>
 
@@ -109,7 +109,7 @@ There are several data types in R: numbers, characters, booleans, factors, etc.
 
 For this introduction, we will mainly see and use numbers and characters.
 
-A character or string of characters must be assigned with **quotes ("")**, for example:
+A character or string of characters must be assigned with simple or double **quotes ("")**, for example:
 
 ```{r}
 myobject <- "training"

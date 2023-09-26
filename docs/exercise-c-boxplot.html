@@ -23,7 +23,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2023-09-25" />
+<meta name="date" content="2023-09-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="exercise-b-scatter-plot.html"/>
-<link rel="next" href="bonus-interactive-plots-with-plotly.html"/>
+<link rel="next" href="resources.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -164,7 +164,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>5</b> Paths and directories</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="path-and-home-directory.html"><a href="path-and-home-directory.html"><i class="fa fa-check"></i><b>5.1</b> Path and home directory</a></li>
-<li class="chapter" data-level="5.2" data-path="create-course-directory.html"><a href="create-course-directory.html"><i class="fa fa-check"></i><b>5.2</b> Create course directory</a></li>
+<li class="chapter" data-level="5.2" data-path="create-the-workshop-directory.html"><a href="create-the-workshop-directory.html"><i class="fa fa-check"></i><b>5.2</b> Create the workshop directory</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>6</b> R basics</a>
 <ul>
@@ -215,9 +215,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.2" data-path="exercise-b-scatter-plot.html"><a href="exercise-b-scatter-plot.html"><i class="fa fa-check"></i><b>10.2</b> Exercise B: scatter plot</a></li>
 <li class="chapter" data-level="10.3" data-path="exercise-c-boxplot.html"><a href="exercise-c-boxplot.html"><i class="fa fa-check"></i><b>10.3</b> Exercise C: boxplot</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="bonus-interactive-plots-with-plotly.html"><a href="bonus-interactive-plots-with-plotly.html"><i class="fa fa-check"></i><b>11</b> Bonus: interactive plots with {plotly}</a></li>
-<li class="chapter" data-level="12" data-path="bonus-heatmaps-with-pheatmap.html"><a href="bonus-heatmaps-with-pheatmap.html"><i class="fa fa-check"></i><b>12</b> Bonus: heatmaps with {pheatmap}</a></li>
-<li class="chapter" data-level="13" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>13</b> Resources</a></li>
+<li class="chapter" data-level="11" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>11</b> Resources</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/sarahbonnin/" target="blank">Published with bookdown</a></li>
 
@@ -247,7 +245,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="exercise-c-boxplot.html#cb94-1" tabindex="-1"></a>rnaseq2 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/GSE150029_rnaseq_log2_long.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="exercise-c-boxplot.html#cb93-1" tabindex="-1"></a>rnaseq2 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/GSE150029_rnaseq_log2_long.csv&quot;</span>)</span></code></pre></div>
 </details>
 <p>Note that the information contained in that file is the same as for the previous exercise, but in a different format: this one is in a so-called <strong>long</strong> format, i.e. one observation (value) per row.</p>
 <ol start="2" style="list-style-type: decimal">
@@ -257,8 +255,8 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="exercise-c-boxplot.html#cb95-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>rnaseq2, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample, <span class="at">y=</span>log2_counts)) <span class="sc">+</span> </span>
-<span id="cb95-2"><a href="exercise-c-boxplot.html#cb95-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="exercise-c-boxplot.html#cb94-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>rnaseq2, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample, <span class="at">y=</span>log2_counts)) <span class="sc">+</span> </span>
+<span id="cb94-2"><a href="exercise-c-boxplot.html#cb94-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
 <p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-90-1.png" width="480" /></p>
 </details>
 <p><br></p>
@@ -269,8 +267,8 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="exercise-c-boxplot.html#cb96-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>rnaseq2, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample, <span class="at">y=</span>log2_counts, <span class="at">fill=</span>gene_biotype)) <span class="sc">+</span> </span>
-<span id="cb96-2"><a href="exercise-c-boxplot.html#cb96-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="exercise-c-boxplot.html#cb95-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>rnaseq2, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample, <span class="at">y=</span>log2_counts, <span class="at">fill=</span>gene_biotype)) <span class="sc">+</span> </span>
+<span id="cb95-2"><a href="exercise-c-boxplot.html#cb95-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
 <p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-91-1.png" width="1728" /></p>
 </details>
 <ol start="4" style="list-style-type: decimal">
@@ -280,8 +278,8 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="exercise-c-boxplot.html#cb97-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span><span class="fu">filter</span>(rnaseq2, gene_biotype<span class="sc">==</span><span class="st">&quot;protein_coding&quot;</span> <span class="sc">|</span> gene_biotype<span class="sc">==</span><span class="st">&quot;lincRNA&quot;</span>), <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample, <span class="at">y=</span>log2_counts, <span class="at">fill=</span>gene_biotype)) <span class="sc">+</span> </span>
-<span id="cb97-2"><a href="exercise-c-boxplot.html#cb97-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="exercise-c-boxplot.html#cb96-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span><span class="fu">filter</span>(rnaseq2, gene_biotype<span class="sc">==</span><span class="st">&quot;protein_coding&quot;</span> <span class="sc">|</span> gene_biotype<span class="sc">==</span><span class="st">&quot;lincRNA&quot;</span>), <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample, <span class="at">y=</span>log2_counts, <span class="at">fill=</span>gene_biotype)) <span class="sc">+</span> </span>
+<span id="cb96-2"><a href="exercise-c-boxplot.html#cb96-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
 <p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-92-1.png" width="480" /></p>
 </details>
 <p><br></p>
@@ -292,8 +290,8 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="exercise-c-boxplot.html#cb98-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>rnaseq2, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>gene_biotype, <span class="at">y=</span>log2_counts, <span class="at">fill=</span>sample)) <span class="sc">+</span> </span>
-<span id="cb98-2"><a href="exercise-c-boxplot.html#cb98-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="exercise-c-boxplot.html#cb97-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>rnaseq2, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>gene_biotype, <span class="at">y=</span>log2_counts, <span class="at">fill=</span>sample)) <span class="sc">+</span> </span>
+<span id="cb97-2"><a href="exercise-c-boxplot.html#cb97-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
 <p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-93-1.png" width="480" /></p>
 </details>
 
@@ -305,7 +303,7 @@ correction
         </div>
       </div>
 <a href="exercise-b-scatter-plot.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="bonus-interactive-plots-with-plotly.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="resources.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

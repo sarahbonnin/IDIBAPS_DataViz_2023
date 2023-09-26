@@ -22,8 +22,8 @@ knitr::opts_chunk$set(fig.width=5, fig.height=4,
 
 A ggplot graph needs at least 3 components:
 
-* **Data**: that is the source data table that we want to represent.
-* **Aesthetics** mappings: they describe what will be visualized from **data**
+* **Data**: that is the source data that we want to represent.
+* **Aesthetics** mappings: they describe what will be visualized from **data**.
 * **Geometrics**: functions that represent what we see in the graph: lines, points, boxes etc. for example:
   * geom_point()
   * geom_lines()
@@ -35,10 +35,10 @@ A ggplot graph needs at least 3 components:
 
 The base structure is the following:
 
-**ggplot(<DATA>, <AESTHETICS>) + <GEOMETRICS>**
+**ggplot(\<DATA\>, \<AESTHETICS\>) + \<GEOMETRICS\>**
 
 
-For example if we want to represent **column1** (on the x axis) and **column2** (on the y axis) of **data** as **points, we would use the following structure:
+For example if we want to represent **column1** (on the x axis) and **column2** (on the y axis) of **data** as **points**, we would use the following structure:
 
 ```{r, eval=F, echo=TRUE}
 ggplot(data=dataframe, mapping=aes(x=column1, y=column2)) + geom_point()
@@ -56,9 +56,11 @@ We can start from the **geneexp** object, that holds the content of file *expres
 
 The base layer will be the following:
 
-```{r, eval=F}
+```{r, eval=T}
 ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2))
 ```
+
+Try to copy-paste it in the console, and hit Enter. As you can see, nothing is actually plotted yet, but the base is set.
 
 Adding to this the geometrics called **geom_point()**, we **tell ggplot to produce a scatter/point plot**:
 
@@ -77,7 +79,7 @@ Your plot should appear in the "Plots" tab in the bottom-right panel.
 
 ### Customize the points
 
-**geom_point()** also takes some parameters, including the color of the point, and their size:
+**geom_point()** also takes some parameters, including the point color and size:
 
 Color all points in red:
 
@@ -99,9 +101,9 @@ Functions in **ggplot2** (and **tidyverse** in general) are richly documented.
 
 While documentation can be quite technical it is always good practice to take a look at it.
 
-You can access the help page of a function in the **Help** tab in the bottom-right panel. Give it a try with the "geom_point":
+You can access the help page of a function in the **Help** tab in the bottom-right panel. Give it a try with "geom_point":
 
-<img src="images/ggplot_help" alt="rstudio logo" width="700"/>
+<img src="images/ggplot_help.png" alt="rstudio help" width="500"/>
 
 
 Back to our customization: you can set different shapes for the points!
@@ -115,17 +117,19 @@ ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) +
   geom_point(color="red", size=2.5, shape="triangle")
 ```
 
+See more options in the following image:
+
 <img src="images/ggplot2_shape.png" alt="import zip" width="700"/>
 
 *Image from ggplot2 documentation*
 
 ### Add more layers
 
-We can add more layers to the plot, using the same structure!
+We can add more layers to the plot, using the same structure (**+ layer_name()**)
 
 #### ggtitle()
 
-For example, let's add a title using the **ggtitle()** layer:
+Add a title using the **ggtitle()** layer:
 
 ```{r}
 ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) + 
@@ -148,6 +152,20 @@ ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) +
   geom_point(color="red", size=2.5, shape="diamond") +
   ggtitle(label="my first ggplot") +
   theme_linedraw()
+```
+
+```{r}
+ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) + 
+  geom_point(color="red", size=2.5, shape="diamond") +
+  ggtitle(label="my first ggplot") +
+  theme_bw()
+```
+
+```{r}
+ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) + 
+  geom_point(color="red", size=2.5, shape="diamond") +
+  ggtitle(label="my first ggplot") +
+  theme_grey()
 ```
 
 A good page to check the different backgrounds:
@@ -177,13 +195,13 @@ In the "Plots" tab, click on "Export" and "Save as image":
 From that windows, you can:
 
 * Pick an image format between: PNG, JPEG, TIFF, BMP, SVG, EPS.
-* Choose where you want to **save the output file**
+* Choose where you want to **save the output file** (by default, R will propose the current working directory).
 * Choose the **file name**.
 * Set the dimensions, by either:
   * Setting the Width and Height of the figure (in pixels)
   * Moving the graph manually (bottom-right corner of the plot) until you obtain the size and proportions that you want.
 
-<img src="images/ggplot_save_parameters.png" alt="import zip" width="500"/>
+<img src="images/ggplot_save_parameters.png" alt="import zip" width="700"/>
 
 ## Exercise 1
 
@@ -285,7 +303,10 @@ Let's customize our scatter plot a bit more.
 
 We may want to show the gene names that the points represent.
 
-This is done by setting the **label** parameter, in the ggplot **aes()** function, and by adding the **geom_text()** layer:
+This is done by:
+
+* setting the **label** parameter, in the ggplot **aes()** function
+* adding the **geom_text()** layer
 
 ```{r}
 ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=Gene)) + 
@@ -423,7 +444,7 @@ ggplot(data=gtf, mapping=aes(x=chr, color=gene_type)) +
 </details>
 
 <br>
-4. Now try with **fill** instead of **color**:
+4. Now try with **fill** instead of **color** in **aes()**:
 
 <details>
 <summary>
@@ -454,7 +475,7 @@ ggplot(data=gtf, mapping=aes(x=chr, fill=gene_type)) +
 </details>
 
 <br>
-6. Change the [**theme**](https://ggplot2-book.org/themes):
+6. Change the default [**theme**](https://ggplot2-book.org/themes):
 
 <details>
 <summary>
@@ -522,7 +543,7 @@ statsbcn <- read_csv("DataViz_source_files-main/files/stats_continents_barcelona
 
 How many rows and how many columns does the data contain?
 
-In the barplots we created so far, R takes categories in the columns specified **x=** and counts the number of occurrences.
+In the barplots we created so far, R takes categories in the columns specified in **x=** and counts the number of occurrences.
 
 The argument **stat="identity"** in geom_bar() is telling R to calculate the sum of the variable specified in **y=**, **grouped by the x variable**: bars of the barplot will display the sums.
 
