@@ -1,4 +1,4 @@
-# Bonus: interactive plots with {plotly}
+# Interactive plots with {plotly}
 
 **{plotly}** is a package that makes interactive graphs.
 
@@ -19,14 +19,31 @@ geneexp <- read_csv("DataViz_source_files-main/files/expression_20genes.csv")
 We can first save the "ggplot" as an object **myplot**:
 
 ```{r}
-myplot <- ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=genes)) + 
+myplot <- ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=Gene, color=DE)) + 
   geom_point()
 ```
 
-And then input that object into the **ggplotly()** function:
+And then input that object into the **ggplotly()** function. 
 
 ```{r, echo=T, eval=F}
 ggplotly(p=myplot)
 ```
 
-The interactive plot should appear in the **Viewer** tab (bottom-right panel).
+The interactive plot should appear in the **Viewer** tab (bottom-right panel). Not that you can zoom into the plot!
+
+Customize what appears in the tooltip box. For example, here, we only show the gene label information:
+
+```{r, echo=T, eval=F}
+ggplotly(p=myplot, tooltip="label")
+```
+
+It also works for different types of plots: for example, barplots.
+
+```{r}
+mybarplot <- ggplot(data=geneexp, mapping=aes(x=DE)) + 
+  geom_bar()
+```
+
+```{r, echo=T, eval=F}
+ggplotly(p=mybarplot)
+```

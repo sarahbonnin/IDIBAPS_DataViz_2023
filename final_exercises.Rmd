@@ -1,16 +1,16 @@
-# Final exercises
+# More exercises
 
 The following sets of exercises aim to help you practice what was learned during this workshop.
 <br>
 
-Exercise A: barplot
+Exercise 5: barplot
 <br>
-Exercise B: scatter plot
+Exercise 6: scatter plot
 <br>
-Exercise C: boxplot
+Exercise 7: boxplot
 <br>
 
-## Exercise A: barplots
+## Exercise 5: barplots
 
 1. Import **DataViz_source_files-main/files/population_age_group_per_sex_long_format.csv** into an object called **pop_age**.
 
@@ -25,9 +25,9 @@ pop_age <- read_csv("DataViz_source_files-main/files/population_age_group_per_se
 
 </details>
 
+<br>
 
 2. Create a barplot that shows the number of people per **Year**:
-
 
 <details>
 <summary>
@@ -41,6 +41,7 @@ ggplot(data=pop_age, mapping=aes(x=Year, y=Population)) +
 
 </details>
 
+<br>
 
 3. Split the view by Sex:
 
@@ -57,6 +58,7 @@ ggplot(data=pop_age, mapping=aes(x=Year, y=Population, fill=Sex)) +
 
 </details>
 
+<br>
 
 4. Select only "Spain" in "Country":
 
@@ -71,8 +73,16 @@ ggplot(data=filter(pop_age, Country=="Spain"), mapping=aes(x=Year, y=Population,
   geom_bar(stat="identity")
 ```
 
+or:
+
+```{r, eval=F}
+filter(pop_age, Country=="Spain") %>% ggplot(mapping=aes(x=Year, y=Population, fill=Sex)) + 
+  geom_bar(stat="identity")
+```
+
 </details>
 
+<br>
 
 5. Show the bars next to each other.
 
@@ -82,13 +92,13 @@ correction
 </summary>
 
 ```{r}
-
 ggplot(data=filter(pop_age, Country=="Spain"), mapping=aes(x=Year, y=Population, fill=Sex)) + 
   geom_bar(stat="identity", position="dodge")
 ```
 
 </details>
 
+<br>
 
 
 6. Change default colors using **scale_fill_manual()** layer.
@@ -104,11 +114,12 @@ correction
 ```{r}
 ggplot(data=filter(pop_age, Country=="Spain"), mapping=aes(x=Year, y=Population, fill=Sex)) + 
   geom_bar(stat="identity", position="dodge") + 
-  scale_fill_manual(values=c("darkgreen", "red"))
+  scale_fill_manual(values=c(Female="darkgreen", Male="red"))
 ```
 
 </details>
 
+<br>
 
 7. Add a title, change the theme / background:
 
@@ -127,13 +138,8 @@ ggplot(data=filter(pop_age, Country=="Spain"), mapping=aes(x=Year, y=Population,
 
 </details>
 
-8. Save to a PDF file: Export -> Save as PDF. Note: when saving to PDF format, you cannot manualy drag the plot to get the size and proportion you want, but you can **Preview** before saving it.
-
-9. Only if you have time!
-
-* Select data from **Italy** and for the year **2000**. 
-* Create a barplot that shows **Sex** in **y**, Population in **y** and that is split by the **Age_group**.
-* Show the proportions (remember: position="fill")
+<br>
+8. Now split the plot by **Age group** using **facet_wrap()**
 
 <details>
 <summary>
@@ -141,13 +147,59 @@ correction
 </summary>
 
 ```{r}
-ggplot(data=filter(pop_age, Country=="Spain" & Year==2000), mapping=aes(x=Sex, y=Population, fill=Age_group)) + 
-  geom_bar(stat="identity", position="dodge")
+ggplot(data=filter(pop_age, Country=="Spain"), mapping=aes(x=Year, y=Population, fill=Sex)) +
+  geom_bar(stat="identity", position="dodge") + 
+  scale_fill_manual(values=c("darkgreen", "red")) + 
+  ggtitle("Spanish population from 1950 to 2021 per sex") + 
+  theme_minimal() +
+  facet_wrap(~Age_group)
+```
+
+</details>
+<br>
+
+9. Save to a PDF file: Export -> Save as PDF. Note: when saving to PDF format, you cannot manualy drag the plot to get the size and proportion you want, but you can **Preview** before saving it.
+
+If you prefer, you can save the file using **ggsave()** (or you can do both!).
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+# first, save to an object
+plot_age <- ggplot(data=filter(pop_age, Country=="Spain"), mapping=aes(x=Year, y=Population, fill=Sex)) +
+  geom_bar(stat="identity", position="dodge") + 
+  scale_fill_manual(values=c("darkgreen", "red")) + 
+  ggtitle("Spanish population from 1950 to 2021 per sex") + 
+  theme_minimal() +
+  facet_wrap(~Age_group)
+
+# save file
+ggsave(filename="population_age_sex.pdf", plot=plot_age, device = "pdf", units = "in", width = 10, height = 8)
 ```
 
 </details>
 
-## Exercise B: scatter plot
+<br>
+
+10. Save your filtered data: have a look at the **write_csv()** function:
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+# first, save to an object
+mysubset <- filter(pop_age, Country=="Spain")
+write_csv(mysubset, "subset_spain.csv")
+```
+
+</details>
+
+## Exercise 6: scatter plot
 
 1. Import **DataViz_source_files-main/files/GSE150029_rnaseq_log2.csv** into an object called **rnaseq**.
 
@@ -161,6 +213,7 @@ rnaseq <- read_csv("DataViz_source_files-main/files/GSE150029_rnaseq_log2.csv")
 ```
 
 </details>
+<br>
 
 2. Create a scatter plot that represents sample CTRL on the x axis and sample EZH on the y axis.
 
@@ -192,7 +245,7 @@ ggplot(data=rnaseq, mapping=aes(x=CTRL, y=EZH, color=gene_biotype)) +
 </details>
 
 <br>
-3. Not very readable! Filter and plot only data corresponding to lincRNA and miRNA.
+3. Not very readable! Filter and plot only data corresponding to either lincRNA OR miRNA.
 
 <details>
 <summary>
@@ -201,6 +254,10 @@ correction
 
 ```{r}
 ggplot(data=filter(rnaseq, gene_biotype=="lincRNA" | gene_biotype=="miRNA"), mapping=aes(x=CTRL, y=EZH, color=gene_biotype)) +
+  geom_point()
+
+# using the pipe:
+filter(rnaseq, gene_biotype=="lincRNA" | gene_biotype=="miRNA") %>% ggplot(mapping=aes(x=CTRL, y=EZH, color=gene_biotype)) +
   geom_point()
 ```
 
@@ -215,17 +272,13 @@ correction
 </summary>
 
 ```{r}
-ggplot(data=filter(rnaseq, gene_biotype=="lincRNA" | gene_biotype=="miRNA" & CTRL > 1.5*EZH), mapping=aes(x=CTRL, y=EZH, color=gene_biotype)) +
+filter(rnaseq, gene_biotype=="lincRNA" | gene_biotype=="miRNA" & CTRL > 1.5*EZH) %>% ggplot(mapping=aes(x=CTRL, y=EZH, color=gene_biotype)) +
   geom_point()
 ```
 
 </details>
 
-
-
-## Exercise C: boxplot
-
-1. Import **DataViz_source_files-main/files/GSE150029_rnaseq_log2_long.csv** into an object called **rnaseq2**.
+5. Add a title to the plot, and make it **bold** (see **theme()** section of the course)
 
 <details>
 <summary>
@@ -233,12 +286,52 @@ correction
 </summary>
 
 ```{r}
-rnaseq2 <- read_csv("DataViz_source_files-main/files/GSE150029_rnaseq_log2_long.csv")
+filter(rnaseq, gene_biotype=="lincRNA" | gene_biotype=="miRNA" & CTRL > 1.5*EZH) %>% ggplot(mapping=aes(x=CTRL, y=EZH, color=gene_biotype)) +
+  geom_point() +
+  ggtitle("lincRNA and miRNA") +
+  theme(plot.title = element_text(face = "bold"))
+```
+
+</details>
+<br>
+
+NOTE: If you want to label only one (or few) point(s), you can do it the following way:
+
+First, filter the data frame:
+```{r}
+SNHG8 <- filter(rnaseq, gene_name=="SNHG8")
+```
+
+Then, add it to geom_text:
+
+```{r}
+filter(rnaseq, gene_biotype=="lincRNA" | gene_biotype=="miRNA" & CTRL > 1.5*EZH) %>% ggplot(mapping=aes(x=CTRL, y=EZH, color=gene_biotype)) +
+  geom_point() +
+  ggtitle("lincRNA and miRNA") +
+  theme(plot.title = element_text(face = "bold")) +
+  geom_text(data=SNHG8, label="SNHG8", show.legend = FALSE)
+```
+
+
+
+## Exercise 7: boxplot
+
+1. Convert **DataViz_source_files-main/files/GSE150029_rnaseq_log2.csv** (rnaseq object) to a long format, and save it as a new object called **rnaseq2**.
+
+Note that it exists already as a separate object, if you prefer to read this in directly: **DataViz_source_files-main/files/GSE150029_rnaseq_log2_long.csv**.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+rnaseq2 <- rnaseq %>% pivot_longer(cols=c(CTRL, EZH), names_to = "sample", values_to = "log2_counts")
 ```
 
 </details>
 
-Note that the information contained in that file is the same as for the previous exercise, but in a different format: this one is in a so-called **long** format, i.e. one observation (value) per row.
+<br>
 
 2. Create a boxplot that will represent the samples on the x axis, and their expression on the y axis.
 
@@ -263,12 +356,13 @@ ggplot(data=rnaseq2, mapping=aes(x=sample, y=log2_counts)) +
 correction
 </summary>
 
-```{r, fig.width=18}
+```{r, fig.width=18, fig.height=9}
 ggplot(data=rnaseq2, mapping=aes(x=sample, y=log2_counts, fill=gene_biotype)) + 
   geom_boxplot()
 ```
 
 </details>
+<br>
 
 4. Select only protein_coding and lincRNA and split again the boxes per gene_biotype.
 
@@ -278,7 +372,7 @@ correction
 </summary>
 
 ```{r}
-ggplot(data=filter(rnaseq2, gene_biotype=="protein_coding" | gene_biotype=="lincRNA"), mapping=aes(x=sample, y=log2_counts, fill=gene_biotype)) + 
+filter(rnaseq2, gene_biotype=="protein_coding" | gene_biotype=="lincRNA") %>% ggplot(mapping=aes(x=sample, y=log2_counts, fill=gene_biotype)) + 
   geom_boxplot()
 ```
 
@@ -286,7 +380,7 @@ ggplot(data=filter(rnaseq2, gene_biotype=="protein_coding" | gene_biotype=="linc
 
 <br>
 
-4. Produce a different view from this boxplot: set the gene_biotype on the x axis, and split by sample.
+5. Add a **geom_violin()** layer. Set **alpha=0.3** in geom_violin. What is the alpha parameter?
 
 <details>
 <summary>
@@ -294,11 +388,32 @@ correction
 </summary>
 
 ```{r}
-ggplot(data=rnaseq2, mapping=aes(x=gene_biotype, y=log2_counts, fill=sample)) + 
-  geom_boxplot()
+filter(rnaseq2, gene_biotype=="protein_coding" | gene_biotype=="lincRNA") %>% ggplot(mapping=aes(x=sample, y=log2_counts, fill=gene_biotype)) + 
+  geom_boxplot() +
+  geom_violin(alpha=0.3)
+
+# if boxplot and violin plots are misaligned, you can play with the position parameter in geom_violin, such as:
+# geom_violin(position=position_dodge(0.7))
 ```
 
 </details>
 
+<br>
 
+6. Look at the help page of **geom_boxplot()** and change the following parameters:
+
+* Set outlier color to red
+* Set outlier shape as triangles
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+filter(rnaseq2, gene_biotype=="protein_coding" | gene_biotype=="lincRNA") %>% ggplot(mapping=aes(x=sample, y=log2_counts, fill=gene_biotype)) + 
+  geom_boxplot(outlier.colour = "red", outlier.shape = "triangle")
+```
+
+</details>
 

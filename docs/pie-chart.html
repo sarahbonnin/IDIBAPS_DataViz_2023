@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>12.2 Pie chart | Data visualization with R and ggplot2: from data to publication-quality graphics</title>
-  <meta name="description" content="12.2 Pie chart | Data visualization with R and ggplot2: from data to publication-quality graphics" />
+  <title>10.2 Pie chart | Data visualization with R and ggplot2: from data to publication-quality graphics</title>
+  <meta name="description" content="10.2 Pie chart | Data visualization with R and ggplot2: from data to publication-quality graphics" />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="12.2 Pie chart | Data visualization with R and ggplot2: from data to publication-quality graphics" />
+  <meta property="og:title" content="10.2 Pie chart | Data visualization with R and ggplot2: from data to publication-quality graphics" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="12.2 Pie chart | Data visualization with R and ggplot2: from data to publication-quality graphics" />
+  <meta name="twitter:title" content="10.2 Pie chart | Data visualization with R and ggplot2: from data to publication-quality graphics" />
   
   
   
@@ -23,7 +23,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2023-09-26" />
+<meta name="date" content="2023-09-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="histograms-and-density-plots.html"/>
-<link rel="next" href="dot-plots.html"/>
+<link rel="next" href="custom-scatter-plot.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -164,7 +164,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>5</b> Paths and directories</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="path-and-home-directory.html"><a href="path-and-home-directory.html"><i class="fa fa-check"></i><b>5.1</b> Path and home directory</a></li>
-<li class="chapter" data-level="5.2" data-path="create-course-directory.html"><a href="create-course-directory.html"><i class="fa fa-check"></i><b>5.2</b> Create course directory</a></li>
+<li class="chapter" data-level="5.2" data-path="create-the-workshop-directory.html"><a href="create-the-workshop-directory.html"><i class="fa fa-check"></i><b>5.2</b> Create the workshop directory</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>6</b> R basics</a>
 <ul>
@@ -188,7 +188,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.2.2" data-path="scatter-plot.html"><a href="scatter-plot.html#customize-the-points"><i class="fa fa-check"></i><b>8.2.2</b> Customize the points</a></li>
 <li class="chapter" data-level="8.2.3" data-path="scatter-plot.html"><a href="scatter-plot.html#add-more-layers"><i class="fa fa-check"></i><b>8.2.3</b> Add more layers</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="save-your-plot.html"><a href="save-your-plot.html"><i class="fa fa-check"></i><b>8.3</b> Save your plot</a></li>
+<li class="chapter" data-level="8.3" data-path="save-your-plot.html"><a href="save-your-plot.html"><i class="fa fa-check"></i><b>8.3</b> Save your plot</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="save-your-plot.html"><a href="save-your-plot.html#from-the-interface"><i class="fa fa-check"></i><b>8.3.1</b> From the interface</a></li>
+<li class="chapter" data-level="8.3.2" data-path="save-your-plot.html"><a href="save-your-plot.html#from-the-console"><i class="fa fa-check"></i><b>8.3.2</b> From the console</a></li>
+</ul></li>
 <li class="chapter" data-level="8.4" data-path="exercise-1.html"><a href="exercise-1.html"><i class="fa fa-check"></i><b>8.4</b> Exercise 1</a></li>
 <li class="chapter" data-level="8.5" data-path="scatter-plots-more-features.html"><a href="scatter-plots-more-features.html"><i class="fa fa-check"></i><b>8.5</b> Scatter plots: more features</a></li>
 <li class="chapter" data-level="8.6" data-path="barplots.html"><a href="barplots.html"><i class="fa fa-check"></i><b>8.6</b> Barplots</a></li>
@@ -208,27 +212,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.2" data-path="select.html"><a href="select.html"><i class="fa fa-check"></i><b>9.2</b> select()</a></li>
 <li class="chapter" data-level="9.3" data-path="rename.html"><a href="rename.html"><i class="fa fa-check"></i><b>9.3</b> rename()</a></li>
 <li class="chapter" data-level="9.4" data-path="exercise-3.html"><a href="exercise-3.html"><i class="fa fa-check"></i><b>9.4</b> Exercise 3</a></li>
+<li class="chapter" data-level="9.5" data-path="the-pipe-operator.html"><a href="the-pipe-operator.html"><i class="fa fa-check"></i><b>9.5</b> The pipe operator</a></li>
+<li class="chapter" data-level="9.6" data-path="from-wide-to-long-format.html"><a href="from-wide-to-long-format.html"><i class="fa fa-check"></i><b>9.6</b> From wide to long format</a></li>
+<li class="chapter" data-level="9.7" data-path="exercise-4.html"><a href="exercise-4.html"><i class="fa fa-check"></i><b>9.7</b> Exercise 4</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="final-exercises.html"><a href="final-exercises.html"><i class="fa fa-check"></i><b>10</b> Final exercises</a>
+<li class="chapter" data-level="10" data-path="more-ggplots.html"><a href="more-ggplots.html"><i class="fa fa-check"></i><b>10</b> More ggplots</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="exercise-a-barplots.html"><a href="exercise-a-barplots.html"><i class="fa fa-check"></i><b>10.1</b> Exercise A: barplots</a></li>
-<li class="chapter" data-level="10.2" data-path="exercise-b-scatter-plot.html"><a href="exercise-b-scatter-plot.html"><i class="fa fa-check"></i><b>10.2</b> Exercise B: scatter plot</a></li>
-<li class="chapter" data-level="10.3" data-path="exercise-c-boxplot.html"><a href="exercise-c-boxplot.html"><i class="fa fa-check"></i><b>10.3</b> Exercise C: boxplot</a></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="bonus-interactive-plots-with-plotly.html"><a href="bonus-interactive-plots-with-plotly.html"><i class="fa fa-check"></i><b>11</b> Bonus: interactive plots with {plotly}</a></li>
-<li class="chapter" data-level="12" data-path="bonus-more-plots-with-ggplot2.html"><a href="bonus-more-plots-with-ggplot2.html"><i class="fa fa-check"></i><b>12</b> Bonus: more plots with {ggplot2}</a>
+<li class="chapter" data-level="10.1" data-path="histograms-and-density-plots.html"><a href="histograms-and-density-plots.html"><i class="fa fa-check"></i><b>10.1</b> Histograms and density plots</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="histograms-and-density-plots.html"><a href="histograms-and-density-plots.html"><i class="fa fa-check"></i><b>12.1</b> Histograms and density plots</a>
+<li class="chapter" data-level="10.1.1" data-path="histograms-and-density-plots.html"><a href="histograms-and-density-plots.html#histogram"><i class="fa fa-check"></i><b>10.1.1</b> Histogram</a></li>
+<li class="chapter" data-level="10.1.2" data-path="histograms-and-density-plots.html"><a href="histograms-and-density-plots.html#density-plot"><i class="fa fa-check"></i><b>10.1.2</b> Density plot</a></li>
+<li class="chapter" data-level="10.1.3" data-path="histograms-and-density-plots.html"><a href="histograms-and-density-plots.html#histogram-density"><i class="fa fa-check"></i><b>10.1.3</b> Histogram + density</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="pie-chart.html"><a href="pie-chart.html"><i class="fa fa-check"></i><b>10.2</b> Pie chart</a></li>
+<li class="chapter" data-level="10.3" data-path="custom-scatter-plot.html"><a href="custom-scatter-plot.html"><i class="fa fa-check"></i><b>10.3</b> Custom scatter plot</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="more-exercises.html"><a href="more-exercises.html"><i class="fa fa-check"></i><b>11</b> More exercises</a>
 <ul>
-<li class="chapter" data-level="12.1.1" data-path="histograms-and-density-plots.html"><a href="histograms-and-density-plots.html#histogram"><i class="fa fa-check"></i><b>12.1.1</b> Histogram</a></li>
-<li class="chapter" data-level="12.1.2" data-path="histograms-and-density-plots.html"><a href="histograms-and-density-plots.html#density-plot"><i class="fa fa-check"></i><b>12.1.2</b> Density plot</a></li>
-<li class="chapter" data-level="12.1.3" data-path="histograms-and-density-plots.html"><a href="histograms-and-density-plots.html#histogram-density"><i class="fa fa-check"></i><b>12.1.3</b> Histogram + density</a></li>
+<li class="chapter" data-level="11.1" data-path="exercise-5-barplots.html"><a href="exercise-5-barplots.html"><i class="fa fa-check"></i><b>11.1</b> Exercise 5: barplots</a></li>
+<li class="chapter" data-level="11.2" data-path="exercise-6-scatter-plot.html"><a href="exercise-6-scatter-plot.html"><i class="fa fa-check"></i><b>11.2</b> Exercise 6: scatter plot</a></li>
+<li class="chapter" data-level="11.3" data-path="exercise-7-boxplot.html"><a href="exercise-7-boxplot.html"><i class="fa fa-check"></i><b>11.3</b> Exercise 7: boxplot</a></li>
 </ul></li>
-<li class="chapter" data-level="12.2" data-path="pie-chart.html"><a href="pie-chart.html"><i class="fa fa-check"></i><b>12.2</b> Pie chart</a></li>
-<li class="chapter" data-level="12.3" data-path="dot-plots.html"><a href="dot-plots.html"><i class="fa fa-check"></i><b>12.3</b> Dot plots</a></li>
-</ul></li>
-<li class="chapter" data-level="13" data-path="bonus-heatmaps-with-pheatmap.html"><a href="bonus-heatmaps-with-pheatmap.html"><i class="fa fa-check"></i><b>13</b> Bonus: heatmaps with {pheatmap}</a></li>
-<li class="chapter" data-level="14" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>14</b> Resources</a></li>
+<li class="chapter" data-level="12" data-path="interactive-plots-with-plotly.html"><a href="interactive-plots-with-plotly.html"><i class="fa fa-check"></i><b>12</b> Interactive plots with {plotly}</a></li>
+<li class="chapter" data-level="13" data-path="heatmaps-with-pheatmap.html"><a href="heatmaps-with-pheatmap.html"><i class="fa fa-check"></i><b>13</b> Heatmaps with {pheatmap}</a></li>
+<li class="chapter" data-level="14" data-path="demo-volcano-plot.html"><a href="demo-volcano-plot.html"><i class="fa fa-check"></i><b>14</b> Demo volcano plot</a></li>
+<li class="chapter" data-level="15" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>15</b> Resources</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/sarahbonnin/" target="blank">Published with bookdown</a></li>
 
@@ -249,18 +257,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="pie-chart" class="section level2 hasAnchor" number="12.2">
-<h2><span class="header-section-number">12.2</span> Pie chart<a href="pie-chart.html#pie-chart" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="pie-chart" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> Pie chart<a href="pie-chart.html#pie-chart" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We will plot a pie chart representing the number of genes from <strong>gtf</strong> found in each chromosome.</p>
-<p>Prepare data so as to obtain counts:</p>
-<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="pie-chart.html#cb105-1" tabindex="-1"></a>gtf_count_chr <span class="ot">&lt;-</span> gtf <span class="sc">%&gt;%</span></span>
-<span id="cb105-2"><a href="pie-chart.html#cb105-2" tabindex="-1"></a>  <span class="fu">group_by</span>(chr) <span class="sc">%&gt;%</span></span>
-<span id="cb105-3"><a href="pie-chart.html#cb105-3" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">counts=</span><span class="fu">n</span>())</span></code></pre></div>
-<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="pie-chart.html#cb106-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf_count_chr, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span><span class="st">&quot;&quot;</span>, <span class="at">y=</span>counts, <span class="at">fill=</span>chr)) <span class="sc">+</span> </span>
-<span id="cb106-2"><a href="pie-chart.html#cb106-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">width=</span><span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb106-3"><a href="pie-chart.html#cb106-3" tabindex="-1"></a>  <span class="fu">coord_polar</span>(<span class="st">&quot;y&quot;</span>, <span class="at">start=</span><span class="dv">0</span>) <span class="sc">+</span></span>
-<span id="cb106-4"><a href="pie-chart.html#cb106-4" tabindex="-1"></a>  <span class="fu">theme_void</span>()</span></code></pre></div>
-<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-101-1.png" width="480" /></p>
+<p>Prepare data so as to obtain counts (that is more advanced dplyr manipulation):</p>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="pie-chart.html#cb109-1" tabindex="-1"></a>gtf_count_chr <span class="ot">&lt;-</span> gtf <span class="sc">%&gt;%</span></span>
+<span id="cb109-2"><a href="pie-chart.html#cb109-2" tabindex="-1"></a>  <span class="fu">group_by</span>(chr) <span class="sc">%&gt;%</span></span>
+<span id="cb109-3"><a href="pie-chart.html#cb109-3" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">counts=</span><span class="fu">n</span>())</span></code></pre></div>
+<p>The <strong>coord_polar()</strong> is needed here: pie plots are stacked barplots in polar coordinates.</p>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="pie-chart.html#cb110-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf_count_chr, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span><span class="st">&quot;&quot;</span>, <span class="at">y=</span>counts, <span class="at">fill=</span>chr)) <span class="sc">+</span> </span>
+<span id="cb110-2"><a href="pie-chart.html#cb110-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span></span>
+<span id="cb110-3"><a href="pie-chart.html#cb110-3" tabindex="-1"></a>  <span class="fu">coord_polar</span>(<span class="st">&quot;y&quot;</span>, <span class="at">start=</span><span class="dv">0</span>)</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-104-1.png" width="480" /></p>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="pie-chart.html#cb111-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf_count_chr, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span><span class="st">&quot;&quot;</span>, <span class="at">y=</span>counts, <span class="at">fill=</span>chr)) <span class="sc">+</span> </span>
+<span id="cb111-2"><a href="pie-chart.html#cb111-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span></span>
+<span id="cb111-3"><a href="pie-chart.html#cb111-3" tabindex="-1"></a>  <span class="fu">coord_polar</span>(<span class="st">&quot;y&quot;</span>, <span class="at">start=</span><span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb111-4"><a href="pie-chart.html#cb111-4" tabindex="-1"></a>  <span class="fu">theme_void</span>()</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-105-1.png" width="480" /></p>
+<p>Change the color scale:</p>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="pie-chart.html#cb112-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf_count_chr, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span><span class="st">&quot;&quot;</span>, <span class="at">y=</span>counts, <span class="at">fill=</span>chr)) <span class="sc">+</span> </span>
+<span id="cb112-2"><a href="pie-chart.html#cb112-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span></span>
+<span id="cb112-3"><a href="pie-chart.html#cb112-3" tabindex="-1"></a>  <span class="fu">coord_polar</span>(<span class="st">&quot;y&quot;</span>, <span class="at">start=</span><span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb112-4"><a href="pie-chart.html#cb112-4" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette=</span><span class="st">&quot;Paired&quot;</span>) <span class="sc">+</span></span>
+<span id="cb112-5"><a href="pie-chart.html#cb112-5" tabindex="-1"></a>  <span class="fu">theme_void</span>()</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-106-1.png" width="480" /></p>
+<p>Here is a <a href="https://genchanghsu.github.io/ggGallery/posts/2021-06-18-post-3-pie-charts-with-ggplot/">nice page</a> about more pie plot customization.</p>
 </div>
             </section>
 
@@ -268,7 +289,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="histograms-and-density-plots.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="dot-plots.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="custom-scatter-plot.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

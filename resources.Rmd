@@ -6,8 +6,11 @@
   * [dplyr](https://rstudio.github.io/cheatsheets/html/data-transformation.html)
   * [tidyr](https://rstudio.github.io/cheatsheets/html/tidyr.html)
   * [readr](https://rstudio.github.io/cheatsheets/html/data-import.html)
-* [ggplot2 cheatsheet]()
 * [ggplot elegant graphics for data analysis](https://ggplot2-book.org/)
 * [R graph gallery](https://r-graph-gallery.com/)
 * [R graphics cookbook](http://www.cookbook-r.com/Graphs/)
 * [ggplot2 extensions](https://exts.ggplot2.tidyverse.org/gallery/)
+* [R programming Coursera course(Johns Hopkins University)](https://www.coursera.org/learn/r-programming)
+* [Official up-to-date introduction to R (from the R Core Team)](https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf)
+* [CRG Biocore intro course to the Tidyverse](https://biocorecrg.github.io/CRG_R_tidyverse_2021/)
+
