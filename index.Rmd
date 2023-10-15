@@ -81,12 +81,14 @@ Day 1 & 2: 9:30-13:30.
   * Scatter plots
   * Barplots
   * Boxplots
-  * Font fine-tuning
+  * Fine-tuning font
   * Colors
   * Faceting
 * Data filtering
-* Final exercises
-* Bonus: interactive plots, heatmaps, etc.
-
+* More ggplots
+* Exercises
+* Interactive plots with {plotly}
+* Heatmaps with {pheatmap}
+* Demo volcano plots
 
 <img src="images/R_logo.png" alt="R logo" width="150"/> <img src="images/setup_rstudio_icon.png" alt="rstudio logo" width="150"/> <img src="images/R_tidyverse_logo.png" alt="tidyverse logo" width="150"/>

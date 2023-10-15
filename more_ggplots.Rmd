@@ -117,7 +117,7 @@ Here is a [nice page](https://genchanghsu.github.io/ggGallery/posts/2021-06-18-p
 
 ## Custom scatter plot
 
-Read in data sent by Laura:
+Read in data sent by an attendee from the last edition of the course:
 
 ```{r}
 orgs <- read_csv("DataViz_source_files-main/files/Dados_organoids.csv")
@@ -150,3 +150,4 @@ ggplot(orgs_long, aes(x=Pas, y=name, size=as.character(Size), color=Color)) +
   theme_minimal() + 
   theme(panel.grid.major.y = element_line(color="grey82", arrow = arrow(angle = 25, length = unit(.15, "inches"),type = "open")), legend.position="none", axis.title = element_blank())
 ```
+
