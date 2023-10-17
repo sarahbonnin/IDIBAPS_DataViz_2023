@@ -24,6 +24,8 @@ data-types
 import-data-read-files-scripts
 fetch-workshop-files
 import-read-in-data
+from-csv
+from-excel
 scripts
 ggplot2
 getting-started
@@ -47,7 +49,7 @@ boxplots
 fine-tuning-text
 colors
 faceting
-data-filtering
+data-filtering-and-wrangling
 filter
 select
 rename

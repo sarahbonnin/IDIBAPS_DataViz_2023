@@ -23,7 +23,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2023-10-15" />
+<meta name="date" content="2023-10-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -176,8 +176,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7" data-path="import-data-read-files-scripts.html"><a href="import-data-read-files-scripts.html"><i class="fa fa-check"></i><b>7</b> Import data / read files / scripts</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="fetch-workshop-files.html"><a href="fetch-workshop-files.html"><i class="fa fa-check"></i><b>7.1</b> Fetch workshop files</a></li>
-<li class="chapter" data-level="7.2" data-path="import-read-in-data.html"><a href="import-read-in-data.html"><i class="fa fa-check"></i><b>7.2</b> Import / read in data</a></li>
-<li class="chapter" data-level="7.3" data-path="scripts.html"><a href="scripts.html"><i class="fa fa-check"></i><b>7.3</b> Scripts</a></li>
+<li class="chapter" data-level="7.2" data-path="import-read-in-data.html"><a href="import-read-in-data.html"><i class="fa fa-check"></i><b>7.2</b> Import / read in data</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="import-read-in-data.html"><a href="import-read-in-data.html#from-csv"><i class="fa fa-check"></i><b>7.2.1</b> from CSV</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="from-excel.html"><a href="from-excel.html"><i class="fa fa-check"></i><b>7.3</b> from Excel</a></li>
+<li class="chapter" data-level="7.4" data-path="scripts.html"><a href="scripts.html"><i class="fa fa-check"></i><b>7.4</b> Scripts</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="ggplot2.html"><a href="ggplot2.html"><i class="fa fa-check"></i><b>8</b> ggplot2</a>
 <ul>
@@ -206,7 +210,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.11" data-path="colors.html"><a href="colors.html"><i class="fa fa-check"></i><b>8.11</b> Colors</a></li>
 <li class="chapter" data-level="8.12" data-path="faceting.html"><a href="faceting.html"><i class="fa fa-check"></i><b>8.12</b> Faceting</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="data-filtering.html"><a href="data-filtering.html"><i class="fa fa-check"></i><b>9</b> Data filtering</a>
+<li class="chapter" data-level="9" data-path="data-filtering-and-wrangling.html"><a href="data-filtering-and-wrangling.html"><i class="fa fa-check"></i><b>9</b> Data filtering and wrangling</a>
 <ul>
 <li class="chapter" data-level="9.1" data-path="filter.html"><a href="filter.html"><i class="fa fa-check"></i><b>9.1</b> filter()</a></li>
 <li class="chapter" data-level="9.2" data-path="select.html"><a href="select.html"><i class="fa fa-check"></i><b>9.2</b> select()</a></li>
@@ -268,9 +272,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="exercise-1.html#cb28-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>geneexp, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample2, <span class="at">y=</span>sample1)) <span class="sc">+</span> </span>
-<span id="cb28-2"><a href="exercise-1.html#cb28-2" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-28-1.png" width="480" /></p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="exercise-1.html#cb32-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>geneexp, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample2, <span class="at">y=</span>sample1)) <span class="sc">+</span> </span>
+<span id="cb32-2"><a href="exercise-1.html#cb32-2" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-30-1.png" width="480" /></p>
 </details>
 <p><br>
 2. Change the point color to blue, and the point size to 2.</p>
@@ -278,9 +282,9 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="exercise-1.html#cb29-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>geneexp, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2)) <span class="sc">+</span> </span>
-<span id="cb29-2"><a href="exercise-1.html#cb29-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color=</span><span class="st">&quot;blue&quot;</span>, <span class="at">size=</span><span class="dv">2</span>)</span></code></pre></div>
-<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-29-1.png" width="480" /></p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="exercise-1.html#cb33-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>geneexp, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2)) <span class="sc">+</span> </span>
+<span id="cb33-2"><a href="exercise-1.html#cb33-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color=</span><span class="st">&quot;blue&quot;</span>, <span class="at">size=</span><span class="dv">2</span>)</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-31-1.png" width="480" /></p>
 </details>
 <p><br>
 3. Change the point shape to “square cross”</p>
@@ -288,9 +292,9 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="exercise-1.html#cb30-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>geneexp, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2)) <span class="sc">+</span> </span>
-<span id="cb30-2"><a href="exercise-1.html#cb30-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color=</span><span class="st">&quot;blue&quot;</span>, <span class="at">size=</span><span class="dv">2</span>, <span class="at">shape=</span><span class="st">&quot;square cross&quot;</span>)</span></code></pre></div>
-<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-30-1.png" width="480" /></p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="exercise-1.html#cb34-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>geneexp, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2)) <span class="sc">+</span> </span>
+<span id="cb34-2"><a href="exercise-1.html#cb34-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color=</span><span class="st">&quot;blue&quot;</span>, <span class="at">size=</span><span class="dv">2</span>, <span class="at">shape=</span><span class="st">&quot;square cross&quot;</span>)</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-32-1.png" width="480" /></p>
 </details>
 <p><br>
 4. Add the title of your choice.</p>
@@ -298,10 +302,10 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="exercise-1.html#cb31-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>geneexp, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2)) <span class="sc">+</span> </span>
-<span id="cb31-2"><a href="exercise-1.html#cb31-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color=</span><span class="st">&quot;blue&quot;</span>, <span class="at">size=</span><span class="dv">2</span>, <span class="at">shape=</span><span class="st">&quot;square cross&quot;</span>) <span class="sc">+</span></span>
-<span id="cb31-3"><a href="exercise-1.html#cb31-3" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="at">label=</span><span class="st">&quot;my second ggplot&quot;</span>)</span></code></pre></div>
-<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-31-1.png" width="480" /></p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="exercise-1.html#cb35-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>geneexp, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2)) <span class="sc">+</span> </span>
+<span id="cb35-2"><a href="exercise-1.html#cb35-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color=</span><span class="st">&quot;blue&quot;</span>, <span class="at">size=</span><span class="dv">2</span>, <span class="at">shape=</span><span class="st">&quot;square cross&quot;</span>) <span class="sc">+</span></span>
+<span id="cb35-3"><a href="exercise-1.html#cb35-3" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="at">label=</span><span class="st">&quot;my second ggplot&quot;</span>)</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-33-1.png" width="480" /></p>
 </details>
 <p><br>
 5. Add a subtitle (wait: that’s new! Google check <strong>ggtitle</strong> help page and/or “ggtitle subtitle” and see if you can find out!)</p>
@@ -309,10 +313,10 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="exercise-1.html#cb32-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>geneexp, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2)) <span class="sc">+</span> </span>
-<span id="cb32-2"><a href="exercise-1.html#cb32-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color=</span><span class="st">&quot;blue&quot;</span>, <span class="at">size=</span><span class="dv">2</span>, <span class="at">shape=</span><span class="st">&quot;square cross&quot;</span>) <span class="sc">+</span></span>
-<span id="cb32-3"><a href="exercise-1.html#cb32-3" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="at">label=</span><span class="st">&quot;my second ggplot&quot;</span>, <span class="at">subtitle=</span><span class="st">&quot;nice blue squares&quot;</span>)</span></code></pre></div>
-<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-32-1.png" width="480" /></p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="exercise-1.html#cb36-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>geneexp, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2)) <span class="sc">+</span> </span>
+<span id="cb36-2"><a href="exercise-1.html#cb36-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color=</span><span class="st">&quot;blue&quot;</span>, <span class="at">size=</span><span class="dv">2</span>, <span class="at">shape=</span><span class="st">&quot;square cross&quot;</span>) <span class="sc">+</span></span>
+<span id="cb36-3"><a href="exercise-1.html#cb36-3" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="at">label=</span><span class="st">&quot;my second ggplot&quot;</span>, <span class="at">subtitle=</span><span class="st">&quot;nice blue squares&quot;</span>)</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-34-1.png" width="480" /></p>
 </details>
 <p><br>
 6. Save your plot as a JPEG file, in the course folder, with dimensions 600X600.</p>

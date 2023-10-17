@@ -1,6 +1,6 @@
-# Data filtering
+# Data filtering and wrangling
 
-We will now see a couple of basic functions to filter and select a data object.
+We will now see a few functions to filter, select and re-organize a data object.
 
 ## filter()
 

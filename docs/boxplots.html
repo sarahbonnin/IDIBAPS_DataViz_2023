@@ -23,7 +23,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2023-10-15" />
+<meta name="date" content="2023-10-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -176,8 +176,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7" data-path="import-data-read-files-scripts.html"><a href="import-data-read-files-scripts.html"><i class="fa fa-check"></i><b>7</b> Import data / read files / scripts</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="fetch-workshop-files.html"><a href="fetch-workshop-files.html"><i class="fa fa-check"></i><b>7.1</b> Fetch workshop files</a></li>
-<li class="chapter" data-level="7.2" data-path="import-read-in-data.html"><a href="import-read-in-data.html"><i class="fa fa-check"></i><b>7.2</b> Import / read in data</a></li>
-<li class="chapter" data-level="7.3" data-path="scripts.html"><a href="scripts.html"><i class="fa fa-check"></i><b>7.3</b> Scripts</a></li>
+<li class="chapter" data-level="7.2" data-path="import-read-in-data.html"><a href="import-read-in-data.html"><i class="fa fa-check"></i><b>7.2</b> Import / read in data</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="import-read-in-data.html"><a href="import-read-in-data.html#from-csv"><i class="fa fa-check"></i><b>7.2.1</b> from CSV</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="from-excel.html"><a href="from-excel.html"><i class="fa fa-check"></i><b>7.3</b> from Excel</a></li>
+<li class="chapter" data-level="7.4" data-path="scripts.html"><a href="scripts.html"><i class="fa fa-check"></i><b>7.4</b> Scripts</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="ggplot2.html"><a href="ggplot2.html"><i class="fa fa-check"></i><b>8</b> ggplot2</a>
 <ul>
@@ -206,7 +210,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.11" data-path="colors.html"><a href="colors.html"><i class="fa fa-check"></i><b>8.11</b> Colors</a></li>
 <li class="chapter" data-level="8.12" data-path="faceting.html"><a href="faceting.html"><i class="fa fa-check"></i><b>8.12</b> Faceting</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="data-filtering.html"><a href="data-filtering.html"><i class="fa fa-check"></i><b>9</b> Data filtering</a>
+<li class="chapter" data-level="9" data-path="data-filtering-and-wrangling.html"><a href="data-filtering-and-wrangling.html"><i class="fa fa-check"></i><b>9</b> Data filtering and wrangling</a>
 <ul>
 <li class="chapter" data-level="9.1" data-path="filter.html"><a href="filter.html"><i class="fa fa-check"></i><b>9.1</b> filter()</a></li>
 <li class="chapter" data-level="9.2" data-path="select.html"><a href="select.html"><i class="fa fa-check"></i><b>9.2</b> select()</a></li>
@@ -263,19 +267,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="images/ggplot_boxplot_definition.jpg" alt="import zip" width="600"/></p>
 <p><em><a href="https://i.ytimg.com/vi/BE8CVGJuftI/maxresdefault.jpg">Source</a></em></p>
 <p>We can import data from a file that contains the same information as <strong>geneexp</strong> but in a slightly different format:</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="boxplots.html#cb57-1" tabindex="-1"></a>geneexp2 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/expression_20genes_long.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="boxplots.html#cb61-1" tabindex="-1"></a>geneexp2 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/expression_20genes_long.csv&quot;</span>)</span></code></pre></div>
 <p>In our first boxplot, one box corresponds to one sample:</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="boxplots.html#cb58-1" tabindex="-1"></a><span class="fu">ggplot</span>(geneexp2, <span class="fu">aes</span>(<span class="at">x=</span>sample, <span class="at">y=</span>expression)) <span class="sc">+</span> </span>
-<span id="cb58-2"><a href="boxplots.html#cb58-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
-<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-58-1.png" width="480" /></p>
-<p>The same way we did for barplots, we can split boxes by <strong>DE</strong>:</p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="boxplots.html#cb59-1" tabindex="-1"></a><span class="fu">ggplot</span>(geneexp2, <span class="fu">aes</span>(<span class="at">x=</span>sample, <span class="at">y=</span>expression, <span class="at">fill=</span>DE)) <span class="sc">+</span> </span>
-<span id="cb59-2"><a href="boxplots.html#cb59-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
-<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-59-1.png" width="480" /></p>
-<p>If you prefer a violin plot, it is easy:</p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="boxplots.html#cb60-1" tabindex="-1"></a><span class="fu">ggplot</span>(geneexp2, <span class="fu">aes</span>(<span class="at">x=</span>sample, <span class="at">y=</span>expression, <span class="at">fill=</span>DE)) <span class="sc">+</span> </span>
-<span id="cb60-2"><a href="boxplots.html#cb60-2" tabindex="-1"></a>  <span class="fu">geom_violin</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="boxplots.html#cb62-1" tabindex="-1"></a><span class="fu">ggplot</span>(geneexp2, <span class="fu">aes</span>(<span class="at">x=</span>sample, <span class="at">y=</span>expression)) <span class="sc">+</span> </span>
+<span id="cb62-2"><a href="boxplots.html#cb62-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
 <p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-60-1.png" width="480" /></p>
+<p>The same way we did for barplots, we can split boxes by <strong>DE</strong>:</p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="boxplots.html#cb63-1" tabindex="-1"></a><span class="fu">ggplot</span>(geneexp2, <span class="fu">aes</span>(<span class="at">x=</span>sample, <span class="at">y=</span>expression, <span class="at">fill=</span>DE)) <span class="sc">+</span> </span>
+<span id="cb63-2"><a href="boxplots.html#cb63-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-61-1.png" width="480" /></p>
+<p>If you prefer a violin plot, it is easy:</p>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="boxplots.html#cb64-1" tabindex="-1"></a><span class="fu">ggplot</span>(geneexp2, <span class="fu">aes</span>(<span class="at">x=</span>sample, <span class="at">y=</span>expression, <span class="at">fill=</span>DE)) <span class="sc">+</span> </span>
+<span id="cb64-2"><a href="boxplots.html#cb64-2" tabindex="-1"></a>  <span class="fu">geom_violin</span>()</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-62-1.png" width="480" /></p>
 <p>Violin plots also aim to visualize data distribution. While boxplots can only show summary statistics / quantiles, violin plots also show the density of each variable.</p>
 </div>
             </section>

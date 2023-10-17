@@ -69,7 +69,7 @@ Attendees will:
 
 Day 1 & 2: 9:30-13:30.
 <br>
-~30' break around 11:30.
+~20' break around 11:30.
 
 * Welcome and set up
 * Introduction to R and RStudio (Posit)
@@ -84,7 +84,10 @@ Day 1 & 2: 9:30-13:30.
   * Fine-tuning font
   * Colors
   * Faceting
-* Data filtering
+* Data filtering and wrangling:
+  * select, filter, rename
+  * the pipe operator
+  * from wide to long format
 * More ggplots
 * Exercises
 * Interactive plots with {plotly}

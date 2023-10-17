@@ -53,7 +53,7 @@ Repeat the process for the following packages:
 
 * ggrepel
 * pheatmap
-* VennDiagram
+* plotly
 * openxlsx
 
 Note: install packages one by one, as it eases debugging in case of installation failure.

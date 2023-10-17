@@ -23,7 +23,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2023-10-15" />
+<meta name="date" content="2023-10-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -176,8 +176,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7" data-path="import-data-read-files-scripts.html"><a href="import-data-read-files-scripts.html"><i class="fa fa-check"></i><b>7</b> Import data / read files / scripts</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="fetch-workshop-files.html"><a href="fetch-workshop-files.html"><i class="fa fa-check"></i><b>7.1</b> Fetch workshop files</a></li>
-<li class="chapter" data-level="7.2" data-path="import-read-in-data.html"><a href="import-read-in-data.html"><i class="fa fa-check"></i><b>7.2</b> Import / read in data</a></li>
-<li class="chapter" data-level="7.3" data-path="scripts.html"><a href="scripts.html"><i class="fa fa-check"></i><b>7.3</b> Scripts</a></li>
+<li class="chapter" data-level="7.2" data-path="import-read-in-data.html"><a href="import-read-in-data.html"><i class="fa fa-check"></i><b>7.2</b> Import / read in data</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="import-read-in-data.html"><a href="import-read-in-data.html#from-csv"><i class="fa fa-check"></i><b>7.2.1</b> from CSV</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="from-excel.html"><a href="from-excel.html"><i class="fa fa-check"></i><b>7.3</b> from Excel</a></li>
+<li class="chapter" data-level="7.4" data-path="scripts.html"><a href="scripts.html"><i class="fa fa-check"></i><b>7.4</b> Scripts</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="ggplot2.html"><a href="ggplot2.html"><i class="fa fa-check"></i><b>8</b> ggplot2</a>
 <ul>
@@ -206,7 +210,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.11" data-path="colors.html"><a href="colors.html"><i class="fa fa-check"></i><b>8.11</b> Colors</a></li>
 <li class="chapter" data-level="8.12" data-path="faceting.html"><a href="faceting.html"><i class="fa fa-check"></i><b>8.12</b> Faceting</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="data-filtering.html"><a href="data-filtering.html"><i class="fa fa-check"></i><b>9</b> Data filtering</a>
+<li class="chapter" data-level="9" data-path="data-filtering-and-wrangling.html"><a href="data-filtering-and-wrangling.html"><i class="fa fa-check"></i><b>9</b> Data filtering and wrangling</a>
 <ul>
 <li class="chapter" data-level="9.1" data-path="filter.html"><a href="filter.html"><i class="fa fa-check"></i><b>9.1</b> filter()</a></li>
 <li class="chapter" data-level="9.2" data-path="select.html"><a href="select.html"><i class="fa fa-check"></i><b>9.2</b> select()</a></li>
@@ -260,24 +264,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="custom-scatter-plot" class="section level2 hasAnchor" number="10.3">
 <h2><span class="header-section-number">10.3</span> Custom scatter plot<a href="custom-scatter-plot.html#custom-scatter-plot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Read in data sent by an attendee from the last edition of the course:</p>
-<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="custom-scatter-plot.html#cb113-1" tabindex="-1"></a>orgs <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/Dados_organoids.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="custom-scatter-plot.html#cb117-1" tabindex="-1"></a>orgs <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/Dados_organoids.csv&quot;</span>)</span></code></pre></div>
 <p>The idea is to visualize the “Pas” on the x-axis and the samples (column “name”) on the y-axis, while controling size and color from another column.</p>
 <p>We need to convert this to a “long” format so as to move all “Pas” columns into one:</p>
-<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="custom-scatter-plot.html#cb114-1" tabindex="-1"></a>orgs_long<span class="ot">=</span><span class="fu">pivot_longer</span>(orgs, <span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">&quot;Pas&quot;</span>), <span class="at">names_to=</span><span class="st">&quot;Pas&quot;</span>, <span class="at">values_to =</span> <span class="st">&quot;Expr&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="custom-scatter-plot.html#cb118-1" tabindex="-1"></a>orgs_long<span class="ot">=</span><span class="fu">pivot_longer</span>(orgs, <span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">&quot;Pas&quot;</span>), <span class="at">names_to=</span><span class="st">&quot;Pas&quot;</span>, <span class="at">values_to =</span> <span class="st">&quot;Expr&quot;</span>)</span></code></pre></div>
 <p>Then we build a scatter plot, based on this new long object:</p>
-<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="custom-scatter-plot.html#cb115-1" tabindex="-1"></a><span class="fu">ggplot</span>(orgs_long, <span class="fu">aes</span>(<span class="at">x=</span>Pas, <span class="at">y=</span>name, <span class="at">size=</span><span class="fu">as.character</span>(Size), <span class="at">color=</span>Color)) <span class="sc">+</span> </span>
-<span id="cb115-2"><a href="custom-scatter-plot.html#cb115-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb115-3"><a href="custom-scatter-plot.html#cb115-3" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="at">Blue=</span><span class="st">&quot;lightblue&quot;</span>, <span class="at">Red=</span><span class="st">&quot;red&quot;</span>)) <span class="sc">+</span> </span>
-<span id="cb115-4"><a href="custom-scatter-plot.html#cb115-4" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> </span>
-<span id="cb115-5"><a href="custom-scatter-plot.html#cb115-5" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major.y =</span> <span class="fu">element_line</span>(<span class="at">color=</span><span class="st">&quot;grey82&quot;</span>, <span class="at">arrow =</span> <span class="fu">arrow</span>(<span class="at">angle =</span> <span class="dv">25</span>, <span class="at">length =</span> <span class="fu">unit</span>(.<span class="dv">15</span>, <span class="st">&quot;inches&quot;</span>),<span class="at">type =</span> <span class="st">&quot;open&quot;</span>)))</span></code></pre></div>
-<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-109-1.png" width="576" /></p>
+<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="custom-scatter-plot.html#cb119-1" tabindex="-1"></a><span class="fu">ggplot</span>(orgs_long, <span class="fu">aes</span>(<span class="at">x=</span>Pas, <span class="at">y=</span>name, <span class="at">size=</span><span class="fu">as.character</span>(Size), <span class="at">color=</span>Color)) <span class="sc">+</span> </span>
+<span id="cb119-2"><a href="custom-scatter-plot.html#cb119-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb119-3"><a href="custom-scatter-plot.html#cb119-3" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="at">Blue=</span><span class="st">&quot;lightblue&quot;</span>, <span class="at">Red=</span><span class="st">&quot;red&quot;</span>)) <span class="sc">+</span> </span>
+<span id="cb119-4"><a href="custom-scatter-plot.html#cb119-4" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> </span>
+<span id="cb119-5"><a href="custom-scatter-plot.html#cb119-5" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major.y =</span> <span class="fu">element_line</span>(<span class="at">color=</span><span class="st">&quot;grey82&quot;</span>, <span class="at">arrow =</span> <span class="fu">arrow</span>(<span class="at">angle =</span> <span class="dv">25</span>, <span class="at">length =</span> <span class="fu">unit</span>(.<span class="dv">15</span>, <span class="st">&quot;inches&quot;</span>),<span class="at">type =</span> <span class="st">&quot;open&quot;</span>)))</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-111-1.png" width="576" /></p>
 <p>Remove the legend and the axis names:</p>
-<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="custom-scatter-plot.html#cb116-1" tabindex="-1"></a><span class="fu">ggplot</span>(orgs_long, <span class="fu">aes</span>(<span class="at">x=</span>Pas, <span class="at">y=</span>name, <span class="at">size=</span><span class="fu">as.character</span>(Size), <span class="at">color=</span>Color)) <span class="sc">+</span> </span>
-<span id="cb116-2"><a href="custom-scatter-plot.html#cb116-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb116-3"><a href="custom-scatter-plot.html#cb116-3" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="at">Blue=</span><span class="st">&quot;lightblue&quot;</span>, <span class="at">Red=</span><span class="st">&quot;red&quot;</span>)) <span class="sc">+</span> </span>
-<span id="cb116-4"><a href="custom-scatter-plot.html#cb116-4" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> </span>
-<span id="cb116-5"><a href="custom-scatter-plot.html#cb116-5" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major.y =</span> <span class="fu">element_line</span>(<span class="at">color=</span><span class="st">&quot;grey82&quot;</span>, <span class="at">arrow =</span> <span class="fu">arrow</span>(<span class="at">angle =</span> <span class="dv">25</span>, <span class="at">length =</span> <span class="fu">unit</span>(.<span class="dv">15</span>, <span class="st">&quot;inches&quot;</span>),<span class="at">type =</span> <span class="st">&quot;open&quot;</span>)), <span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>, <span class="at">axis.title =</span> <span class="fu">element_blank</span>())</span></code></pre></div>
-<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-110-1.png" width="480" /></p>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="custom-scatter-plot.html#cb120-1" tabindex="-1"></a><span class="fu">ggplot</span>(orgs_long, <span class="fu">aes</span>(<span class="at">x=</span>Pas, <span class="at">y=</span>name, <span class="at">size=</span><span class="fu">as.character</span>(Size), <span class="at">color=</span>Color)) <span class="sc">+</span> </span>
+<span id="cb120-2"><a href="custom-scatter-plot.html#cb120-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb120-3"><a href="custom-scatter-plot.html#cb120-3" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="at">Blue=</span><span class="st">&quot;lightblue&quot;</span>, <span class="at">Red=</span><span class="st">&quot;red&quot;</span>)) <span class="sc">+</span> </span>
+<span id="cb120-4"><a href="custom-scatter-plot.html#cb120-4" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> </span>
+<span id="cb120-5"><a href="custom-scatter-plot.html#cb120-5" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major.y =</span> <span class="fu">element_line</span>(<span class="at">color=</span><span class="st">&quot;grey82&quot;</span>, <span class="at">arrow =</span> <span class="fu">arrow</span>(<span class="at">angle =</span> <span class="dv">25</span>, <span class="at">length =</span> <span class="fu">unit</span>(.<span class="dv">15</span>, <span class="st">&quot;inches&quot;</span>),<span class="at">type =</span> <span class="st">&quot;open&quot;</span>)), <span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>, <span class="at">axis.title =</span> <span class="fu">element_blank</span>())</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-112-1.png" width="480" /></p>
 
 </div>
 <!-- </div> -->
