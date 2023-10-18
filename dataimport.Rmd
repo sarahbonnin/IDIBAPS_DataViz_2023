@@ -62,11 +62,14 @@ Note that if you click on an object name in the **Environment** tab, it will ope
 
 ## from Excel
 
-{tidyverse} provides the {readxls} package with functions to read in Excel files.
+{tidyverse} provides the {readxl} package with functions to read in Excel files.
 
-Although working with text files (.txt, .csv, .tsv etc.) is a better practice, you can import Excel files using the **read_excel()** function:
+Although working with text files (.txt, .csv, .tsv etc.) is a better practice, you can import Excel files using the **read_excel()** function.
+
+First, load the {readxl} package (bottom-right panel -> Packages -> search and tick readxl, or from the console, as shown below).
 
 ```{r}
+library(readxl)
 read_excel("DataViz_source_files-main/files/expression_20genes.xlsx")
 ```
 

@@ -23,7 +23,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2023-10-17" />
+<meta name="date" content="2023-10-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -263,9 +263,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="from-excel" class="section level2 hasAnchor" number="7.3">
 <h2><span class="header-section-number">7.3</span> from Excel<a href="from-excel.html#from-excel" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>{tidyverse} provides the {readxls} package with functions to read in Excel files.</p>
-<p>Although working with text files (.txt, .csv, .tsv etc.) is a better practice, you can import Excel files using the <strong>read_excel()</strong> function:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="from-excel.html#cb13-1" tabindex="-1"></a><span class="fu">read_excel</span>(<span class="st">&quot;DataViz_source_files-main/files/expression_20genes.xlsx&quot;</span>)</span></code></pre></div>
+<p>{tidyverse} provides the {readxl} package with functions to read in Excel files.</p>
+<p>Although working with text files (.txt, .csv, .tsv etc.) is a better practice, you can import Excel files using the <strong>read_excel()</strong> function.</p>
+<p>First, load the {readxl} package (bottom-right panel -&gt; Packages -&gt; search and tick readxl, or from the console, as shown below).</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="from-excel.html#cb13-1" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb13-2"><a href="from-excel.html#cb13-2" tabindex="-1"></a><span class="fu">read_excel</span>(<span class="st">&quot;DataViz_source_files-main/files/expression_20genes.xlsx&quot;</span>)</span></code></pre></div>
 <pre><code>## # A tibble: 20 × 4
 ##    Gene   DE    sample1 sample2
 ##    &lt;chr&gt;  &lt;chr&gt;   &lt;dbl&gt;   &lt;dbl&gt;

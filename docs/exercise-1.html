@@ -23,7 +23,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2023-10-17" />
+<meta name="date" content="2023-10-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -319,12 +319,23 @@ correction
 <p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-34-1.png" width="480" /></p>
 </details>
 <p><br>
-6. Save your plot as a JPEG file, in the course folder, with dimensions 600X600.</p>
+6. Save your plot as a JPEG file, in the course folder, with dimensions 600X600 pixels.</p>
 <details>
 <summary>
 correction
 </summary>
+<p>From the interface:</p>
 <p>Bottom-right panel -&gt; Plots tab -&gt; Export -&gt; …</p>
+<p>From the console:</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="exercise-1.html#cb37-1" tabindex="-1"></a><span class="co"># first, save in an object</span></span>
+<span id="cb37-2"><a href="exercise-1.html#cb37-2" tabindex="-1"></a>mybluescatterplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>geneexp, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2)) <span class="sc">+</span> </span>
+<span id="cb37-3"><a href="exercise-1.html#cb37-3" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color=</span><span class="st">&quot;blue&quot;</span>, <span class="at">size=</span><span class="dv">2</span>, <span class="at">shape=</span><span class="st">&quot;square cross&quot;</span>) <span class="sc">+</span></span>
+<span id="cb37-4"><a href="exercise-1.html#cb37-4" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="at">label=</span><span class="st">&quot;my second ggplot&quot;</span>, <span class="at">subtitle=</span><span class="st">&quot;nice blue squares&quot;</span>)</span>
+<span id="cb37-5"><a href="exercise-1.html#cb37-5" tabindex="-1"></a></span>
+<span id="cb37-6"><a href="exercise-1.html#cb37-6" tabindex="-1"></a><span class="co"># then save with ggsave</span></span>
+<span id="cb37-7"><a href="exercise-1.html#cb37-7" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">filename=</span><span class="st">&quot;myblueplot.jpg&quot;</span>, <span class="at">plot=</span>mybluescatterplot, </span>
+<span id="cb37-8"><a href="exercise-1.html#cb37-8" tabindex="-1"></a>       <span class="at">device=</span><span class="st">&quot;jpeg&quot;</span>, </span>
+<span id="cb37-9"><a href="exercise-1.html#cb37-9" tabindex="-1"></a>       <span class="at">units=</span><span class="st">&quot;px&quot;</span>, <span class="at">width=</span><span class="dv">600</span>, <span class="at">height=</span><span class="dv">600</span>)</span></code></pre></div>
 </details>
 </div>
             </section>

@@ -333,15 +333,30 @@ ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) +
 </details>
 
 <br>
-6. Save your plot as a JPEG file, in the course folder, with dimensions 600X600.
+6. Save your plot as a JPEG file, in the course folder, with dimensions 600X600 pixels.
 
 <details>
 <summary>
 correction
 </summary>
 
+From the interface:
+
 Bottom-right panel -> Plots tab -> Export -> ...
 
+From the console:
+
+```{r}
+# first, save in an object
+mybluescatterplot <- ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) + 
+  geom_point(color="blue", size=2, shape="square cross") +
+  ggtitle(label="my second ggplot", subtitle="nice blue squares")
+
+# then save with ggsave
+ggsave(filename="myblueplot.jpg", plot=mybluescatterplot, 
+       device="jpeg", 
+       units="px", width=600, height=600)
+```
 </details>
 
 ## Scatter plots: more features
@@ -525,7 +540,7 @@ correction
 
 ```{r}
 ggplot(data=gtf, mapping=aes(x=chr, fill=gene_type)) + 
-  geom_bar(position="dodge") +
+  geom_bar() +
   ggtitle(label = "Number of genes per chromosome, split by gene type")
 ```
 
@@ -541,7 +556,7 @@ correction
 
 ```{r}
 ggplot(data=gtf, mapping=aes(x=chr, fill=gene_type)) + 
-  geom_bar(position="dodge") +
+  geom_bar() +
   ggtitle(label = "Number of genes per chromosome, split by gene type") +
   theme_bw()
 ```
@@ -550,6 +565,24 @@ ggplot(data=gtf, mapping=aes(x=chr, fill=gene_type)) +
 
 <br>
 7. Save the graph in PNG format in the course's directory.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+# save plot in an object
+gtfbars <- ggplot(data=gtf, mapping=aes(x=chr, fill=gene_type)) + 
+  geom_bar() +
+  ggtitle(label = "Number of genes per chromosome, split by gene type") +
+  theme_bw()
+
+# save as PNG file
+ggsave(filename="gtfbarplot.png", plot=gtfbars, 
+       device="png")
+```
+
 
 ## Barplots: bars position
 
