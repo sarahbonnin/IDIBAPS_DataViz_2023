@@ -43,7 +43,7 @@ ggplot(data=pop_age, mapping=aes(x=Year, y=Population)) +
 
 <br>
 
-3. Split the view by Sex:
+3. Split by Sex (**in the same plot**: do not split into different plots):
 
 
 <details>
@@ -184,7 +184,7 @@ ggsave(filename="population_age_sex.pdf", plot=plot_age, device = "pdf", units =
 
 <br>
 
-10. Save your filtered data: have a look at the **write_csv()** function:
+10. Save your filtered data as a **.csv** file: have a look at the **write_csv()** function from {readr}:
 
 <details>
 <summary>
@@ -272,7 +272,7 @@ correction
 </summary>
 
 ```{r}
-filter(rnaseq, gene_biotype=="lincRNA" | gene_biotype=="miRNA" & CTRL > 1.5*EZH) %>% ggplot(mapping=aes(x=CTRL, y=EZH, color=gene_biotype)) +
+filter(rnaseq, (gene_biotype=="lincRNA" | gene_biotype=="miRNA") & CTRL > 1.5*EZH) %>% ggplot(mapping=aes(x=CTRL, y=EZH, color=gene_biotype)) +
   geom_point()
 ```
 

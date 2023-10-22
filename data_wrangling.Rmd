@@ -242,7 +242,9 @@ stats_countries_long <- pivot_longer(stats_countries,
 <br>
 3. Do the 3 following tasks linked by a **%>%** (pipe):
 
-* Keep only rows that correspond to the American continent and that correspond to a population of at least 50 people.
+* Keep only rows that 
+  * match continent "America"
+  * have a population >= 50
 * Remove column **Continent**.
 * Produce a barplot with "Years" in the x-axis, Population in the y-axis, and split by Country.
 

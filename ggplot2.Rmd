@@ -394,6 +394,19 @@ ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=Gene)) +
   geom_text(nudge_x=1.5, size=3)
 ```
 
+Note that the automatic organization of labels, so that they do not overlap, can be done using the {ggrepel} package. You only need to load the package and change **geom_text()** to **geom_repel_text()**:
+
+```{r, eval=T, echo=F}
+library(ggrepel)
+```
+
+```{r}
+ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=Gene)) + 
+  geom_point() +
+  geom_text_repel()
+```
+
+
 Last but not least: point color and shape can be **dependent on another column / variable of the data**. 
 
 Columns to **conditionally color or shape the points** should be specified inside the **aes()** function.
@@ -602,7 +615,6 @@ ggplot(data=gtf, mapping=aes(x=chr, fill=gene_type)) +
   geom_bar(position="dodge")
 ```
 
-
 <details>
 <summary>
 *More advanced (as reference, or if someone asks): how to reorder x-axis labels:*
@@ -621,6 +633,11 @@ ggplot(data=gtf, mapping=aes(x=factor(chr, levels=c("chr1", "chr2", "chr3", "chr
 ### stats="identity" parameter
 
 geom_bar() can work a bit differently, when facing numbers instead of categories.
+
+geom_bar()'s default behavior is to **count the number of occurrences of each value found in x**: it does not expect a y-value. the default is stat="count".
+
+If you set stat parameter to "identity", ggplot2 skips the aggregation and values used for the bars are provided by the user in **x**.
+
 
 Let's import data from file: **DataViz_source_files-main/files/stats_continents_barcelona_2013-2023_long.csv** 
 into an object called **statsbcn**.
@@ -666,6 +683,13 @@ Position **dodge** :
 ```{r}
 ggplot(statsbcn, aes(x=Year, y=Population, fill=Continent)) + 
   geom_bar(stat="identity", position="dodge")
+```
+
+You can control the width of bars (hence, the spacing between 2 bars) using the **width** parameter of geom_bar():
+
+```{r}
+ggplot(statsbcn, aes(x=Year, y=Population, fill=Continent)) + 
+  geom_bar(stat="identity", position="dodge", width = 0.8)
 ```
 
 
@@ -792,6 +816,15 @@ ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) +
   theme(plot.title = element_text(size = 20, hjust = 0.5, face = "bold", colour = "blue"))
 ```
 
+You can also use theme() to rotate the x-axis label of plots, for example:
+
+```{r}
+ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) + 
+  geom_point() +
+  ggtitle("scatter plot") +
+  theme(axis.text.x = element_text(angle=90))
+```
+
 If you want to learn more, you can check this [complete guide on how to modify the ggplot2 theme](https://ggplot2tor.com/theme/).
 
 ## Colors
@@ -854,6 +887,8 @@ ggplot(data=gtf, mapping=aes(x=chr, fill=gene_type)) +
   facet_wrap(~strand)
 ```
 
+
+
 If you want to organize plots vertically, you can set **dir="v"**:
 
 ```{r, fig.width=15}
@@ -868,6 +903,14 @@ You can also split/facet the plots using a second variable, for example:
 ggplot(data=gtf, mapping=aes(x=chr, color=chr)) + 
   geom_bar(position="dodge") + 
   facet_wrap(gene_type~strand)
+```
+
+By default, scales are common in all plots. You may want to change this to "free scales" for more readability: it will set the scales per sub-plot.
+
+```{r, fig.width=15, fig.height=15}
+ggplot(data=gtf, mapping=aes(x=chr, color=chr)) + 
+  geom_bar(position="dodge") + 
+  facet_wrap(gene_type~strand, scales = "free")
 ```
 
 

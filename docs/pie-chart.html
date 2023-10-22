@@ -23,7 +23,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2023-10-18" />
+<meta name="date" content="2023-10-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -265,26 +265,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">10.2</span> Pie chart<a href="pie-chart.html#pie-chart" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We will plot a pie chart representing the number of genes from <strong>gtf</strong> found in each chromosome.</p>
 <p>Prepare data so as to obtain counts (that is more advanced dplyr manipulation):</p>
-<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="pie-chart.html#cb115-1" tabindex="-1"></a>gtf_count_chr <span class="ot">&lt;-</span> gtf <span class="sc">%&gt;%</span></span>
-<span id="cb115-2"><a href="pie-chart.html#cb115-2" tabindex="-1"></a>  <span class="fu">group_by</span>(chr) <span class="sc">%&gt;%</span></span>
-<span id="cb115-3"><a href="pie-chart.html#cb115-3" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">counts=</span><span class="fu">n</span>())</span></code></pre></div>
+<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="pie-chart.html#cb119-1" tabindex="-1"></a>gtf_count_chr <span class="ot">&lt;-</span> gtf <span class="sc">%&gt;%</span></span>
+<span id="cb119-2"><a href="pie-chart.html#cb119-2" tabindex="-1"></a>  <span class="fu">group_by</span>(chr) <span class="sc">%&gt;%</span></span>
+<span id="cb119-3"><a href="pie-chart.html#cb119-3" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">counts=</span><span class="fu">n</span>())</span></code></pre></div>
 <p>The <strong>coord_polar()</strong> is needed here: pie plots are stacked barplots in polar coordinates.</p>
-<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="pie-chart.html#cb116-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf_count_chr, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span><span class="st">&quot;&quot;</span>, <span class="at">y=</span>counts, <span class="at">fill=</span>chr)) <span class="sc">+</span> </span>
-<span id="cb116-2"><a href="pie-chart.html#cb116-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span></span>
-<span id="cb116-3"><a href="pie-chart.html#cb116-3" tabindex="-1"></a>  <span class="fu">coord_polar</span>(<span class="st">&quot;y&quot;</span>, <span class="at">start=</span><span class="dv">0</span>)</span></code></pre></div>
-<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-108-1.png" width="480" /></p>
-<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="pie-chart.html#cb117-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf_count_chr, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span><span class="st">&quot;&quot;</span>, <span class="at">y=</span>counts, <span class="at">fill=</span>chr)) <span class="sc">+</span> </span>
-<span id="cb117-2"><a href="pie-chart.html#cb117-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span></span>
-<span id="cb117-3"><a href="pie-chart.html#cb117-3" tabindex="-1"></a>  <span class="fu">coord_polar</span>(<span class="st">&quot;y&quot;</span>, <span class="at">start=</span><span class="dv">0</span>) <span class="sc">+</span></span>
-<span id="cb117-4"><a href="pie-chart.html#cb117-4" tabindex="-1"></a>  <span class="fu">theme_void</span>()</span></code></pre></div>
-<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-109-1.png" width="480" /></p>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="pie-chart.html#cb120-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf_count_chr, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span><span class="st">&quot;&quot;</span>, <span class="at">y=</span>counts, <span class="at">fill=</span>chr)) <span class="sc">+</span> </span>
+<span id="cb120-2"><a href="pie-chart.html#cb120-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span></span>
+<span id="cb120-3"><a href="pie-chart.html#cb120-3" tabindex="-1"></a>  <span class="fu">coord_polar</span>(<span class="st">&quot;y&quot;</span>, <span class="at">start=</span><span class="dv">0</span>)</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-113-1.png" width="480" /></p>
+<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="pie-chart.html#cb121-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf_count_chr, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span><span class="st">&quot;&quot;</span>, <span class="at">y=</span>counts, <span class="at">fill=</span>chr)) <span class="sc">+</span> </span>
+<span id="cb121-2"><a href="pie-chart.html#cb121-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span></span>
+<span id="cb121-3"><a href="pie-chart.html#cb121-3" tabindex="-1"></a>  <span class="fu">coord_polar</span>(<span class="st">&quot;y&quot;</span>, <span class="at">start=</span><span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb121-4"><a href="pie-chart.html#cb121-4" tabindex="-1"></a>  <span class="fu">theme_void</span>()</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-114-1.png" width="480" /></p>
 <p>Change the color scale:</p>
-<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="pie-chart.html#cb118-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf_count_chr, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span><span class="st">&quot;&quot;</span>, <span class="at">y=</span>counts, <span class="at">fill=</span>chr)) <span class="sc">+</span> </span>
-<span id="cb118-2"><a href="pie-chart.html#cb118-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span></span>
-<span id="cb118-3"><a href="pie-chart.html#cb118-3" tabindex="-1"></a>  <span class="fu">coord_polar</span>(<span class="st">&quot;y&quot;</span>, <span class="at">start=</span><span class="dv">0</span>) <span class="sc">+</span></span>
-<span id="cb118-4"><a href="pie-chart.html#cb118-4" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette=</span><span class="st">&quot;Paired&quot;</span>) <span class="sc">+</span></span>
-<span id="cb118-5"><a href="pie-chart.html#cb118-5" tabindex="-1"></a>  <span class="fu">theme_void</span>()</span></code></pre></div>
-<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-110-1.png" width="480" /></p>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="pie-chart.html#cb122-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf_count_chr, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span><span class="st">&quot;&quot;</span>, <span class="at">y=</span>counts, <span class="at">fill=</span>chr)) <span class="sc">+</span> </span>
+<span id="cb122-2"><a href="pie-chart.html#cb122-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span></span>
+<span id="cb122-3"><a href="pie-chart.html#cb122-3" tabindex="-1"></a>  <span class="fu">coord_polar</span>(<span class="st">&quot;y&quot;</span>, <span class="at">start=</span><span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb122-4"><a href="pie-chart.html#cb122-4" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette=</span><span class="st">&quot;Paired&quot;</span>) <span class="sc">+</span></span>
+<span id="cb122-5"><a href="pie-chart.html#cb122-5" tabindex="-1"></a>  <span class="fu">theme_void</span>()</span></code></pre></div>
+<p><img src="idibaps-dataviz-2023_files/figure-html/unnamed-chunk-115-1.png" width="480" /></p>
 <p>Here is a <a href="https://genchanghsu.github.io/ggGallery/posts/2021-06-18-post-3-pie-charts-with-ggplot/">nice page</a> about more pie plot customization.</p>
 </div>
             </section>
